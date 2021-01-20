@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chapter 1 Spark Basics &#8212; Spark Programming for Data Engineering</title>
+    <title>Chapter 1: Spark Basics &#8212; Spark Programming for Data Engineering</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -57,8 +57,8 @@
     <link rel="canonical" href="https://github.com/ngdeepak/testbook/chapters/chapter1-spark-basics.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Chapter 1 Basics" href="chapter2-dataframe.html" />
-    <link rel="prev" title="Markdown Files" href="../README.html" />
+    <link rel="next" title="Chapter 2 Basics" href="chapter2-dataframe.html" />
+    <link rel="prev" title="About the Author:" href="../Author.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -67,8 +67,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://github.com/ngdeepak/testbook/chapters/chapter1-spark-basics.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Chapter 1 Spark Basics" />
-<meta property="og:description" content="Chapter 1 Spark BasicsChapter Outline  1. one  2. teo1. one2. teo123test  AnotherCellChpter Learning Objectives  Create, describe and differentiate standard Pyt" />
+<meta property="og:title"       content="Chapter 1: Spark Basics" />
+<meta property="og:description" content="Chapter 1: Spark Basics  &lt;h2&gt;Chapter Outline&lt;span class=&#34;tocSkip&#34;&gt;&lt;/span&gt;&lt;/h2&gt; &lt;hr&gt; &lt;div class=&#34;toc&#34;&gt;&lt;ul class=&#34;toc-item&#34;&gt;&lt;li&gt;&lt;span&gt;&lt;a href=&#34;#1.-Introduction&#34; d" />
 <meta property="og:image"       content="https://github.com/ngdeepak/testbook/_static/sparklogo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -99,8 +99,8 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="../README.html">
-   Markdown Files
+  <a class="reference internal" href="../Author.html">
+   About the Author:
   </a>
  </li>
 </ul>
@@ -112,37 +112,12 @@
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Chapter 1 Spark Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#chapter-outline">
-   Chapter Outline
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#test">
-   123test
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#chpter-learning-objectives">
-   Chpter Learning Objectives
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#id1">
-   test
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="#ashahahakhakhdak">
-   ashahahakhakhdak
+   Chapter 1: Spark Basics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="chapter2-dataframe.html">
-   Chapter 1 Basics
+   Chapter 2 Basics
   </a>
  </li>
  <li class="toctree-l1">
@@ -363,46 +338,31 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Chapter 1 Spark Basics
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#chapter-outline">
    Chapter Outline
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#one">
      1. one
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#teo">
      2. teo
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#test">
-   123test
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-learning-objectives">
+   Chapter Learning Objectives
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#chpter-learning-objectives">
-   Chpter Learning Objectives
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   test
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ashahahakhakhdak">
-   ashahahakhakhdak
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   1. Introduction
   </a>
  </li>
 </ul>
@@ -416,28 +376,24 @@
         
               <div>
                 
-  <div class="figure align-default" id="figure-example">
-<a class="reference internal image-reference" href="../_images/banner.png"><img alt="../_images/banner.png" src="../_images/banner.png" style="height: 150px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Here is my figure caption!</span><a class="headerlink" href="#figure-example" title="Permalink to this image">¶</a></p>
+  <div class="figure align-center" id="banner">
+<img alt="../_images/banner.png" src="../_images/banner.png" />
 </div>
 <div class="section" id="chapter-1-spark-basics">
-<h1>Chapter 1 Spark Basics<a class="headerlink" href="#chapter-1-spark-basics" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="chapter-outline">
-<h1>Chapter Outline<a class="headerlink" href="#chapter-outline" title="Permalink to this headline">¶</a></h1>
+<h1>Chapter 1: Spark Basics<a class="headerlink" href="#chapter-1-spark-basics" title="Permalink to this headline">¶</a></h1>
+<h2>Chapter Outline<span class="tocSkip"></span></h2>
+<hr>
+<div class="toc"><ul class="toc-item"><li><span><a href="#1.-Introduction" data-toc-modified-id="1.-Introduction-1">1. Introduction</a></span></li></ul></div><div class="section" id="chapter-outline">
+<h2>Chapter Outline<a class="headerlink" href="#chapter-outline" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="one">
-<h2>1. one<a class="headerlink" href="#one" title="Permalink to this headline">¶</a></h2>
+<h3>1. one<a class="headerlink" href="#one" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="teo">
-<h2>2. teo<a class="headerlink" href="#teo" title="Permalink to this headline">¶</a></h2>
+<h3>2. teo<a class="headerlink" href="#teo" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
-<div class="section" id="test">
-<h1>123test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="#another_cell">AnotherCell</a></p>
-</div>
-<div class="section" id="chpter-learning-objectives">
-<h1>Chpter Learning Objectives<a class="headerlink" href="#chpter-learning-objectives" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="chapter-learning-objectives">
+<h2>Chapter Learning Objectives<a class="headerlink" href="#chapter-learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Create, describe and differentiate standard Python datatypes such as <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">string</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, etc.</p></li>
 <li><p>Perform arithmetic operations like <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code> on numeric values.</p></li>
@@ -448,6 +404,45 @@
 <li><p>Identify code blocks by levels of indentation.</p></li>
 <li><p>Explain the difference between mutable objects like a <code class="docutils literal notranslate"><span class="pre">list</span></code> and immutable objects like a <code class="docutils literal notranslate"><span class="pre">tuple</span></code>.</p></li>
 </ul>
+</div>
+<div class="section" id="introduction">
+<h2>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<hr><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
@@ -461,12 +456,6 @@
 </div>
 </div>
 </div>
-<div class="section" id="id1">
-<h1>test<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p><a id='another_cell'></a></p>
-</div>
-<div class="section" id="ashahahakhakhdak">
-<h1>ashahahakhakhdak<a class="headerlink" href="#ashahahakhakhdak" title="Permalink to this headline">¶</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -497,8 +486,8 @@
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="../README.html" title="previous page">Markdown Files</a>
-    <a class='right-next' id="next-link" href="chapter2-dataframe.html" title="next page">Chapter 1 Basics</a>
+    <a class='left-prev' id="prev-link" href="../Author.html" title="previous page">About the Author:</a>
+    <a class='right-next' id="next-link" href="chapter2-dataframe.html" title="next page">Chapter 2 Basics</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
