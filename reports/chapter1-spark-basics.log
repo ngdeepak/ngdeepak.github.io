@@ -17,14 +17,18 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-## What is distributed data?
-<a id=''2></a>
+
+```{figure} img/chapter1/spark_cluster.png
+---
+align: center
+---
+```
 ------------------
 
-[0;36m  File [0;32m"<ipython-input-1-355eb2be174a>"[0;36m, line [0;32m2[0m
-[0;31m    <a id=''2></a>[0m
+[0;36m  File [0;32m"<ipython-input-1-5080a744778c>"[0;36m, line [0;32m1[0m
+[0;31m    ```{figure} img/chapter1/spark_cluster.png[0m
 [0m    ^[0m
 [0;31mSyntaxError[0m[0;31m:[0m invalid syntax
 
-SyntaxError: invalid syntax (<ipython-input-1-355eb2be174a>, line 2)
+SyntaxError: invalid syntax (<ipython-input-1-5080a744778c>, line 1)
 
