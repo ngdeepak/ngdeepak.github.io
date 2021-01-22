@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chapter 2 Basics &#8212; Spark Programming for Data Engineering</title>
+    <title>Chapter 2 : DataFrames &#8212; Spark Programming for Data Engineering</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -67,8 +67,8 @@
 <!-- Opengraph tags -->
 <meta property="og:url"         content="https://github.com/ngdeepak/testbook/chapters/chapter2-dataframe.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Chapter 2 Basics" />
-<meta property="og:description" content="Chapter 2 Basics" />
+<meta property="og:title"       content="Chapter 2 : DataFrames" />
+<meta property="og:description" content="Chapter 2 : DataFrames  Chapter Outline  1. Distributed data &amp; Spark Cluster  2. Spark DataFrame   3. Creating Spark DataFrame  test1  test2  4. Introduction4  " />
 <meta property="og:image"       content="https://github.com/ngdeepak/testbook/_static/sparklogo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -117,7 +117,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Chapter 2 Basics
+   Chapter 2 : DataFrames
   </a>
  </li>
  <li class="toctree-l1">
@@ -333,6 +333,72 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-outline">
+   Chapter Outline
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-learning-objectives">
+   Chapter Learning Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distributed-data-spark-cluster">
+   1. Distributed data &amp; Spark Cluster
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-distributed-data">
+     What is distributed data?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spark-dataframe">
+   2. Spark DataFrame
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-spark-dataframe">
+   3. Creating Spark DataFrame
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-test1">
+   .    3a. test1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test2">
+   5.     test2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction6">
+   6. Introduction6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   7. Introduction6
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   8. Introduction6
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -340,8 +406,223 @@
         
               <div>
                 
-  <div class="section" id="chapter-2-basics">
-<h1>Chapter 2 Basics<a class="headerlink" href="#chapter-2-basics" title="Permalink to this headline">¶</a></h1>
+  <div class="figure align-center" id="banner">
+<img alt="../_images/banner.png" src="../_images/banner.png" />
+</div>
+<div class="section" id="chapter-2-dataframes">
+<h1>Chapter 2 : DataFrames<a class="headerlink" href="#chapter-2-dataframes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="chapter-outline">
+<h2>Chapter Outline<a class="headerlink" href="#chapter-outline" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#1">1. Distributed data &amp; Spark Cluster</a></p></li>
+<li><p><a class="reference external" href="#2">2. Spark DataFrame </a></p></li>
+<li><p><a class="reference external" href="#3">3. Creating Spark DataFrame</a></p>
+<ol class="simple">
+<li><p><a class="reference external" href="#4">test1</a></p></li>
+<li><p><a class="reference external" href="#5">test2</a></p></li>
+</ol>
+</li>
+<li><p><a class="reference external" href="#6">4. Introduction4</a></p></li>
+<li><p><a class="reference external" href="#7">5. Introduction5</a></p></li>
+<li><p><a class="reference external" href="#8">6. Introduction6</a></p></li>
+</ul>
+</div>
+<div class="section" id="chapter-learning-objectives">
+<h2>Chapter Learning Objectives<a class="headerlink" href="#chapter-learning-objectives" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Create, describe and differentiate standard Python datatypes such as <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">string</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, etc.</p></li>
+<li><p>Perform arithmetic operations like <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code> on numeric values.</p></li>
+<li><p>Perform basic string operations like <code class="docutils literal notranslate"><span class="pre">.lower()</span></code>, <code class="docutils literal notranslate"><span class="pre">.split()</span></code> to manipulate strings.</p></li>
+<li><p>Compute boolean values using comparison operators operations (<code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, etc.) and boolean operators (<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code>).</p></li>
+<li><p>Assign, index, slice and subset values to and from tuples, lists, strings and dictionaries.</p></li>
+<li><p>Write a conditional statement with <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code>.</p></li>
+<li><p>Identify code blocks by levels of indentation.</p></li>
+<li><p>Explain the difference between mutable objects like a <code class="docutils literal notranslate"><span class="pre">list</span></code> and immutable objects like a <code class="docutils literal notranslate"><span class="pre">tuple</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="distributed-data-spark-cluster">
+<h2>1. Distributed data &amp; Spark Cluster<a class="headerlink" href="#distributed-data-spark-cluster" title="Permalink to this headline">¶</a></h2>
+<p><a id='1'></a></p>
+<div class="section" id="what-is-distributed-data">
+<h3>What is distributed data?<a class="headerlink" href="#what-is-distributed-data" title="Permalink to this headline">¶</a></h3>
+<p>To answer this question, let us first understand how a non-distributed data look like. Lets us assume that a table consisting of just 3 records is stored on mySQL RDBMS in Linux.</p>
+<div class="figure align-center">
+<img alt="../_images/non-distributed-data1.png" src="../_images/non-distributed-data1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="spark-dataframe">
+<h2>2. Spark DataFrame<a class="headerlink" href="#spark-dataframe" title="Permalink to this headline">¶</a></h2>
+<p><a id='2'></a></p>
+</div>
+<div class="section" id="creating-spark-dataframe">
+<h2>3. Creating Spark DataFrame<a class="headerlink" href="#creating-spark-dataframe" title="Permalink to this headline">¶</a></h2>
+<p><a id='3'></a></p>
+</div>
+<div class="section" id="a-test1">
+<h2>.    3a. test1<a class="headerlink" href="#a-test1" title="Permalink to this headline">¶</a></h2>
+<p><a id='4'></a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="test2">
+<h2>   5.     test2<a class="headerlink" href="#test2" title="Permalink to this headline">¶</a></h2>
+<p><a id='5'></a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="introduction6">
+<h2>6. Introduction6<a class="headerlink" href="#introduction6" title="Permalink to this headline">¶</a></h2>
+<p><a id='6'></a></p>
+</div>
+<div class="section" id="id1">
+<h2>7. Introduction6<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p><a id='7'></a></p>
+</div>
+<div class="section" id="id2">
+<h2>8. Introduction6<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><a id='8'></a></p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
