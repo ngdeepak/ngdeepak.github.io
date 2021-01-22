@@ -68,7 +68,7 @@
 <meta property="og:url"         content="https://github.com/ngdeepak/testbook/chapters/chapter2-dataframe.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Chapter 2 : DataFrames" />
-<meta property="og:description" content="Chapter 2 : DataFrames  Chapter Outline  1. Distributed data &amp; Spark Cluster  2. Spark DataFrame   3. Creating Spark DataFrame  test1  test2  4. Introduction4  " />
+<meta property="og:description" content="Chapter 2 : DataFrames  Chapter Outline  1. What is spark dataframe  2. Creating a spark dataframe  2a. from list  2b. from pandas dataframe  Chapter Learning O" />
 <meta property="og:image"       content="https://github.com/ngdeepak/testbook/_static/sparklogo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -349,13 +349,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#distributed-data-spark-cluster">
-   1. Distributed data &amp; Spark Cluster
+  <a class="reference internal nav-link" href="#what-is-spark-dataframe">
+   1. What is spark dataframe?
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-is-distributed-data">
-     What is distributed data?
+    <a class="reference internal nav-link" href="#creating-a-spark-dataframe">
+     Creating a spark dataframe
     </a>
    </li>
   </ul>
@@ -380,21 +380,6 @@
    5.     test2
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction6">
-   6. Introduction6
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   7. Introduction6
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   8. Introduction6
-  </a>
- </li>
 </ul>
 
         </nav>
@@ -414,40 +399,37 @@
 <div class="section" id="chapter-outline">
 <h2>Chapter Outline<a class="headerlink" href="#chapter-outline" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="#1">1. Distributed data &amp; Spark Cluster</a></p></li>
-<li><p><a class="reference external" href="#2">2. Spark DataFrame </a></p></li>
-<li><p><a class="reference external" href="#3">3. Creating Spark DataFrame</a></p>
-<ol class="simple">
-<li><p><a class="reference external" href="#4">test1</a></p></li>
-<li><p><a class="reference external" href="#5">test2</a></p></li>
-</ol>
+<li><p><a class="reference external" href="#1">1. What is spark dataframe</a></p></li>
+<li><p><a class="reference external" href="#2">2. Creating a spark dataframe</a></p>
+<ul>
+<li><p><a class="reference external" href="#3">2a. from list</a></p></li>
+<li><p><a class="reference external" href="#4">2b. from pandas dataframe</a></p></li>
+</ul>
 </li>
-<li><p><a class="reference external" href="#6">4. Introduction4</a></p></li>
-<li><p><a class="reference external" href="#7">5. Introduction5</a></p></li>
-<li><p><a class="reference external" href="#8">6. Introduction6</a></p></li>
 </ul>
 </div>
 <div class="section" id="chapter-learning-objectives">
 <h2>Chapter Learning Objectives<a class="headerlink" href="#chapter-learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Create, describe and differentiate standard Python datatypes such as <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">string</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple</span></code>, etc.</p></li>
-<li><p>Perform arithmetic operations like <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">**</span></code> on numeric values.</p></li>
-<li><p>Perform basic string operations like <code class="docutils literal notranslate"><span class="pre">.lower()</span></code>, <code class="docutils literal notranslate"><span class="pre">.split()</span></code> to manipulate strings.</p></li>
-<li><p>Compute boolean values using comparison operators operations (<code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, etc.) and boolean operators (<code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code>).</p></li>
-<li><p>Assign, index, slice and subset values to and from tuples, lists, strings and dictionaries.</p></li>
-<li><p>Write a conditional statement with <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code>.</p></li>
-<li><p>Identify code blocks by levels of indentation.</p></li>
-<li><p>Explain the difference between mutable objects like a <code class="docutils literal notranslate"><span class="pre">list</span></code> and immutable objects like a <code class="docutils literal notranslate"><span class="pre">tuple</span></code>.</p></li>
+<li><p>understand the syntax to create dataframe</p></li>
+<li><p>create spark dataframe from different datasources</p></li>
 </ul>
 <p><a id='1'></a></p>
 </div>
-<div class="section" id="distributed-data-spark-cluster">
-<h2>1. Distributed data &amp; Spark Cluster<a class="headerlink" href="#distributed-data-spark-cluster" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="what-is-distributed-data">
-<h3>What is distributed data?<a class="headerlink" href="#what-is-distributed-data" title="Permalink to this headline">¶</a></h3>
-<p>To answer this question, let us first understand how a non-distributed data look like. Lets us assume that a table consisting of just 3 records is stored on mySQL RDBMS in Linux.</p>
+<div class="section" id="what-is-spark-dataframe">
+<h2>1. What is spark dataframe?<a class="headerlink" href="#what-is-spark-dataframe" title="Permalink to this headline">¶</a></h2>
+<p>A DataFrame simply represents a table of data with rows and columns. A simple analogy would be a spreadsheet with named columns.</p>
+<p>Spark Data Frame is a distributed collection of data organized into named columns. It can be constructed from a wide array of sources such as: structured data files, tables in Hive, external databases, or existing RDD, Lists, Pandas data frame.</p>
 <div class="figure align-center">
-<img alt="../_images/non-distributed-data1.png" src="../_images/non-distributed-data1.png" />
+<img alt="../_images/spark_dataframe.png" src="../_images/spark_dataframe.png" />
+</div>
+<div class="section" id="creating-a-spark-dataframe">
+<h3>Creating a spark dataframe<a class="headerlink" href="#creating-a-spark-dataframe" title="Permalink to this headline">¶</a></h3>
+<p>Lets first understand the syntax</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This is an example
+of a tip directive.</p>
 </div>
 </div>
 </div>
@@ -610,18 +592,6 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="introduction6">
-<h2>6. Introduction6<a class="headerlink" href="#introduction6" title="Permalink to this headline">¶</a></h2>
-<p><a id='6'></a></p>
-</div>
-<div class="section" id="id1">
-<h2>7. Introduction6<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p><a id='7'></a></p>
-</div>
-<div class="section" id="id2">
-<h2>8. Introduction6<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p><a id='8'></a></p>
 </div>
 </div>
 
