@@ -17,13 +17,13 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-<a id='2'></a>
+<a id='3'></a>
 ------------------
 
-[0;36m  File [0;32m"<ipython-input-1-9a56fda4989e>"[0;36m, line [0;32m1[0m
-[0;31m    <a id='2'></a>[0m
+[0;36m  File [0;32m"<ipython-input-5-95144b77053f>"[0;36m, line [0;32m1[0m
+[0;31m    <a id='3'></a>[0m
 [0m    ^[0m
 [0;31mSyntaxError[0m[0;31m:[0m invalid syntax
 
-SyntaxError: invalid syntax (<ipython-input-1-9a56fda4989e>, line 1)
+SyntaxError: invalid syntax (<ipython-input-5-95144b77053f>, line 1)
 

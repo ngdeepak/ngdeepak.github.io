@@ -45,8 +45,6 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -68,7 +66,7 @@
 <meta property="og:url"         content="https://github.com/ngdeepak/testbook/chapters/chapter1-spark-basics.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Chapter 1: Spark Basics" />
-<meta property="og:description" content="Chapter 1: Spark Basics  Chapter Outline  1. What is Apache Spark?  2. What is distributed data?  3. Overview of Spark Cluster   4. How to create spark session?" />
+<meta property="og:description" content="Chapter 1: Spark Basics  Learning Objectives  Understand what Apache Spark is.  Understand distributed data vs non-distributed data.  Understand how distributed" />
 <meta property="og:image"       content="https://github.com/ngdeepak/testbook/_static/sparklogo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -126,103 +124,73 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter3-data-sources.html#test123">
-   test123
+  <a class="reference internal" href="chapter4-data-types-schema.html">
+   Chapter 4 : Data Types &amp; Schema
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter6-user-defined-function.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter5-string-column.html">
+   Chapter 5 : String Columns
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter7-string-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter6-number-column.html">
+   Chapter 6 : Number Columns
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter8-number-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter7-date-column.html">
+   Chapter 7 : Date Columns
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter9-date-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter8-array-column.html">
+   Chapter 8 : Array Columns
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter10-array-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter9-map-column.html">
+   Chapter 9 : Map Column
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter11-map-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter10-struct-column.html">
+   Chapter 10 : Struct Column
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter12-struct-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter11-json-string-column.html">
+   Chapter 11 : JSON Column
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter13-null-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter12-null-nan-column.html">
+   Chapter 12 : Null &amp; NaN Column
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter14-columns%20operations.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter13-user-defined-function.html">
+   Chapter 13 : User Defined Functions(UDFs)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter15-rows-operations.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter14-pandas-with-arrow.html">
+   Chapter 14 : Pandas User Defined Function
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter16-spark-with-pandas.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter15-aggregate-operations.html">
+   Chapter 15 : Aggregate Operations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter17-columns%20operations.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter16-join-operations.html">
+   Chapter 16 : Join operations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter18-rows-operations.html">
-   Chapter 1 Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Jupiter Book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../test.html">
-   Creating a Data Frame
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../test.html#twisting-spinning-data-in-apache-spark-interactive-data-engineer-s-guide">
-   Twisting &amp; Spinning Data in Apache Spark - Interactive Data Engineer’s Guide
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../SparkDataFrame.html">
-   Spark Data Frame
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../SparkDataFrame.html#creating-a-spark-dataframe">
-   Creating a Spark DataFrame
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../SparkDataFrame.html#creating-a-spark-dataframe123">
-   Creating a Spark DataFrame123
+  <a class="reference internal" href="chapter17-window-operations.html">
+   Chapter 17 : Window operations
   </a>
  </li>
 </ul>
@@ -334,13 +302,13 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#chapter-outline">
-   Chapter Outline
+  <a class="reference internal nav-link" href="#learning-objectives">
+   Learning Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#chapter-learning-objectives">
-   Chapter Learning Objectives
+  <a class="reference internal nav-link" href="#chapter-outline">
+   Chapter Outline
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -386,6 +354,16 @@
 </div>
 <div class="section" id="chapter-1-spark-basics">
 <h1>Chapter 1: Spark Basics<a class="headerlink" href="#chapter-1-spark-basics" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Understand what Apache Spark is.</p></li>
+<li><p>Understand distributed data vs non-distributed data.</p></li>
+<li><p>Understand how distributed data is stored in spark.</p></li>
+<li><p>Overview of spark cluster.</p></li>
+<li><p>Understand the working of spark clsuter.</p></li>
+</ul>
+</div>
 <div class="section" id="chapter-outline">
 <h2>Chapter Outline<a class="headerlink" href="#chapter-outline" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -394,16 +372,6 @@
 <li><p><a class="reference external" href="#3">3. Overview of Spark Cluster </a></p></li>
 <li><p><a class="reference external" href="#4">4. How to create spark session? </a></p></li>
 </ul>
-</div>
-<div class="section" id="chapter-learning-objectives">
-<h2>Chapter Learning Objectives<a class="headerlink" href="#chapter-learning-objectives" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Understand what Apache Spark is</p></li>
-<li><p>Understand distributed data vs non-distributed data</p></li>
-<li><p>How distributed data is stored in spark?</p></li>
-<li><p>Overview of Spark Cluster</p></li>
-<li><p>Understand the working of distributed computing</p></li>
-</ul>
 <p><a id='1'></a></p>
 </div>
 <div class="section" id="what-is-apache-spark">
@@ -411,8 +379,17 @@
 <p>Apache Spark is a unified analytics engine for large-scale data processing.
 It consists of various modules as shown in the diagram below</p>
 <div class="figure align-center">
-<img alt="../_images/spark_platform.png" src="../_images/spark_platform.png" />
+<img alt="../_images/1.png" src="../_images/1.png" />
 </div>
+<p>Spark’s Key Components</p>
+<ul class="simple">
+<li><p>Spark Core— The general execution engine of the Spark platform, Spark Core contains various components for functions such as task scheduling, memory management, fault recovery, etc. Spark’s application program interface (API) that defines Resilient Distributed Datasets (RDDs) also resides in Spark Core. Thanks to RDDs—which can be thought of as a collection of items distributed across a vast number of compute nodes operating in parallel—Spark is able to draw on Hadoop clusters for stored data and process that data in-memory at unprecedented speeds, allowing data to be explored interactively in real-time.</p></li>
+<li><p>Spark SQL—Big data consists of structured and unstructured data, each of which is queried differently. Spark SQL provides an SQL interface to Spark that allows developers to co-mingle SQL queries of structured data with the programmatic manipulations of unstructured data supported by RDDs, all within a single application. This ability to combine SQL with complex analytics makes Spark SQL a powerful open source tool for the data warehouse.</p></li>
+<li><p>Spark Streaming—This Spark component enables analysts to process live streams of data, such as log files generated by production web servers, and live video and Stock Market feed. By providing an API for manipulating data streams that is a close match to Spark Core’s RDD API, Spark Streaming makes it easy for programmers to navigate between applications that process data stored in memory, on disk, or as it arrives in real time.</p></li>
+<li><p>MLlib—Spark comes with an integrated framework for performing advanced analytics. Among the components found in this framework is Spark’s scalable Machine Learning Library (MLlib). The MLlib contains common machine learning (ML) functionality and provides a varied array of machine learning algorithms such as classification, regression, clustering, and collaborative filtering and model evaluation, and more. Spark and MLlib are set to run on a Hadoop 2.0 cluster without any pre-installation.</p></li>
+<li><p>GraphX—Also found in Spark’s integrated framework is GraphX, a library of common graph algorithms and operators for manipulating graphs and performing graph-parallel computations. Extending the Spark RDD and API, GraphX allows users to create directed graphs with arbitrary properties attached to each vertex and edge. GraphX is best used for analytics on static graphs, such as Facebook’s Friend Graph that helps to uncover patterns that exist within social network connections.</p></li>
+</ul>
+<p>Apache Spark is one of the largest open source communities in big data. With the flexibility and scalability to deliver real-time processing, plus the ability to constantly evolve through open source contributions, Apache Spark is on its way to achieving rock star status as a premiere big data tool.</p>
 <p>Benefits:</p>
 <ul class="simple">
 <li><p><b>Speed</b> : Run workloads 100x faster.</p></li>
@@ -421,7 +398,7 @@ It consists of various modules as shown in the diagram below</p>
 <li><p><b>Runs Everywhere</b> : Spark runs on Hadoop, Apache Mesos, Kubernetes, standalone, or in the cloud. It can access diverse data sources</p></li>
 </ul>
 <div class="figure align-center">
-<img alt="../_images/spark_runs.png" src="../_images/spark_runs.png" />
+<img alt="../_images/2.png" src="../_images/2.png" />
 </div>
 <p><a id='2'></a></p>
 </div>
@@ -429,19 +406,22 @@ It consists of various modules as shown in the diagram below</p>
 <h2>2. What is distributed data?<a class="headerlink" href="#what-is-distributed-data" title="Permalink to this headline">¶</a></h2>
 <p>To answer this question, let us first understand how a non-distributed data look like. Lets us assume that a table consisting of just 3 records is stored on mySQL RDBMS in Linux.</p>
 <div class="figure align-center">
-<img alt="../_images/non-distributed-data.png" src="../_images/non-distributed-data.png" />
+<img alt="../_images/3.png" src="../_images/3.png" />
+</div>
+<div class="figure align-center">
+<img alt="../_images/4.png" src="../_images/4.png" />
 </div>
 <p>Having understood on how normal data is stored, let us look at how the same data is stored in a distributed data environment. Please note that distributed File System is required to store the data in distributed manner.</p>
 <p>Lets take a moment to understand what a distributed File System is.</p>
 <div class="figure align-center">
-<img alt="../_images/dist_file_system.png" src="../_images/dist_file_system.png" />
+<img alt="../_images/6.png" src="../_images/6.png" />
 </div>
 <p>Below is an example of how data is distributed across 3 nodes. In this example, table consisting of 2 columns(Name &amp; Age) and 3 rows are stored across 3 worker nodes .  Each node stores one record.
 In spark, data operations are mostly carried out directly on a node where data resides instead of getting the data from other nodes.</p>
 <div class="section" id="overview-of-how-data-is-stored-on-a-spark-cluster">
 <h3>Overview of how data is stored on a spark cluster<a class="headerlink" href="#overview-of-how-data-is-stored-on-a-spark-cluster" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center">
-<img alt="../_images/spark_dist_data.png" src="../_images/spark_dist_data.png" />
+<img alt="../_images/5.png" src="../_images/5.png" />
 </div>
 <p><a id='3'></a></p>
 </div>
@@ -449,7 +429,7 @@ In spark, data operations are mostly carried out directly on a node where data r
 <div class="section" id="overview-of-spark-cluster">
 <h2>3. Overview of Spark Cluster<a class="headerlink" href="#overview-of-spark-cluster" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/spark_cluster.png" src="../_images/spark_cluster.png" />
+<img alt="../_images/7.png" src="../_images/7.png" />
 </div>
 <p>Spark uses a master/slave architecture. As you can see in the figure above, it has one central coordinator (Driver) that communicates with many distributed workers (executors). The driver and each of the executors run in their own Java processes.</p>
 <p><b>DRIVER</b></p>
@@ -500,7 +480,7 @@ Spark automatically deals with failed or slow machines by re-executing failed or
 <div>
     <p><b>SparkContext</b></p>
 
-    <p><a href="http://192.168.0.167:4041">Spark UI</a></p>
+    <p><a href="http://192.168.0.167:4053">Spark UI</a></p>
 
     <dl>
       <dt>Version</dt>

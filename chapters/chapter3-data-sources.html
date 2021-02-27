@@ -45,8 +45,6 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -57,7 +55,7 @@
     <link rel="canonical" href="https://github.com/ngdeepak/testbook/chapters/chapter3-data-sources.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Chapter 1 Basics" href="chapter6-user-defined-function.html" />
+    <link rel="next" title="Chapter 4 : Data Types &amp; Schema" href="chapter4-data-types-schema.html" />
     <link rel="prev" title="Chapter 2 : DataFrames" href="chapter2-dataframe.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -68,7 +66,7 @@
 <meta property="og:url"         content="https://github.com/ngdeepak/testbook/chapters/chapter3-data-sources.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Chapter 3 : Data Sources" />
-<meta property="og:description" content="Chapter 3 : Data Sources  Chapter Learning Objectives  various data sources &amp; file formats  general methods to load the data into spark dataframe  general metho" />
+<meta property="og:description" content="Chapter 3 : Data Sources  Chapter Learning Objectives  Various data sources &amp; file formats.  General methods to read the data into spark dataframe.  General met" />
 <meta property="og:image"       content="https://github.com/ngdeepak/testbook/_static/sparklogo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -126,103 +124,73 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="#test123">
-   test123
+  <a class="reference internal" href="chapter4-data-types-schema.html">
+   Chapter 4 : Data Types &amp; Schema
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter6-user-defined-function.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter5-string-column.html">
+   Chapter 5 : String Columns
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter7-string-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter6-number-column.html">
+   Chapter 6 : Number Columns
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter8-number-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter7-date-column.html">
+   Chapter 7 : Date Columns
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter9-date-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter8-array-column.html">
+   Chapter 8 : Array Columns
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter10-array-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter9-map-column.html">
+   Chapter 9 : Map Column
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter11-map-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter10-struct-column.html">
+   Chapter 10 : Struct Column
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter12-struct-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter11-json-string-column.html">
+   Chapter 11 : JSON Column
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter13-null-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter12-null-nan-column.html">
+   Chapter 12 : Null &amp; NaN Column
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter14-columns%20operations.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter13-user-defined-function.html">
+   Chapter 13 : User Defined Functions(UDFs)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter15-rows-operations.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter14-pandas-with-arrow.html">
+   Chapter 14 : Pandas User Defined Function
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter16-spark-with-pandas.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter15-aggregate-operations.html">
+   Chapter 15 : Aggregate Operations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter17-columns%20operations.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter16-join-operations.html">
+   Chapter 16 : Join operations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter18-rows-operations.html">
-   Chapter 1 Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Jupiter Book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../test.html">
-   Creating a Data Frame
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../test.html#twisting-spinning-data-in-apache-spark-interactive-data-engineer-s-guide">
-   Twisting &amp; Spinning Data in Apache Spark - Interactive Data Engineer’s Guide
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../SparkDataFrame.html">
-   Spark Data Frame
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../SparkDataFrame.html#creating-a-spark-dataframe">
-   Creating a Spark DataFrame
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../SparkDataFrame.html#creating-a-spark-dataframe123">
-   Creating a Spark DataFrame123
+  <a class="reference internal" href="chapter17-window-operations.html">
+   Chapter 17 : Window operations
   </a>
  </li>
 </ul>
@@ -333,78 +301,143 @@
         </div>
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Chapter 3 : Data Sources
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-learning-objectives">
+   Chapter Learning Objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-outline">
+   Chapter Outline
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visual-outline">
+   Visual Outline
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#various-data-sources">
+   1. Various data sources
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#chapter-learning-objectives">
-     Chapter Learning Objectives
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-text-file">
+     1a. Text file
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#chapter-outline">
-     Chapter Outline
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-csv-file">
+     1b. CSV file
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#chapter-outline-visual">
-     Chapter Outline (Visual)
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-json-file">
+     1c.JSON file
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Chapter Outline (Visual)
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-parquet-file">
+     1d. Parquet file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-orc-file">
+     1e. ORC file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-avro-file">
+     1e. AVRO file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#f-whole-binary-file">
+     1f. Whole Binary file
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#test123">
-   test123
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-writing-data-from-various-data-sources">
+   2. Reading &amp; Writing data from various data sources
   </a>
   <ul class="nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-is-spark-dataframe">
-     1. What is spark dataframe?
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hive">
-     hive
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-reading-from-text-file-into-spark-data-frame">
+     2a. Reading from text file into spark data frame
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#creating-a-spark-dataframe">
-       2. Creating a spark dataframe
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#saving-the-spark-data-frame-content-into-a-text-file">
+       Saving the spark data frame content into a text file
       </a>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-from-rdd">
-     2a. from RDD
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-reading-from-csv-file-into-spark-data-frame">
+     2a. Reading from CSV file into spark data frame
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#saving-the-spark-data-frame-content-into-a-csv-file">
+       Saving the spark data frame content into a CSV file
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#b-from-list">
-     2b. from List
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-reading-from-json-file-into-spark-data-frame">
+     2a. Reading from JSON file into spark data frame
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#saving-the-spark-data-frame-content-into-a-json-file">
+       Saving the spark data frame content into a JSON  file
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#c-from-pandas-dataframe">
-     2c. from pandas dataframe
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-reading-from-parquet-file-into-spark-data-frame">
+     2d. Reading from Parquet file into spark data frame
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#saving-the-spark-data-frame-content-into-a-parquet-file">
+       Saving the spark data frame content into a Parquet  file
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-test1">
-     .    3a. test1
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-reading-from-an-orc-file-into-spark-data-frame">
+     2e. Reading from an ORC file into spark data frame
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#saving-the-spark-data-frame-content-into-an-orc-file">
+       Saving the spark data frame content into an ORC  file
+      </a>
+     </li>
+    </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#test2">
-     5.     test2
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#f-reading-from-an-avro-file-into-spark-data-frame">
+     2f. Reading from an AVRO file into spark data frame
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#saving-the-spark-data-frame-content-into-an-avro-file">
+       Saving the spark data frame content into an AVRO  file
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#g-reading-from-an-whole-binary-file-into-spark-data-frame">
+     2g. Reading from an Whole Binary file into spark data frame
     </a>
    </li>
   </ul>
@@ -428,475 +461,662 @@
 <div class="section" id="chapter-learning-objectives">
 <h2>Chapter Learning Objectives<a class="headerlink" href="#chapter-learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>various data sources &amp; file formats</p></li>
-<li><p>general methods to load the data into spark dataframe</p></li>
-<li><p>general methods to save the data into spark dataframe</p></li>
+<li><p>Various data sources &amp; file formats.</p></li>
+<li><p>General methods to read the data into spark dataframe.</p></li>
+<li><p>General methods to write the spark dataframe into an external data source/file.</p></li>
 </ul>
 </div>
 <div class="section" id="chapter-outline">
 <h2>Chapter Outline<a class="headerlink" href="#chapter-outline" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="#1">1. Various data sources &amp; file formats</a></p></li>
-<li><p><a class="reference external" href="#2">2. Loading &amp; Saving data from various data sources</a></p>
+<li><p><a class="reference external" href="#1">1. Various data sources</a></p>
 <ul>
-<li><p><a class="reference external" href="#3">2a. from text file</a></p></li>
-<li><p><a class="reference external" href="#4">2b. from CSV file</a></p></li>
-<li><p><a class="reference external" href="#5">2c. from JSON file</a></p></li>
-<li><p><a class="reference external" href="#6">2d. from Parquet file</a></p></li>
-<li><p><a class="reference external" href="#7">2e. from ORC file</a></p></li>
-<li><p><a class="reference external" href="#8">2f. from AVRO file</a></p></li>
-<li><p><a class="reference external" href="#9">2g. from whole Binary file</a></p></li>
+<li><p><a class="reference external" href="#2">1a. Text file</a></p></li>
+<li><p><a class="reference external" href="#3">1b. CSV file</a></p></li>
+<li><p><a class="reference external" href="#4">1c. JSON file</a></p></li>
+<li><p><a class="reference external" href="#5">1d. Parquet file</a></p></li>
+<li><p><a class="reference external" href="#6">1e. ORC file</a></p></li>
+<li><p><a class="reference external" href="#7">1f. AVRO file</a></p></li>
+<li><p><a class="reference external" href="#8">1g. Whole Binary file</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#9">2. Reading &amp; Writing data from various data sources</a></p>
+<ul>
+<li><p><a class="reference external" href="#10">2a. from text file</a></p></li>
+<li><p><a class="reference external" href="#11">2b. from CSV file</a></p></li>
+<li><p><a class="reference external" href="#12">2c. from JSON file</a></p></li>
+<li><p><a class="reference external" href="#13">2d. from Parquet file</a></p></li>
+<li><p><a class="reference external" href="#14">2e. from ORC file</a></p></li>
+<li><p><a class="reference external" href="#15">2f. from AVRO file</a></p></li>
+<li><p><a class="reference external" href="#16">2g. from whole Binary file</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section" id="chapter-outline-visual">
-<h2>Chapter Outline (Visual)<a class="headerlink" href="#chapter-outline-visual" title="Permalink to this headline">¶</a></h2>
-<p>Click on any one of the image to go to that section</p>
+<div class="section" id="visual-outline">
+<h2>Visual Outline<a class="headerlink" href="#visual-outline" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
 <img alt="../_images/datasources.png" src="../_images/datasources.png" />
 </div>
-</div>
-<div class="section" id="id1">
-<h2>Chapter Outline (Visual)<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Click on any one of the image to go to that section</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>
-<span class="n">css</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">div.special_table + table, th, td {</span>
-<span class="s2">  border: 3px solid orange;</span>
-<span class="s2">}</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pn</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="n">raw_css</span><span class="o">=</span><span class="p">[</span><span class="n">css</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<script type="application/javascript">
-(function(root) {
-  function now() {
-    return new Date();
-  }
-
-  var force = true;
-
-  if (typeof root._bokeh_onload_callbacks === "undefined" || force === true) {
-    root._bokeh_onload_callbacks = [];
-    root._bokeh_is_loading = undefined;
-  }
-
-  if (typeof (root._bokeh_timeout) === "undefined" || force === true) {
-    root._bokeh_timeout = Date.now() + 5000;
-    root._bokeh_failed_load = false;
-  }
-
-  function run_callbacks() {
-    try {
-      root._bokeh_onload_callbacks.forEach(function(callback) {
-        if (callback != null)
-          callback();
-      });
-    } finally {
-      delete root._bokeh_onload_callbacks
-    }
-    console.debug("Bokeh: all callbacks have finished");
-  }
-
-  function load_libs(css_urls, js_urls, callback) {
-    if (css_urls == null) css_urls = [];
-    if (js_urls == null) js_urls = [];
-
-    root._bokeh_onload_callbacks.push(callback);
-    if (root._bokeh_is_loading > 0) {
-      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
-      return null;
-    }
-    if (js_urls == null || js_urls.length === 0) {
-      run_callbacks();
-      return null;
-    }
-    console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
-    root._bokeh_is_loading = css_urls.length + js_urls.length;
-
-    function on_load() {
-      root._bokeh_is_loading--;
-      if (root._bokeh_is_loading === 0) {
-        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
-        run_callbacks()
-      }
-    }
-
-    function on_error() {
-      console.error("failed to load " + url);
-    }
-
-    for (var i = 0; i < css_urls.length; i++) {
-      var url = css_urls[i];
-      const element = document.createElement("link");
-      element.onload = on_load;
-      element.onerror = on_error;
-      element.rel = "stylesheet";
-      element.type = "text/css";
-      element.href = url;
-      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
-      document.body.appendChild(element);
-    }
-
-    var skip = [];
-    if (window.requirejs) {
-      require([], function() {
-      })
-    }
-    for (var i = 0; i < js_urls.length; i++) {
-      var url = js_urls[i];
-      if (skip.indexOf(url) >= 0) { on_load(); continue; }
-      var element = document.createElement('script');
-      element.onload = on_load;
-      element.onerror = on_error;
-      element.async = false;
-      element.src = url;
-      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
-      document.head.appendChild(element);
-    }
-	if (!js_urls.length) {
-      on_load()
-    }
-  };
-
-  function inject_raw_css(css) {
-    const element = document.createElement("style");
-    element.appendChild(document.createTextNode(css));
-    document.body.appendChild(element);
-  }
-
-  var js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.3.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.2.3.min.js", "https://unpkg.com/@holoviz/panel@^0.10.3/dist/panel.min.js"];
-  var css_urls = ["https://unpkg.com/@holoviz/panel@0.10.3/dist/css/alerts.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/card.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/widgets.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/markdown.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/json.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/dataframe.css"];
-
-  var inline_js = [
-    function(Bokeh) {
-      inject_raw_css("\ndiv.special_table + table, th, td {\n  border: 3px solid orange;\n}\n");
-    },
-    function(Bokeh) {
-      Bokeh.set_log_level("info");
-    },
-    function(Bokeh) {} // ensure no trailing comma for IE
-  ];
-
-  function run_inline_js() {
-    if ((root.Bokeh !== undefined) || (force === true)) {
-      for (var i = 0; i < inline_js.length; i++) {
-        inline_js[i].call(root, root.Bokeh);
-      }} else if (Date.now() < root._bokeh_timeout) {
-      setTimeout(run_inline_js, 100);
-    } else if (!root._bokeh_failed_load) {
-      console.log("Bokeh: BokehJS failed to load within specified timeout.");
-      root._bokeh_failed_load = true;
-    }
-  }
-
-  if (root._bokeh_is_loading === 0) {
-    console.debug("Bokeh: BokehJS loaded, going straight to plotting");
-    run_inline_js();
-  } else {
-    load_libs(css_urls, js_urls, function() {
-      console.debug("Bokeh: BokehJS plotting callback run at", now());
-      run_inline_js();
-    });
-  }
-}(window));</script><script type="application/javascript">
-if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
-  window.PyViz = {comms: {}, comm_status:{}, kernels:{}, receivers: {}, plot_index: []}
-}
-
-
-    function JupyterCommManager() {
-    }
-
-    JupyterCommManager.prototype.register_target = function(plot_id, comm_id, msg_handler) {
-      if (window.comm_manager || ((window.Jupyter !== undefined) && (Jupyter.notebook.kernel != null))) {
-        var comm_manager = window.comm_manager || Jupyter.notebook.kernel.comm_manager;
-        comm_manager.register_target(comm_id, function(comm) {
-          comm.on_msg(msg_handler);
-        });
-      } else if ((plot_id in window.PyViz.kernels) && (window.PyViz.kernels[plot_id])) {
-        window.PyViz.kernels[plot_id].registerCommTarget(comm_id, function(comm) {
-          comm.onMsg = msg_handler;
-        });
-      } else if (typeof google != 'undefined' && google.colab.kernel != null) {
-        google.colab.kernel.comms.registerTarget(comm_id, (comm) => {
-          var messages = comm.messages[Symbol.asyncIterator]();
-          function processIteratorResult(result) {
-            var message = result.value;
-            console.log(message)
-            var content = {data: message.data, comm_id};
-            var buffers = []
-            for (var buffer of message.buffers || []) {
-              buffers.push(new DataView(buffer))
-            }
-            var metadata = message.metadata || {};
-            var msg = {content, buffers, metadata}
-            msg_handler(msg);
-            return messages.next().then(processIteratorResult);
-          }
-          return messages.next().then(processIteratorResult);
-        })
-      }
-    }
-
-    JupyterCommManager.prototype.get_client_comm = function(plot_id, comm_id, msg_handler) {
-      if (comm_id in window.PyViz.comms) {
-        return window.PyViz.comms[comm_id];
-      } else if (window.comm_manager || ((window.Jupyter !== undefined) && (Jupyter.notebook.kernel != null))) {
-        var comm_manager = window.comm_manager || Jupyter.notebook.kernel.comm_manager;
-        var comm = comm_manager.new_comm(comm_id, {}, {}, {}, comm_id);
-        if (msg_handler) {
-          comm.on_msg(msg_handler);
-        }
-      } else if ((plot_id in window.PyViz.kernels) && (window.PyViz.kernels[plot_id])) {
-        var comm = window.PyViz.kernels[plot_id].connectToComm(comm_id);
-        comm.open();
-        if (msg_handler) {
-          comm.onMsg = msg_handler;
-        }
-      } else if (typeof google != 'undefined' && google.colab.kernel != null) {
-        var comm_promise = google.colab.kernel.comms.open(comm_id)
-        comm_promise.then((comm) => {
-          window.PyViz.comms[comm_id] = comm;
-          if (msg_handler) {
-            var messages = comm.messages[Symbol.asyncIterator]();
-            function processIteratorResult(result) {
-              var message = result.value;
-              var content = {data: message.data};
-              var metadata = message.metadata || {comm_id};
-              var msg = {content, metadata}
-              msg_handler(msg);
-              return messages.next().then(processIteratorResult);
-            }
-            return messages.next().then(processIteratorResult);
-          }
-        }) 
-        var sendClosure = (data, metadata, buffers, disposeOnDone) => {
-          return comm_promise.then((comm) => {
-            comm.send(data, metadata, buffers, disposeOnDone);
-          });
-        };
-        var comm = {
-          send: sendClosure
-        };
-      }
-      window.PyViz.comms[comm_id] = comm;
-      return comm;
-    }
-    window.PyViz.comm_manager = new JupyterCommManager();
-    
-
-
-var JS_MIME_TYPE = 'application/javascript';
-var HTML_MIME_TYPE = 'text/html';
-var EXEC_MIME_TYPE = 'application/vnd.holoviews_exec.v0+json';
-var CLASS_NAME = 'output';
-
-/**
- * Render data to the DOM node
- */
-function render(props, node) {
-  var div = document.createElement("div");
-  var script = document.createElement("script");
-  node.appendChild(div);
-  node.appendChild(script);
-}
-
-/**
- * Handle when a new output is added
- */
-function handle_add_output(event, handle) {
-  var output_area = handle.output_area;
-  var output = handle.output;
-  if ((output.data == undefined) || (!output.data.hasOwnProperty(EXEC_MIME_TYPE))) {
-    return
-  }
-  var id = output.metadata[EXEC_MIME_TYPE]["id"];
-  var toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
-  if (id !== undefined) {
-    var nchildren = toinsert.length;
-    var html_node = toinsert[nchildren-1].children[0];
-    html_node.innerHTML = output.data[HTML_MIME_TYPE];
-    var scripts = [];
-    var nodelist = html_node.querySelectorAll("script");
-    for (var i in nodelist) {
-      if (nodelist.hasOwnProperty(i)) {
-        scripts.push(nodelist[i])
-      }
-    }
-
-    scripts.forEach( function (oldScript) {
-      var newScript = document.createElement("script");
-      var attrs = [];
-      var nodemap = oldScript.attributes;
-      for (var j in nodemap) {
-        if (nodemap.hasOwnProperty(j)) {
-          attrs.push(nodemap[j])
-        }
-      }
-      attrs.forEach(function(attr) { newScript.setAttribute(attr.name, attr.value) });
-      newScript.appendChild(document.createTextNode(oldScript.innerHTML));
-      oldScript.parentNode.replaceChild(newScript, oldScript);
-    });
-    if (JS_MIME_TYPE in output.data) {
-      toinsert[nchildren-1].children[1].textContent = output.data[JS_MIME_TYPE];
-    }
-    output_area._hv_plot_id = id;
-    if ((window.Bokeh !== undefined) && (id in Bokeh.index)) {
-      window.PyViz.plot_index[id] = Bokeh.index[id];
-    } else {
-      window.PyViz.plot_index[id] = null;
-    }
-  } else if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
-    var bk_div = document.createElement("div");
-    bk_div.innerHTML = output.data[HTML_MIME_TYPE];
-    var script_attrs = bk_div.children[0].attributes;
-    for (var i = 0; i < script_attrs.length; i++) {
-      toinsert[toinsert.length - 1].childNodes[1].setAttribute(script_attrs[i].name, script_attrs[i].value);
-    }
-    // store reference to server id on output_area
-    output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
-  }
-}
-
-/**
- * Handle when an output is cleared or removed
- */
-function handle_clear_output(event, handle) {
-  var id = handle.cell.output_area._hv_plot_id;
-  var server_id = handle.cell.output_area._bokeh_server_id;
-  if (((id === undefined) || !(id in PyViz.plot_index)) && (server_id !== undefined)) { return; }
-  var comm = window.PyViz.comm_manager.get_client_comm("hv-extension-comm", "hv-extension-comm", function () {});
-  if (server_id !== null) {
-    comm.send({event_type: 'server_delete', 'id': server_id});
-    return;
-  } else if (comm !== null) {
-    comm.send({event_type: 'delete', 'id': id});
-  }
-  delete PyViz.plot_index[id];
-  if ((window.Bokeh !== undefined) & (id in window.Bokeh.index)) {
-    var doc = window.Bokeh.index[id].model.document
-    doc.clear();
-    const i = window.Bokeh.documents.indexOf(doc);
-    if (i > -1) {
-      window.Bokeh.documents.splice(i, 1);
-    }
-  }
-}
-
-/**
- * Handle kernel restart event
- */
-function handle_kernel_cleanup(event, handle) {
-  delete PyViz.comms["hv-extension-comm"];
-  window.PyViz.plot_index = {}
-}
-
-/**
- * Handle update_display_data messages
- */
-function handle_update_output(event, handle) {
-  handle_clear_output(event, {cell: {output_area: handle.output_area}})
-  handle_add_output(event, handle)
-}
-
-function register_renderer(events, OutputArea) {
-  function append_mime(data, metadata, element) {
-    // create a DOM node to render to
-    var toinsert = this.create_output_subarea(
-    metadata,
-    CLASS_NAME,
-    EXEC_MIME_TYPE
-    );
-    this.keyboard_manager.register_events(toinsert);
-    // Render to node
-    var props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
-    render(props, toinsert[0]);
-    element.append(toinsert);
-    return toinsert
-  }
-
-  events.on('output_added.OutputArea', handle_add_output);
-  events.on('output_updated.OutputArea', handle_update_output);
-  events.on('clear_output.CodeCell', handle_clear_output);
-  events.on('delete.Cell', handle_clear_output);
-  events.on('kernel_ready.Kernel', handle_kernel_cleanup);
-
-  OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
-    safe: true,
-    index: 0
-  });
-}
-
-if (window.Jupyter !== undefined) {
-  try {
-    var events = require('base/js/events');
-    var OutputArea = require('notebook/js/outputarea').OutputArea;
-    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
-      register_renderer(events, OutputArea);
-    }
-  } catch(err) {
-  }
-}
-</script></div>
-</div>
-<div class="special_table"></div>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>click on any of the image below</p></th>
-<th class="head"><p>To come back to this image gallery, on the top right corner under contents, click on “Outline Gallery”</p></th>
+<tr class="row-odd"><th class="text-align:right head"><p>click on</p></th>
+<th class="text-align:left head"><p>any image</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference external" href="#501"><img alt="alt" src="../_images/text.png" /></a></p></td>
-<td><p><a class="reference external" href="#502"><img alt="alt" src="../_images/csv.png" /></a></p></td>
+<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#2"><img alt="alt" src="../_images/1a.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#3"><img alt="alt" src="../_images/1b.png" /></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="#503"><img alt="alt" src="../_images/json.png" /></a></p></td>
-<td><p><a class="reference external" href="#504"><img alt="alt" src="../_images/parquet.png" /></a></p></td>
+<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#4"><img alt="alt" src="../_images/1c.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#5"><img alt="alt" src="../_images/1d.png" /></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference external" href="#505"><img alt="alt" src="../_images/orc.png" /></a></p></td>
-<td><p><a class="reference external" href="#506"><img alt="alt" src="../_images/avro.png" /></a></p></td>
+<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#6"><img alt="alt" src="../_images/1e.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#7"><img alt="alt" src="../_images/1f.png" /></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="#507"><img alt="alt" src="../_images/binary.png" /></a></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#8"><img alt="alt" src="../_images/1g.png" /></a></p></td>
+<td class="text-align:left"><p></p></td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="test123">
-<h1>test123<a class="headerlink" href="#test123" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference external" href="#12451"><img src="img/chapter3/text.png" /></a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## [![alt text](img/chapter2/pd_spark.png &quot;Title&quot;)](#23)</span>
-<span class="c1">#***</span>
-</pre></div>
-</div>
-</div>
-</div>
 <p><a id='1'></a></p>
-<div class="section" id="what-is-spark-dataframe">
-<h2>1. What is spark dataframe?<a class="headerlink" href="#what-is-spark-dataframe" title="Permalink to this headline">¶</a></h2>
-<p>A DataFrame simply represents a table of data with rows and columns. A simple analogy would be a spreadsheet with named columns.</p>
-<p>Spark Data Frame is a distributed collection of data organized into named columns. It can be constructed from a wide array of sources such as: structured data files, tables in Hive, external databases, or existing RDD, Lists, Pandas data frame.</p>
-<div class="figure align-center">
-<img alt="../_images/spark_dataframe.png" src="../_images/spark_dataframe.png" />
 </div>
+<div class="section" id="various-data-sources">
+<h2>1. Various data sources<a class="headerlink" href="#various-data-sources" title="Permalink to this headline">¶</a></h2>
+<p>As a general computing engine, Spark can process data from various data management/storage systems, including HDFS, Hive, Cassandra and Kafka. For flexibility and high throughput, Spark defines the Data Source API, which is an abstraction of the storage layer. The Data Source API has two requirements.</p>
+<ol class="simple">
+<li><p>Generality: support reading/writing most data management/storage systems.</p></li>
+<li><p>Flexibility: customize and optimize the read and write paths for different systems based on their capabilities.</p></li>
+</ol>
+<div class="figure align-center">
+<img alt="chapters/img/chapter2/datasources.png" src="chapters/img/chapter2/datasources.png" />
+</div>
+<p><a id='2'></a></p>
+<div class="section" id="a-text-file">
+<h3>1a. Text file<a class="headerlink" href="#a-text-file" title="Permalink to this headline">¶</a></h3>
+<p>A text file is a kind of computer file that is structured as a sequence of lines of electronic text.
+Because of their simplicity, text files are commonly used for storage of information. They avoid some of the problems encountered with other file formats, such as  padding bytes, or differences in the number of bytes in a machine word. Further, when data corruption occurs in a text file, it is often easier to recover and continue processing the remaining contents.
+A disadvantage of text files is that they usually have a low entropy, meaning that the information occupies more storage than is strictly necessary.</p>
+<p>A simple text file may need no additional metadata (other than knowledge of its character set) to assist the reader in interpretation.</p>
+<p><a id='3'></a></p>
+</div>
+<div class="section" id="b-csv-file">
+<h3>1b. CSV file<a class="headerlink" href="#b-csv-file" title="Permalink to this headline">¶</a></h3>
+<p>A comma-separated values (CSV) file is a delimited text file that uses a comma to separate values. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format. A CSV file typically stores tabular data (numbers and text) in plain text, in which case each line will have the same number of fields.</p>
+<p><a id='4'></a></p>
+</div>
+<div class="section" id="c-json-file">
+<h3>1c.JSON file<a class="headerlink" href="#c-json-file" title="Permalink to this headline">¶</a></h3>
+<p>JSON (JavaScript Object Notation) is an open standard file format, and data interchange format, that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and array data types (or any other serializable value</p>
+<p><a id='5'></a></p>
+</div>
+<div class="section" id="d-parquet-file">
+<h3>1d. Parquet file<a class="headerlink" href="#d-parquet-file" title="Permalink to this headline">¶</a></h3>
+<p>Apache Parquet is a free and open-source column-oriented data storage format of the Apache Hadoop ecosystem. It is similar to the other columnar-storage file formats available in Hadoop namely RCFile and ORC. It is compatible with most of the data processing frameworks in the Hadoop environment. It provides efficient data compression and encoding schemes with enhanced performance to handle complex data in bulk.</p>
+<p>Parquet uses the record shredding and assembly algorithm which is superior to simple flattening of nested namespaces. Parquet is optimized to work with complex data in bulk and features different ways for efficient data compression and encoding types.  This approach is best especially for those queries that need to read certain columns from a large table. Parquet can only read the needed columns therefore greatly minimizing the IO.</p>
+<p>Advantages of Storing Data in a Columnar Format:</p>
+<ul class="simple">
+<li><p>Columnar storage like Apache Parquet is designed to bring efficiency compared to row-based files like CSV. When querying, columnar storage you can skip over the non-relevant data very quickly. As a result, aggregation queries are less time consuming compared to row-oriented databases. This way of storage has translated into hardware savings and minimized latency for accessing data.</p></li>
+<li><p>Apache Parquet is built from the ground up. Hence it is able to support advanced nested data structures. The layout of Parquet data files is optimized for queries that process large volumes of data, in the gigabyte range for each individual file.</p></li>
+<li><p>Parquet is built to support flexible compression options and efficient encoding schemes. As the data type for each column is quite similar, the compression of each column is straightforward (which makes queries even faster). Data can be compressed by using one of the several codecs available; as a result, different data files can be compressed differently.</p></li>
+</ul>
+<p>The values in each column are physically stored in contiguous memory locations and this columnar storage provides the following benefits:</p>
+<ul class="simple">
+<li><p>Column-wise compression is efficient and saves storage space</p></li>
+<li><p>Compression techniques specific to a type can be applied as the column values tend to be of the same type</p></li>
+<li><p>Queries that fetch specific column values need not read the entire row data thus improving performance</p></li>
+<li><p>Different encoding techniques can be applied to different columns</p></li>
+</ul>
+<p><a id='6'></a></p>
+</div>
+<div class="section" id="e-orc-file">
+<h3>1e. ORC file<a class="headerlink" href="#e-orc-file" title="Permalink to this headline">¶</a></h3>
+<p>Apache ORC (Optimized Row Columnar) is a free and open-source column-oriented data storage format of the Apache Hadoop ecosystem. It is similar to the other columnar-storage file formats available in the Hadoop ecosystem such as RCFile and Parquet. It is compatible with most of the data processing frameworks in the Hadoop environment.</p>
+<p>ORC is a self-describing type-aware columnar file format designed for Hadoop workloads. It is optimized for large streaming reads, but with integrated support for finding required rows quickly. Storing data in a columnar format lets the reader read, decompress, and process only the values that are required for the current query. Because ORC files are type-aware, the writer chooses the most appropriate encoding for the type and builds an internal index as the file is written. Predicate pushdown uses those indexes to determine which stripes in a file need to be read for a particular query and the row indexes can narrow the search to a particular set of 10,000 rows. ORC supports the complete set of types in Hive, including the complex types: structs, lists, maps, and unions.</p>
+<p>The ORC file format provides the following advantages:</p>
+<ul class="simple">
+<li><p>Efficient compression: Stored as columns and compressed, which leads to smaller disk reads. The columnar format is also ideal for vectorization optimizations in Tez.</p></li>
+<li><p>Fast reads: ORC has a built-in index, min/max values, and other aggregates that cause entire stripes to be skipped during reads. In addition, predicate pushdown pushes filters into reads so that minimal rows are read. And Bloom filters further reduce the number of rows that are returned.</p></li>
+<li><p>Proven in large-scale deployments: Facebook uses the ORC file format for a 300+ PB deployment.</p></li>
+</ul>
+<p><a id='7'></a></p>
+</div>
+<div class="section" id="e-avro-file">
+<h3>1e. AVRO file<a class="headerlink" href="#e-avro-file" title="Permalink to this headline">¶</a></h3>
+<p>Avro is a row-oriented remote procedure call and data serialization framework developed within Apache’s Hadoop project.</p>
+<p>It uses JSON for defining data types and protocols, and serializes data in a compact binary format. Its primary use is in Apache Hadoop, where it can provide both a serialization format for persistent data, and a wire format for communication between Hadoop nodes, and from client programs to the Hadoop services.</p>
+<p>Avro uses a schema to structure the data that is being encoded. It has two different types of schema languages; one for human editing (Avro IDL) and another which is more machine-readable based on JSON.</p>
+<p>The Avro data source supports:</p>
+<ul class="simple">
+<li><p>Schema conversion: Automatic conversion between Apache Spark SQL and Avro records.</p></li>
+<li><p>Partitioning: Easily reading and writing partitioned data without any extra configuration.</p></li>
+<li><p>Compression: Compression to use when writing Avro out to disk. The supported types are uncompressed, snappy, and deflate.</p></li>
+<li><p>Record names: Record name and namespace by passing a map of parameters with recordName and recordNamespace.</p></li>
+</ul>
+<p><a id='8'></a></p>
+</div>
+<div class="section" id="f-whole-binary-file">
+<h3>1f. Whole Binary file<a class="headerlink" href="#f-whole-binary-file" title="Permalink to this headline">¶</a></h3>
+<p>A binary file is a computer file that is not a text file.</p>
+<p>Binary files are usually thought of as being a sequence of bytes, which means the binary digits (bits) are grouped in eights.</p>
+<p>Binary files typically contain bytes that are intended to be interpreted as something other than text characters. Compiled computer programs are typical examples; indeed, compiled applications are sometimes referred to, particularly by programmers, as binaries. But binary files can also mean that they contain images, sounds, compressed versions of other files, etc. – in short, any type of file content whatsoever</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#alist = [(John	180	True	1.70	1960-01-01	{“home”: 123456789, “office”:234567567}	[“blue”,”red”,”green”]	]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#./bin/spark-submit --packages org.apache.spark:spark-avro_2.12:3.0.2 ...</span>
 <span class="kn">import</span> <span class="nn">pyspark</span>
 <span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
 <span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span> \
     <span class="o">.</span><span class="n">builder</span> \
     <span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s2">&quot;Python Spark SQL basic example&quot;</span><span class="p">)</span> \
-    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.some.config.option&quot;</span><span class="p">,</span> <span class="s2">&quot;some-value&quot;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s1">&#39;spark.jars.packages&#39;</span><span class="p">,</span> <span class="s1">&#39;org.apache.spark:spark-avro_2.12:3.0.2&#39;</span><span class="p">)</span>\
+    <span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="mi">180</span><span class="p">,</span><span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s2">&quot;1960-01-01&quot;</span><span class="p">,</span> <span class="s1">&#39;{“home”: 123456789, “office”:234567567}&#39;</span><span class="p">),])</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>        
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---+----+---+----------+---------------------------------------+
+|_1  |_2 |_3  |_4 |_5        |_6                                     |
++----+---+----+---+----------+---------------------------------------+
+|John|180|true|1.7|1960-01-01|{“home”: 123456789, “office”:234567567}|
++----+---+----+---+----------+---------------------------------------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id='9'></a></p>
+</div>
+</div>
+<div class="section" id="reading-writing-data-from-various-data-sources">
+<h2>2. Reading &amp; Writing data from various data sources<a class="headerlink" href="#reading-writing-data-from-various-data-sources" title="Permalink to this headline">¶</a></h2>
+<p><a id='10'></a></p>
+<div class="section" id="a-reading-from-text-file-into-spark-data-frame">
+<h3>2a. Reading from text file into spark data frame<a class="headerlink" href="#a-reading-from-text-file-into-spark-data-frame" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-syntax admonition">
+<p class="admonition-title">Syntax</p>
+<p><b>text(paths, wholetext=False, lineSep=None, pathGlobFilter=None, recursiveFileLookup=None)</b>
+Loads text files and returns a DataFrame whose schema starts with a string column named “value”, and followed by partitioned columns if there are any. The text files must be encoded as UTF-8.
+By default, each line in the text file is a new row in the resulting DataFrame.</p>
+<p><b>Parameters</b>:</p>
+<ul class="simple">
+<li><p>paths – string, or list of strings, for input path(s).</p></li>
+<li><p>wholetext – if true, read each file from input path(s) as a single row.</p></li>
+<li><p>lineSep – defines the line separator that should be used for parsing.
+If None is set, it covers all \r, \r\n and \n.</p></li>
+<li><p>pathGlobFilter – an optional glob pattern to only include files with paths matching the pattern. The syntax follows org.apache.hadoop.fs.GlobFilter. It does not change the behavior of partition discovery.</p></li>
+<li><p>recursiveFileLookup – recursively scan a directory for files. Using this option disables partition discovery.</p></li>
+</ul>
+</div>
+<p><b>Input: Text File</b></p>
+<div class="figure align-center">
+<img alt="../_images/2a.png" src="../_images/2a.png" />
+</div>
+<p><b>Input: Spark data frame</b></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_text</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;data/text/sample.txt&quot;</span><span class="p">)</span>
+<span class="n">df_text</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|value                                                                                                                                                                |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Apache Spark is a unified analytics engine for large-scale data processing.                                                                                          |
+|Apache Spark achieves high performance for both batch and streaming data, using a state-of-the-art DAG scheduler, a query optimizer, and a physical execution engine.|
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="saving-the-spark-data-frame-content-into-a-text-file">
+<h4>Saving the spark data frame content into a text file<a class="headerlink" href="#saving-the-spark-data-frame-content-into-a-text-file" title="Permalink to this headline">¶</a></h4>
+<div class="admonition-syntax admonition">
+<p class="admonition-title">Syntax</p>
+<p><b>text(path, compression=None, lineSep=None)</b>
+Saves the content of the DataFrame in a text file at the specified path. The text files will be encoded as UTF-8.
+The DataFrame must have only one column that is of string type. Each row becomes a new line in the output file.</p>
+<p><b>Parameters</b>:</p>
+<ul class="simple">
+<li><p>path – the path in any Hadoop supported file system</p></li>
+<li><p>compression – compression codec to use when saving to file. This can be one of the known case-insensitive shorten names (none, bzip2, gzip, lz4, snappy and deflate).</p></li>
+<li><p>lineSep – defines the line separator that should be used for writing.
+If None is set, it uses the default value, \n.</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_text</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">&quot;overwrite&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;data/text/sample_write&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To verify the save, let us read the file into data frame</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="s2">&quot;data/text/sample_write&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|value                                                                                                                                                                |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Apache Spark is a unified analytics engine for large-scale data processing.                                                                                          |
+|Apache Spark achieves high performance for both batch and streaming data, using a state-of-the-art DAG scheduler, a query optimizer, and a physical execution engine.|
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id='11'></a></p>
+</div>
+</div>
+<div class="section" id="a-reading-from-csv-file-into-spark-data-frame">
+<h3>2a. Reading from CSV file into spark data frame<a class="headerlink" href="#a-reading-from-csv-file-into-spark-data-frame" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-syntax admonition">
+<p class="admonition-title">Syntax</p>
+<p><b>csv(path, schema=None, sep=None, encoding=None, quote=None, escape=None, comment=None, header=None, inferSchema=None, ignoreLeadingWhiteSpace=None, ignoreTrailingWhiteSpace=None, nullValue=None, nanValue=None, positiveInf=None, negativeInf=None, dateFormat=None, timestampFormat=None, maxColumns=None, maxCharsPerColumn=None, maxMalformedLogPerPartition=None, mode=None, columnNameOfCorruptRecord=None, multiLine=None, charToEscapeQuoteEscaping=None, samplingRatio=None, enforceSchema=None, emptyValue=None, locale=None, lineSep=None, pathGlobFilter=None, recursiveFileLookup=None)</b></p>
+<p>Loads a CSV file and returns the result as a DataFrame.</p>
+<p>This function will go through the input once to determine the input schema if inferSchema is enabled. To avoid going through the entire data once, disable inferSchema option or specify the schema explicitly using schema.</p>
+<p><b>Parameters</b>:</p>
+<ul class="simple">
+<li><p>path – string, or list of strings, for input path(s), or RDD of Strings storing CSV rows.</p></li>
+<li><p>schema – an optional pyspark.sql.types.StructType for the input schema or a DDL-formatted string (For example col0 INT, col1 DOUBLE).</p></li>
+<li><p>sep – sets a separator (one or more characters) for each field and value. If None is set, it uses the default value, ,.</p></li>
+<li><p>encoding – decodes the CSV files by the given encoding type. If None is set, it uses the default value, UTF-8.</p></li>
+<li><p>quote – sets a single character used for escaping quoted values where the separator can be part of the value. If None is set, it uses the default value, “. If you would like to turn off quotations, you need to set an empty string.</p></li>
+<li><p>escape – sets a single character used for escaping quotes inside an already quoted value. If None is set, it uses the default value, .</p></li>
+<li><p>comment – sets a single character used for skipping lines beginning with this character. By default (None), it is disabled.</p></li>
+<li><p>header – uses the first line as names of columns. If None is set, it uses the default value, false. .. note:: if the given path is a RDD of Strings, this header option will remove all lines same with the header if exists.</p></li>
+<li><p>inferSchema – infers the input schema automatically from data. It requires one extra pass over the data. If None is set, it uses the default value, false.</p></li>
+<li><p>enforceSchema – If it is set to true, the specified or inferred schema will be forcibly applied to datasource files, and headers in CSV files will be ignored. If the option is set to false, the schema will be validated against all headers in CSV files or the first header in RDD if the header option is set to true. Field names in the schema and column names in CSV headers are checked by their positions taking into account spark.sql.caseSensitive. If None is set, true is used by default. Though the default value is true, it is recommended to disable the enforceSchema option to avoid incorrect results.</p></li>
+<li><p>ignoreLeadingWhiteSpace – A flag indicating whether or not leading whitespaces from values being read should be skipped. If None is set, it uses the default value, false.</p></li>
+<li><p>ignoreTrailingWhiteSpace – A flag indicating whether or not trailing whitespaces from values being read should be skipped. If None is set, it uses the default value, false.</p></li>
+<li><p>nullValue – sets the string representation of a null value. If None is set, it uses the default value, empty string. Since 2.0.1, this nullValue param applies to all supported types including the string type.</p></li>
+<li><p>nanValue – sets the string representation of a non-number value. If None is set, it uses the default value, NaN.</p></li>
+<li><p>positiveInf – sets the string representation of a positive infinity value. If None is set, it uses the default value, Inf.</p></li>
+<li><p>negativeInf – sets the string representation of a negative infinity value. If None is set, it uses the default value, Inf.</p></li>
+<li><p>dateFormat – sets the string that indicates a date format. Custom date formats follow the formats at datetime pattern. This applies to date type. If None is set, it uses the default value, yyyy-MM-dd.
+timestampFormat – sets the string that indicates a timestamp format. Custom date formats follow the formats at datetime pattern. This applies to timestamp type. If None is set, it uses the default value, yyyy-MM-dd’T’HH:mm:ss[.SSS][XXX].</p></li>
+<li><p>maxColumns – defines a hard limit of how many columns a record can have. If None is set, it uses the default value, 20480.</p></li>
+<li><p>maxCharsPerColumn – defines the maximum number of characters allowed for any given value being read. If None is set, it uses the default value, -1 meaning unlimited length.</p></li>
+<li><p>maxMalformedLogPerPartition – this parameter is no longer used since Spark 2.2.0. If specified, it is ignored.</p></li>
+<li><p>mode –
+allows a mode for dealing with corrupt records during parsing. If None is
+set, it uses the default value, PERMISSIVE. Note that Spark tries to parse only required columns in CSV under column pruning. Therefore, corrupt records can be different based on required set of fields. This behavior can be controlled by spark.sql.csv.parser.columnPruning.enabled (enabled by default).
+PERMISSIVE: when it meets a corrupted record, puts the malformed string into a field configured by columnNameOfCorruptRecord, and sets malformed fields to null. To keep corrupt records, an user can set a string type field named columnNameOfCorruptRecord in an user-defined schema. If a schema does not have the field, it drops corrupt records during parsing. A record with less/more tokens than schema is not a corrupted record to CSV. When it meets a record having fewer tokens than the length of the schema, sets null to extra fields. When the record has more tokens than the length of the schema, it drops extra tokens.
+DROPMALFORMED: ignores the whole corrupted records.
+FAILFAST: throws an exception when it meets corrupted records.
+columnNameOfCorruptRecord – allows renaming the new field having malformed string created by PERMISSIVE mode. This overrides spark.sql.columnNameOfCorruptRecord. If None is set, it uses the value specified in spark.sql.columnNameOfCorruptRecord.</p></li>
+<li><p>multiLine – parse records, which may span multiple lines. If None is set, it uses the default value, false.
+charToEscapeQuoteEscaping – sets a single character used for escaping the escape for the quote character. If None is set, the default value is escape character when escape and quote characters are different, \0 otherwise.</p></li>
+<li><p>samplingRatio – defines fraction of rows used for schema inferring. If None is set, it uses the default value, 1.0.</p></li>
+<li><p>emptyValue – sets the string representation of an empty value. If None is set, it uses the default value, empty string.</p></li>
+<li><p>locale – sets a locale as language tag in IETF BCP 47 format. If None is set, it uses the default value, en-US. For instance, locale is used while parsing dates and timestamps.</p></li>
+<li><p>lineSep – defines the line separator that should be used for parsing. If None is set, it covers all \r, \r\n and \n. Maximum length is 1 character.</p></li>
+<li><p>pathGlobFilter – an optional glob pattern to only include files with paths matching the pattern. The syntax follows org.apache.hadoop.fs.GlobFilter. It does not change the behavior of partition discovery.</p></li>
+<li><p>recursiveFileLookup – recursively scan a directory for files. Using this option disables partition discovery.</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_csv</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s1">&#39;/Users/deepak/Documents/sparkbook/chapters/data/people.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_csv</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+------+------+------+----------+-------------------------------------+-------------------+-----------------------------------------------------------------+
+|name|weight|smoker|height|birthdate |phone_nos                            |favorite_colors    |address                                                          |
++----+------+------+------+----------+-------------------------------------+-------------------+-----------------------------------------------------------------+
+|john|180   |true  |1.7   |1960-01-01|{&quot;office&quot;:123456789,&quot;home&quot;:223456789}|[&quot;blue&quot;,&quot;red&quot;]     |{&quot;houseno&quot;:100,&quot;street&quot;:&quot;street1&quot;,&quot;city&quot;:&quot;city1&quot;,&quot;zipcode&quot;:12345}|
+|tony|180   |true  |1.8   |1990-01-01|{&quot;office&quot;:223456789,&quot;home&quot;:323456789}|[&quot;green&quot;,&quot;purple&quot;] |{&quot;houseno&quot;:200,&quot;street&quot;:&quot;street2&quot;,&quot;city&quot;:&quot;city2&quot;,&quot;zipcode&quot;:22345}|
+|mike|180   |true  |1.65  |1980-01-01|{&quot;office&quot;:323456789,&quot;home&quot;:423456789}|[&quot;yellow&quot;,&quot;orange&quot;]|{&quot;houseno&quot;:300,&quot;street&quot;:&quot;street3&quot;,&quot;city&quot;:&quot;city3&quot;,&quot;zipcode&quot;:32345}|
++----+------+------+------+----------+-------------------------------------+-------------------+-----------------------------------------------------------------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="saving-the-spark-data-frame-content-into-a-csv-file">
+<h4>Saving the spark data frame content into a CSV file<a class="headerlink" href="#saving-the-spark-data-frame-content-into-a-csv-file" title="Permalink to this headline">¶</a></h4>
+<div class="admonition-syntax admonition">
+<p class="admonition-title">Syntax</p>
+<p><b>csv(path, mode=None, compression=None, sep=None, quote=None, escape=None, header=None, nullValue=None, escapeQuotes=None, quoteAll=None, dateFormat=None, timestampFormat=None, ignoreLeadingWhiteSpace=None, ignoreTrailingWhiteSpace=None, charToEscapeQuoteEscaping=None, encoding=None, emptyValue=None, lineSep=None)</b>
+Saves the content of the DataFrame in CSV format at the specified path.</p>
+<p><b>Parameters</b>:</p>
+<ul class="simple">
+<li><p>path – the path in any Hadoop supported file system</p></li>
+<li><p>mode –
+specifies the behavior of the save operation when data already exists.
+append: Append contents of this DataFrame to existing data.
+overwrite: Overwrite existing data.
+ignore: Silently ignore this operation if data already exists.
+error or errorifexists (default case): Throw an exception if data already
+exists.</p></li>
+<li><p>compression – compression codec to use when saving to file. This can be one of the known case-insensitive shorten names (none, bzip2, gzip, lz4, snappy and deflate).</p></li>
+<li><p>sep – sets a separator (one or more characters) for each field and value. If None is set, it uses the default value, ,.</p></li>
+<li><p>quote – sets a single character used for escaping quoted values where the separator can be part of the value. If None is set, it uses the default value, “. If an empty string is set, it uses u0000 (null character).</p></li>
+<li><p>escape – sets a single character used for escaping quotes inside an already quoted value. If None is set, it uses the default value, \</p></li>
+<li><p>escapeQuotes – a flag indicating whether values containing quotes should always be enclosed in quotes. If None is set, it uses the default value true, escaping all values containing a quote character.</p></li>
+<li><p>quoteAll – a flag indicating whether all values should always be enclosed in quotes. If None is set, it uses the default value false, only escaping values containing a quote character.</p></li>
+<li><p>header – writes the names of columns as the first line. If None is set, it uses the default value, false.</p></li>
+<li><p>nullValue – sets the string representation of a null value. If None is set, it uses the default value, empty string.</p></li>
+<li><p>dateFormat – sets the string that indicates a date format. Custom date formats follow the formats at datetime pattern. This applies to date type. If None is set, it uses the default value, yyyy-MM-dd.</p></li>
+<li><p>timestampFormat – sets the string that indicates a timestamp format. Custom date formats follow the formats at datetime pattern. This applies to timestamp type. If None is set, it uses the default value, yyyy-MM-dd’T’HH:mm:ss[.SSS][XXX].</p></li>
+<li><p>ignoreLeadingWhiteSpace – a flag indicating whether or not leading whitespaces from values being written should be skipped. If None is set, it uses the default value, true.</p></li>
+<li><p>ignoreTrailingWhiteSpace – a flag indicating whether or not trailing whitespaces from values being written should be skipped. If None is set, it uses the default value, true.</p></li>
+<li><p>charToEscapeQuoteEscaping – sets a single character used for escaping the escape for the quote character. If None is set, the default value is escape character when escape and quote characters are different, \0 otherwise..</p></li>
+<li><p>encoding – sets the encoding (charset) of saved csv files. If None is set, the default UTF-8 charset will be used.</p></li>
+<li><p>emptyValue – sets the string representation of an empty value. If None is set, it uses the default value, “”.</p></li>
+<li><p>lineSep – defines the line separator that should be used for writing. If None is set, it uses the default value, \n. Maximum length is 1 character.</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_csv</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">&quot;data/people_csv_write&quot;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;overwrite&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s2">&quot;data/people_csv_write&quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+------+------+------+----------+--------------------+-------------------+--------------------+
+|name|weight|smoker|height| birthdate|           phone_nos|    favorite_colors|             address|
++----+------+------+------+----------+--------------------+-------------------+--------------------+
+|john|   180|  true|   1.7|1960-01-01|{&quot;office&quot;:1234567...|     [&quot;blue&quot;,&quot;red&quot;]|{&quot;houseno&quot;:100,&quot;s...|
+|tony|   180|  true|   1.8|1990-01-01|{&quot;office&quot;:2234567...| [&quot;green&quot;,&quot;purple&quot;]|{&quot;houseno&quot;:200,&quot;s...|
+|mike|   180|  true|  1.65|1980-01-01|{&quot;office&quot;:3234567...|[&quot;yellow&quot;,&quot;orange&quot;]|{&quot;houseno&quot;:300,&quot;s...|
++----+------+------+------+----------+--------------------+-------------------+--------------------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id='12'></a></p>
+</div>
+</div>
+<div class="section" id="a-reading-from-json-file-into-spark-data-frame">
+<h3>2a. Reading from JSON file into spark data frame<a class="headerlink" href="#a-reading-from-json-file-into-spark-data-frame" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-syntax admonition">
+<p class="admonition-title">Syntax</p>
+<p><b>json(path, schema=None, primitivesAsString=None, prefersDecimal=None, allowComments=None, allowUnquotedFieldNames=None, allowSingleQuotes=None, allowNumericLeadingZero=None, allowBackslashEscapingAnyCharacter=None, mode=None, columnNameOfCorruptRecord=None, dateFormat=None, timestampFormat=None, multiLine=None, allowUnquotedControlChars=None, lineSep=None, samplingRatio=None, dropFieldIfAllNull=None, encoding=None, locale=None, pathGlobFilter=None, recursiveFileLookup=None)
+</b>
+Loads JSON files and returns the results as a DataFrame.
+JSON Lines (newline-delimited JSON) is supported by default. For JSON (one record per file), set the multiLine parameter to true.</p>
+<p><b>Parameters</b>:</p>
+<ul class="simple">
+<li><p>path – string represents path to the JSON dataset, or a list of paths, or RDD of Strings storing JSON objects.</p></li>
+<li><p>schema – an optional pyspark.sql.types.StructType for the input schema or a DDL-formatted string (For example col0 INT, col1 DOUBLE).</p></li>
+<li><p>primitivesAsString – infers all primitive values as a string type. If None is set, it uses the default value, false.</p></li>
+<li><p>prefersDecimal – infers all floating-point values as a decimal type. If the values do not fit in decimal, then it infers them as doubles. If None is set, it uses the default value, false.</p></li>
+<li><p>allowComments – ignores Java/C++ style comment in JSON records. If None is set, it uses the default value, false.</p></li>
+<li><p>allowUnquotedFieldNames – allows unquoted JSON field names. If None is set, it uses the default value, false.</p></li>
+<li><p>allowSingleQuotes – allows single quotes in addition to double quotes. If None is set, it uses the default value, true.</p></li>
+<li><p>allowNumericLeadingZero – allows leading zeros in numbers (e.g. 00012). If None is set, it uses the default value, false.</p></li>
+<li><p>allowBackslashEscapingAnyCharacter – allows accepting quoting of all character using backslash quoting mechanism. If None is set, it uses the default value, false.</p></li>
+<li><p>mode –
+allows a mode for dealing with corrupt records during parsing. If None is
+set, it uses the default value, PERMISSIVE.
+PERMISSIVE: when it meets a corrupted record, puts the malformed string into a field configured by columnNameOfCorruptRecord, and sets malformed fields to null. To keep corrupt records, an user can set a string type field named columnNameOfCorruptRecord in an user-defined schema. If a schema does not have the field, it drops corrupt records during parsing. When inferring a schema, it implicitly adds a columnNameOfCorruptRecord field in an output schema.
+DROPMALFORMED: ignores the whole corrupted records.
+FAILFAST: throws an exception when it meets corrupted records.</p></li>
+<li><p>columnNameOfCorruptRecord – allows renaming the new field having malformed string created by PERMISSIVE mode. This overrides spark.sql.columnNameOfCorruptRecord. If None is set, it uses the value specified in spark.sql.columnNameOfCorruptRecord.</p></li>
+<li><p>dateFormat – sets the string that indicates a date format. Custom date formats follow the formats at datetime pattern. This applies to date type. If None is set, it uses the default value, yyyy-MM-dd.</p></li>
+<li><p>timestampFormat – sets the string that indicates a timestamp format. Custom date formats follow the formats at datetime pattern. This applies to timestamp type. If None is set, it uses the default value, yyyy-MM-dd’T’HH:mm:ss[.SSS][XXX].</p></li>
+<li><p>multiLine – parse one record, which may span multiple lines, per file. If None is set, it uses the default value, false.</p></li>
+<li><p>allowUnquotedControlChars – allows JSON Strings to contain unquoted control characters (ASCII characters with value less than 32, including tab and line feed characters) or not.
+encoding – allows to forcibly set one of standard basic or extended encoding for the JSON files. For example UTF-16BE, UTF-32LE. If None is set, the encoding of input JSON will be detected automatically when the multiLine option is set to true.</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jsonStrings</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;{&quot;name&quot;:&quot;Yin&quot;,&quot;age&quot;:45,&quot;smoker&quot;: true,&quot;test&quot;:34, &quot;address&quot;:{&quot;city&quot;:&quot;Columbus&quot;,&quot;state&quot;:&quot;Ohio&quot;},&quot;favorite_colors&quot;: [&quot;blue&quot;,&quot;green&quot;] }&#39;</span><span class="p">,]</span>
+<span class="n">otherPeopleRDD</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">sparkContext</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">jsonStrings</span><span class="p">)</span>
+<span class="n">otherPeople</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="n">otherPeopleRDD</span><span class="p">)</span>
+<span class="n">df_json</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;json&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;data/json&quot;</span><span class="p">)</span>
+<span class="n">df_json</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----------------------------+----------+----------------+------+----+----------------------+------+------+
+|address                     |birthdate |favorite_colors |height|name|phone_nos             |smoker|weight|
++----------------------------+----------+----------------+------+----+----------------------+------+------+
+|[city1, 100, street1, 12345]|1960-01-01|[blue, red]     |1.7   |john|[223456789, 123456789]|true  |180   |
+|[city2, 200, street2, 22345]|1990-01-01|[green, purple] |1.8   |tony|[323456789, 223456789]|true  |180   |
+|[city3, 300, street3, 32345]|1980-01-01|[yellow, orange]|1.65  |mike|[423456789, 323456789]|true  |180   |
++----------------------------+----------+----------------+------+----+----------------------+------+------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="saving-the-spark-data-frame-content-into-a-json-file">
+<h4>Saving the spark data frame content into a JSON  file<a class="headerlink" href="#saving-the-spark-data-frame-content-into-a-json-file" title="Permalink to this headline">¶</a></h4>
+<div class="admonition-syntax admonition">
+<p class="admonition-title">Syntax</p>
+<p><b>json(path, mode=None, compression=None, dateFormat=None, timestampFormat=None, lineSep=None, encoding=None, ignoreNullFields=None)</b>
+Saves the content of the DataFrame in JSON format (JSON Lines text format or newline-delimited JSON) at the specified path.</p>
+<p><b>Parameters</b>:</p>
+<ul class="simple">
+<li><p>path – the path in any Hadoop supported file system</p></li>
+<li><p>mode –
+specifies the behavior of the save operation when data already exists.
+append: Append contents of this DataFrame to existing data.
+overwrite: Overwrite existing data.
+ignore: Silently ignore this operation if data already exists.
+error or errorifexists (default case): Throw an exception if data already exists.</p></li>
+<li><p>compression – compression codec to use when saving to file. This can be one of the known case-insensitive shorten names (none, bzip2, gzip, lz4, snappy and deflate).</p></li>
+<li><p>dateFormat – sets the string that indicates a date format. Custom date formats follow the formats at datetime pattern. This applies to date type. If None is set, it uses the default value, yyyy-MM-dd.</p></li>
+<li><p>timestampFormat – sets the string that indicates a timestamp format. Custom date formats follow the formats at datetime pattern. This applies to timestamp type. If None is set, it uses the default value, yyyy-MM-dd’T’HH:mm:ss[.SSS][XXX].</p></li>
+<li><p>encoding – specifies encoding (charset) of saved json files. If None is set, the default UTF-8 charset will be used.</p></li>
+<li><p>lineSep – defines the line separator that should be used for writing. If None is set, it uses the default value, \n.</p></li>
+<li><p>ignoreNullFields – Whether to ignore null fields when generating JSON objects. If None is set, it uses the default value, true.</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_json</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="s2">&quot;data/json_write&quot;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;overwrite&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="s2">&quot;data/json_write&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+--------------------+----------+----------------+------+----+--------------------+------+------+
+|             address| birthdate| favorite_colors|height|name|           phone_nos|smoker|weight|
++--------------------+----------+----------------+------+----+--------------------+------+------+
+|[city1, 100, stre...|1960-01-01|     [blue, red]|   1.7|john|[223456789, 12345...|  true|   180|
+|[city2, 200, stre...|1990-01-01| [green, purple]|   1.8|tony|[323456789, 22345...|  true|   180|
+|[city3, 300, stre...|1980-01-01|[yellow, orange]|  1.65|mike|[423456789, 32345...|  true|   180|
++--------------------+----------+----------------+------+----+--------------------+------+------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id='13'></a></p>
+</div>
+</div>
+<div class="section" id="d-reading-from-parquet-file-into-spark-data-frame">
+<h3>2d. Reading from Parquet file into spark data frame<a class="headerlink" href="#d-reading-from-parquet-file-into-spark-data-frame" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-syntax admonition">
+<p class="admonition-title">Syntax</p>
+<p><b>parquet(*paths, **options)</b>
+Loads Parquet files, returning the result as a DataFrame.</p>
+<p><b>Parameters</b>:</p>
+<ul class="simple">
+<li><p>mergeSchema – sets whether we should merge schemas collected from all Parquet part-files. This will override spark.sql.parquet.mergeSchema. The default value is specified in spark.sql.parquet.mergeSchema.</p></li>
+<li><p>pathGlobFilter – an optional glob pattern to only include files with paths matching the pattern. The syntax follows org.apache.hadoop.fs.GlobFilter. It does not change the behavior of partition discovery.</p></li>
+<li><p>recursiveFileLookup – recursively scan a directory for files. Using this option disables partition discovery. None is set, it uses the default value, \n.</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_parquet</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">parquet</span><span class="p">(</span><span class="s2">&quot;data/parquetfile&quot;</span><span class="p">)</span>
+<span class="n">df_parquet</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+|name|weight|smoker|height|birthdate |phone_nos                               |favorite_colors |address                     |
++----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+|john|180   |true  |1.7   |1960-01-01|[office -&gt; 123456789, home -&gt; 223456789]|[blue, red]     |[100, street1, city1, 12345]|
+|tony|180   |true  |1.8   |1990-01-01|[office -&gt; 223456789, home -&gt; 323456789]|[green, purple] |[200, street2, city2, 22345]|
+|mike|180   |true  |1.65  |1980-01-01|[office -&gt; 323456789, home -&gt; 423456789]|[yellow, orange]|[300, street3, city3, 32345]|
++----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="saving-the-spark-data-frame-content-into-a-parquet-file">
+<h4>Saving the spark data frame content into a Parquet  file<a class="headerlink" href="#saving-the-spark-data-frame-content-into-a-parquet-file" title="Permalink to this headline">¶</a></h4>
+<div class="admonition-syntax admonition">
+<p class="admonition-title">Syntax</p>
+<p><b>parquet(path, mode=None, partitionBy=None, compression=None)</b>
+Saves the content of the DataFrame in Parquet format at the specified path.</p>
+<p><b>Parameters</b>:</p>
+<ul class="simple">
+<li><p>path – the path in any Hadoop supported file system</p></li>
+<li><p>mode –
+specifies the behavior of the save operation when data already exists.
+append: Append contents of this DataFrame to existing data.
+overwrite: Overwrite existing data.
+ignore: Silently ignore this operation if data already exists.
+error or errorifexists (default case): Throw an exception if data already exists.</p></li>
+<li><p>partitionBy – names of partitioning columns</p></li>
+<li><p>compression – compression codec to use when saving to file. This can be one of the known case-insensitive shorten names (none, uncompressed, snappy, gzip, lzo, brotli, lz4, and zstd). This will override spark.sql.parquet.compression.codec. If None is set, it uses the value specified in spark.sql.parquet.compression.codec.</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_parquet</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">parquet</span><span class="p">(</span><span class="s2">&quot;data/parquetfile_write&quot;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;overwrite&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">parquet</span><span class="p">(</span><span class="s2">&quot;data/parquetfile_write&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+|name|weight|smoker|height|birthdate |phone_nos                               |favorite_colors |address                     |
++----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+|john|180   |true  |1.7   |1960-01-01|[office -&gt; 123456789, home -&gt; 223456789]|[blue, red]     |[100, street1, city1, 12345]|
+|tony|180   |true  |1.8   |1990-01-01|[office -&gt; 223456789, home -&gt; 323456789]|[green, purple] |[200, street2, city2, 22345]|
+|mike|180   |true  |1.65  |1980-01-01|[office -&gt; 323456789, home -&gt; 423456789]|[yellow, orange]|[300, street3, city3, 32345]|
++----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id='14'></a></p>
+</div>
+</div>
+<div class="section" id="e-reading-from-an-orc-file-into-spark-data-frame">
+<h3>2e. Reading from an ORC file into spark data frame<a class="headerlink" href="#e-reading-from-an-orc-file-into-spark-data-frame" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-syntax admonition">
+<p class="admonition-title">Syntax</p>
+<p><b>orc(path, mergeSchema=None, pathGlobFilter=None, recursiveFileLookup=None)</b>
+Loads ORC files, returning the result as a DataFrame.</p>
+<p><b>Parameters</b>:</p>
+<ul class="simple">
+<li><p>mergeSchema – sets whether we should merge schemas collected from all ORC part-files. This will override spark.sql.orc.mergeSchema. The default value is specified in spark.sql.orc.mergeSchema.</p></li>
+<li><p>pathGlobFilter – an optional glob pattern to only include files with paths matching the pattern. The syntax follows org.apache.hadoop.fs.GlobFilter. It does not change the behavior of partition discovery.</p></li>
+<li><p>recursiveFileLookup – recursively scan a directory for files. Using this option disables partition discovery.</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_orc</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">orc</span><span class="p">(</span><span class="s2">&quot;data/orcfile&quot;</span><span class="p">)</span>
+<span class="n">df_orc</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+|name|weight|smoker|height|birthdate |phone_nos                               |favorite_colors |address                     |
++----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+|john|180   |true  |1.7   |1960-01-01|[home -&gt; 223456789, office -&gt; 123456789]|[blue, red]     |[100, street1, city1, 12345]|
+|tony|180   |true  |1.8   |1990-01-01|[home -&gt; 323456789, office -&gt; 223456789]|[green, purple] |[200, street2, city2, 22345]|
+|mike|180   |true  |1.65  |1980-01-01|[home -&gt; 423456789, office -&gt; 323456789]|[yellow, orange]|[300, street3, city3, 32345]|
++----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="saving-the-spark-data-frame-content-into-an-orc-file">
+<h4>Saving the spark data frame content into an ORC  file<a class="headerlink" href="#saving-the-spark-data-frame-content-into-an-orc-file" title="Permalink to this headline">¶</a></h4>
+<div class="admonition-syntax admonition">
+<p class="admonition-title">Syntax</p>
+<p><b>orc(path, mode=None, partitionBy=None, compression=None)</b>
+Saves the content of the DataFrame in ORC format at the specified path.</p>
+<p><b>Parameters</b>:</p>
+<ul class="simple">
+<li><p>path – the path in any Hadoop supported file system</p></li>
+<li><p>mode –
+specifies the behavior of the save operation when data already exists.
+append: Append contents of this DataFrame to existing data.
+overwrite: Overwrite existing data.
+ignore: Silently ignore this operation if data already exists.
+error or errorifexists (default case): Throw an exception if data already exists.</p></li>
+<li><p>partitionBy – names of partitioning columns</p></li>
+<li><p>compression – compression codec to use when saving to file. This can be one of the known case-insensitive shorten names (none, snappy, zlib, and lzo). This will override orc.compress and spark.sql.orc.compression.codec. If None is set, it uses the value specified in spark.sql.orc.compression.codec.</p></li>
+</ul>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_orc</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">orc</span><span class="p">(</span><span class="s2">&quot;data/orcfile_write&quot;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;overwrite&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">orc</span><span class="p">(</span><span class="s2">&quot;data/orcfile_write&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+|name|weight|smoker|height|birthdate |phone_nos                               |favorite_colors |address                     |
++----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+|john|180   |true  |1.7   |1960-01-01|[home -&gt; 223456789, office -&gt; 123456789]|[blue, red]     |[100, street1, city1, 12345]|
+|tony|180   |true  |1.8   |1990-01-01|[home -&gt; 323456789, office -&gt; 223456789]|[green, purple] |[200, street2, city2, 22345]|
+|mike|180   |true  |1.65  |1980-01-01|[home -&gt; 423456789, office -&gt; 323456789]|[yellow, orange]|[300, street3, city3, 32345]|
++----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id='15'></a></p>
+</div>
+</div>
+<div class="section" id="f-reading-from-an-avro-file-into-spark-data-frame">
+<h3>2f. Reading from an AVRO file into spark data frame<a class="headerlink" href="#f-reading-from-an-avro-file-into-spark-data-frame" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ch">#!./bin/spark-submit --packages org.apache.spark:spark-avro_2.12:3.0.2 ...</span>
+<span class="c1">##.config(&#39;spark.jars&#39;, &#39;org.apache.spark:spark-avro_2.12:3.0.2&#39;)\</span>
+<span class="kn">import</span> <span class="nn">pyspark</span>
+<span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
+<span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span> \
+    <span class="o">.</span><span class="n">builder</span> \
+    <span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s2">&quot;Python Spark SQL basic example&quot;</span><span class="p">)</span> \
+    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s1">&#39;spark.jars.packages&#39;</span><span class="p">,</span> <span class="s1">&#39;org.apache.spark:spark-avro_2.12:3.0.2&#39;</span><span class="p">)</span>\
     <span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
 <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="mi">180</span><span class="p">,</span><span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s2">&quot;1960-01-01&quot;</span><span class="p">,</span> <span class="s1">&#39;{“home”: 123456789, “office”:234567567}&#39;</span><span class="p">),])</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>        
 </pre></div>
@@ -914,56 +1134,8 @@ if (window.Jupyter !== undefined) {
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">jsonStrings</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;{&quot;name&quot;:&quot;Yin&quot;,&quot;age&quot;:45,&quot;smoker&quot;: true,&quot;test&quot;:34, &quot;address&quot;:{&quot;city&quot;:&quot;Columbus&quot;,&quot;state&quot;:&quot;Ohio&quot;},&quot;favorite_colors&quot;: [&quot;blue&quot;,&quot;green&quot;] }&#39;</span><span class="p">,]</span>
-<span class="n">otherPeopleRDD</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">sparkContext</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">jsonStrings</span><span class="p">)</span>
-<span class="n">otherPeople</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">json</span><span class="p">(</span><span class="n">otherPeopleRDD</span><span class="p">)</span>
-<span class="n">otherPeople</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>  
-<span class="c1">#123</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>root
- |-- address: struct (nullable = true)
- |    |-- city: string (nullable = true)
- |    |-- state: string (nullable = true)
- |-- age: long (nullable = true)
- |-- favorite_colors: array (nullable = true)
- |    |-- element: string (containsNull = true)
- |-- name: string (nullable = true)
- |-- smoker: boolean (nullable = true)
- |-- test: long (nullable = true)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.types</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">functions</span> <span class="k">as</span> <span class="n">func</span>
-<span class="n">schema</span> <span class="o">=</span> <span class="n">StructType</span><span class="p">([</span>
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">()),</span>
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;weight&quot;</span><span class="p">,</span> <span class="n">LongType</span><span class="p">()),</span>
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;smoker&quot;</span><span class="p">,</span> <span class="n">BooleanType</span><span class="p">()),</span>
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">()),</span>
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;birthdate&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">()),</span>
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;phone_nos&quot;</span><span class="p">,</span> <span class="n">MapType</span><span class="p">(</span><span class="n">StringType</span><span class="p">(),</span><span class="n">LongType</span><span class="p">(),</span><span class="kc">True</span><span class="p">),</span><span class="kc">True</span><span class="p">),</span>  
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;favorite_colors&quot;</span><span class="p">,</span> <span class="n">ArrayType</span><span class="p">(</span><span class="n">StringType</span><span class="p">(),</span><span class="kc">True</span><span class="p">),</span><span class="kc">True</span><span class="p">),</span>  
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;address&quot;</span><span class="p">,</span> <span class="n">StructType</span><span class="p">([</span>
-        <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;houseno&quot;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">(),</span><span class="kc">True</span><span class="p">),</span>
-        <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;street&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span><span class="kc">True</span><span class="p">),</span>
-        <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span><span class="kc">True</span><span class="p">),</span>
-        <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;zipcode&quot;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">(),</span><span class="kc">True</span><span class="p">),</span>
-    <span class="p">]))</span> 
-    
-<span class="p">])</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">((</span>
-    <span class="p">[[</span><span class="s2">&quot;john&quot;</span><span class="p">,</span><span class="mi">180</span><span class="p">,</span><span class="kc">True</span><span class="p">,</span><span class="mf">1.7</span><span class="p">,</span><span class="s1">&#39;1960-01-01&#39;</span><span class="p">,{</span><span class="s1">&#39;office&#39;</span><span class="p">:</span> <span class="mi">123456789</span><span class="p">,</span> <span class="s1">&#39;home&#39;</span><span class="p">:</span> <span class="mi">223456789</span><span class="p">},[</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span><span class="s2">&quot;red&quot;</span><span class="p">],(</span><span class="mi">100</span><span class="p">,</span><span class="s1">&#39;street1&#39;</span><span class="p">,</span><span class="s1">&#39;city1&#39;</span><span class="p">,</span><span class="mi">12345</span><span class="p">)],</span>
-    <span class="p">[</span><span class="s2">&quot;tony&quot;</span><span class="p">,</span><span class="mi">180</span><span class="p">,</span><span class="kc">True</span><span class="p">,</span><span class="mf">1.8</span><span class="p">,</span><span class="s1">&#39;1990-01-01&#39;</span><span class="p">,{</span><span class="s1">&#39;office&#39;</span><span class="p">:</span> <span class="mi">223456789</span><span class="p">,</span> <span class="s1">&#39;home&#39;</span><span class="p">:</span> <span class="mi">323456789</span><span class="p">},[</span><span class="s2">&quot;green&quot;</span><span class="p">,</span><span class="s2">&quot;purple&quot;</span><span class="p">],(</span><span class="mi">200</span><span class="p">,</span><span class="s1">&#39;street2&#39;</span><span class="p">,</span><span class="s1">&#39;city2&#39;</span><span class="p">,</span><span class="mi">22345</span><span class="p">)],</span>
-    <span class="p">[</span><span class="s2">&quot;mike&quot;</span><span class="p">,</span><span class="mi">180</span><span class="p">,</span><span class="kc">True</span><span class="p">,</span><span class="mf">1.65</span><span class="p">,</span><span class="s1">&#39;1980-01-01&#39;</span><span class="p">,{</span><span class="s1">&#39;office&#39;</span><span class="p">:</span> <span class="mi">323456789</span><span class="p">,</span> <span class="s1">&#39;home&#39;</span><span class="p">:</span> <span class="mi">423456789</span><span class="p">},[</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span><span class="s2">&quot;orange&quot;</span><span class="p">],(</span><span class="mi">300</span><span class="p">,</span><span class="s1">&#39;street3&#39;</span><span class="p">,</span><span class="s1">&#39;city3&#39;</span><span class="p">,</span><span class="mi">32345</span><span class="p">)]]</span>
-<span class="p">),</span><span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_avro</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;avro&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;data/avrofile&quot;</span><span class="p">)</span>
+<span class="n">df_avro</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -979,158 +1151,41 @@ if (window.Jupyter !== undefined) {
 </div>
 </div>
 </div>
+<div class="section" id="saving-the-spark-data-frame-content-into-an-avro-file">
+<h4>Saving the spark data frame content into an AVRO  file<a class="headerlink" href="#saving-the-spark-data-frame-content-into-an-avro-file" title="Permalink to this headline">¶</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_avro</span><span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;avro&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;data/avrofile_write&quot;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;overwrite&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;avro&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;data/avrofile_write&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>root
- |-- name: string (nullable = true)
- |-- weight: long (nullable = true)
- |-- smoker: boolean (nullable = true)
- |-- height: double (nullable = true)
- |-- birthdate: string (nullable = true)
- |-- phone_nos: map (nullable = true)
- |    |-- key: string
- |    |-- value: long (valueContainsNull = true)
- |-- favorite_colors: array (nullable = true)
- |    |-- element: string (containsNull = true)
- |-- address: struct (nullable = true)
- |    |-- houseno: integer (nullable = true)
- |    |-- street: string (nullable = true)
- |    |-- city: string (nullable = true)
- |    |-- zipcode: integer (nullable = true)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+|name|weight|smoker|height|birthdate |phone_nos                               |favorite_colors |address                     |
++----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
+|john|180   |true  |1.7   |1960-01-01|[office -&gt; 123456789, home -&gt; 223456789]|[blue, red]     |[100, street1, city1, 12345]|
+|tony|180   |true  |1.8   |1990-01-01|[office -&gt; 223456789, home -&gt; 323456789]|[green, purple] |[200, street2, city2, 22345]|
+|mike|180   |true  |1.65  |1980-01-01|[office -&gt; 323456789, home -&gt; 423456789]|[yellow, orange]|[300, street3, city3, 32345]|
++----+------+------+------+----------+----------------------------------------+----------------+----------------------------+
 </pre></div>
 </div>
 </div>
 </div>
+<p><a id='16'></a></p>
+</div>
+</div>
+<div class="section" id="g-reading-from-an-whole-binary-file-into-spark-data-frame">
+<h3>2g. Reading from an Whole Binary file into spark data frame<a class="headerlink" href="#g-reading-from-an-whole-binary-file-into-spark-data-frame" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#JSON FILE</span>
-<span class="c1">#df.repartition(1).write.json(&quot;/Users/deepak/Documents/sparkbook/chapters/data/json&quot;)</span>
-<span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;json&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;/Users/deepak/Documents/sparkbook/chapters/data/json&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----------------------------+----------+----------------+------+----+----------------------+------+------+
-|address                     |birthdate |favorite_colors |height|name|phone_nos             |smoker|weight|
-+----------------------------+----------+----------------+------+----+----------------------+------+------+
-|[city1, 100, street1, 12345]|1960-01-01|[blue, red]     |1.7   |john|[223456789, 123456789]|true  |180   |
-|[city2, 200, street2, 22345]|1990-01-01|[green, purple] |1.8   |tony|[323456789, 223456789]|true  |180   |
-|[city3, 300, street3, 32345]|1980-01-01|[yellow, orange]|1.65  |mike|[423456789, 323456789]|true  |180   |
-+----------------------------+----------+----------------+------+----+----------------------+------+------+
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df.select(func.concat(&quot;name&quot;,&quot;weight&quot;,&quot;smoker&quot;,&quot;height&quot;,&quot;birthdate&quot;,func.to_json(&quot;phone_nos&quot;),func.to_json(&quot;favorite_colors&quot;),func.to_json(&quot;address&quot;)).alias(&quot;text&quot;)).repartition(1).write.format(&quot;text&quot;).option(&quot;header&quot;,&quot;true&quot;).save(&quot;/Users/deepak/Documents/sparkbook/chapters/data/people/part-00000-29f563bb-12e4-42c3-bae3-3e30505a16cc-c000.txt&quot;)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;/Users/deepak/Documents/sparkbook/chapters/data/people/part-00000-29f563bb-12e4-42c3-bae3-3e30505a16cc-c000.txt&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+--------------------------------------------------------------------------------------------------------------------------------------------------+
-|value                                                                                                                                             |
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-|john180true1.71960-01-01{&quot;office&quot;:123456789,&quot;home&quot;:223456789}[&quot;blue&quot;,&quot;red&quot;]{&quot;houseno&quot;:100,&quot;street&quot;:&quot;street1&quot;,&quot;city&quot;:&quot;city1&quot;,&quot;zipcode&quot;:12345}      |
-|tony180true1.81990-01-01{&quot;office&quot;:223456789,&quot;home&quot;:323456789}[&quot;green&quot;,&quot;purple&quot;]{&quot;houseno&quot;:200,&quot;street&quot;:&quot;street2&quot;,&quot;city&quot;:&quot;city2&quot;,&quot;zipcode&quot;:22345}  |
-|mike180true1.651980-01-01{&quot;office&quot;:323456789,&quot;home&quot;:423456789}[&quot;yellow&quot;,&quot;orange&quot;]{&quot;houseno&quot;:300,&quot;street&quot;:&quot;street3&quot;,&quot;city&quot;:&quot;city3&quot;,&quot;zipcode&quot;:32345}|
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="s1">&#39;/Users/deepak/Documents/sparkbook/chapters/data/people.csv&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+------+------+------+----------+-------------------------------------+-------------------+-----------------------------------------------------------------+
-|name|weight|smoker|height|birthdate |phone_nos                            |favorite_colors    |address                                                          |
-+----+------+------+------+----------+-------------------------------------+-------------------+-----------------------------------------------------------------+
-|john|180   |true  |1.7   |1960-01-01|{&quot;office&quot;:123456789,&quot;home&quot;:223456789}|[&quot;blue&quot;,&quot;red&quot;]     |{&quot;houseno&quot;:100,&quot;street&quot;:&quot;street1&quot;,&quot;city&quot;:&quot;city1&quot;,&quot;zipcode&quot;:12345}|
-|tony|180   |true  |1.8   |1990-01-01|{&quot;office&quot;:223456789,&quot;home&quot;:323456789}|[&quot;green&quot;,&quot;purple&quot;] |{&quot;houseno&quot;:200,&quot;street&quot;:&quot;street2&quot;,&quot;city&quot;:&quot;city2&quot;,&quot;zipcode&quot;:22345}|
-|mike|180   |true  |1.65  |1980-01-01|{&quot;office&quot;:323456789,&quot;home&quot;:423456789}|[&quot;yellow&quot;,&quot;orange&quot;]|{&quot;houseno&quot;:300,&quot;street&quot;:&quot;street3&quot;,&quot;city&quot;:&quot;city3&quot;,&quot;zipcode&quot;:32345}|
-+----+------+------+------+----------+-------------------------------------+-------------------+-----------------------------------------------------------------+
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#/Users/deepak/Documents/sparkbook/chapters</span>
-<span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">functions</span> <span class="k">as</span> <span class="n">func</span>
-<span class="c1">#df.select(&quot;name&quot;,&quot;weight&quot;,&quot;smoker&quot;,&quot;height&quot;,&quot;birthdate&quot;,func.to_json(&quot;phone_nos&quot;).alias(&quot;phone_nos&quot;),func.to_json(&quot;favorite_colors&quot;).alias(&quot;favorite_colors&quot;),func.to_json(&quot;address&quot;).alias(&quot;address&quot;)).repartition(1).write.csv(&#39;/Users/deepak/Documents/sparkbook/chapters/data/people.csv&#39;, header=True)#show(3,False)</span>
-<span class="c1">#df.write.csv(&#39;/Users/deepak/Documents/sparkbook/chapters/data/people1.csv&#39;, header=True)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df.repartition(1).write.parquet(&quot;/Users/deepak/Documents/sparkbook/chapters/data/parquetfile&quot;,mode=&#39;overwrite&#39;)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#spark.read.parquet(&quot;/Users/deepak/Documents/sparkbook/chapters/data/parquetfile&quot;).show(3,False)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df.repartition(1).write.orc(&quot;/Users/deepak/Documents/sparkbook/chapters/data/orcfile&quot;,mode=&#39;overwrite&#39;)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#spark.read.orc(&quot;/Users/deepak/Documents/sparkbook/chapters/data/orcfile&quot;).show(3,False)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df.repartition(1).write.json(&quot;/Users/deepak/Documents/sparkbook/chapters/data/jsonfile&quot;,mode=&#39;overwrite&#39;)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df.repartition(1).write.format(&quot;avro&quot;).save(&quot;/Users/deepak/Documents/sparkbook/chapters/data/avrofile&quot;)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="c1"># pd.set_option(&#39;display.max_colwidth&#39;, None)</span>
-<span class="c1"># pd.set_option(&#39;display.max_rows&#39;, None)</span>
-<span class="c1"># pd.set_option(&#39;display.max_columns&#39;, None)</span>
-<span class="c1"># pd.set_option(&#39;display.width&#39;, None)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.expand_frame_repr&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
-<span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;binaryFile&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;/Users/deepak/Documents/sparkbook/images/banner.png&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;binaryFile&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;../images/banner.png&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1138,318 +1193,13 @@ if (window.Jupyter !== undefined) {
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+--------------------+-------------------+------+--------------------+
 |                path|   modificationTime|length|             content|
 +--------------------+-------------------+------+--------------------+
-|file:/Users/deepa...|2021-01-19 21:26:53| 63864|[89 50 4E 47 0D 0...|
+|file:/Users/deepa...|2021-02-20 22:40:59|339845|[89 50 4E 47 0D 0...|
 +--------------------+-------------------+------+--------------------+
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="hive">
-<h2>hive<a class="headerlink" href="#hive" title="Permalink to this headline">¶</a></h2>
-<p><a id='501'></a></p>
-<p><a id='502'></a></p>
-<p><a id='503'></a></p>
-<p><a id='504'></a></p>
-<p><a id='505'></a></p>
-<p><a id='506'></a></p>
-<p><a id='507'></a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">warehouse_location</span> <span class="o">=</span> <span class="s1">&#39;hive-warehouse&#39;</span>
-<span class="kn">import</span> <span class="nn">pyspark</span>
-<span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
-<span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span> \
-    <span class="o">.</span><span class="n">builder</span> \
-    <span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s2">&quot;Python Spark SQL Hive integration example&quot;</span><span class="p">)</span> \
-    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.sql.warehouse.dir&quot;</span><span class="p">,</span> <span class="n">warehouse_location</span><span class="p">)</span> \
-    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.jars.packages&quot;</span><span class="p">,</span> <span class="s2">&quot;org.apache.spark:spark-avro_2.12:3.0.1&quot;</span><span class="p">)</span> \
-    <span class="o">.</span><span class="n">enableHiveSupport</span><span class="p">()</span> \
-    <span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">createOrReplaceTempView</span><span class="p">(</span><span class="s2">&quot;people&quot;</span><span class="p">)</span> 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#myDf.createOrReplaceTempView(&quot;mytempTable&quot;) </span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s2">&quot;hive.metastore.schema.verification&quot;</span><span class="p">,</span><span class="s2">&quot;false&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df.write.saveAsTable(&#39;people&#39;)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#spark.sql(&quot;create table people as select * from df&quot;)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#sqlContext.sql(&quot;create table mytable as select * from mytempTable&quot;);</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.types</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="n">schema</span> <span class="o">=</span> <span class="n">StructType</span><span class="p">([</span>
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">()),</span>
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;weight&quot;</span><span class="p">,</span> <span class="n">LongType</span><span class="p">()),</span>
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;smoker&quot;</span><span class="p">,</span> <span class="n">BooleanType</span><span class="p">()),</span>
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">()),</span>
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;birthdate&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">()),</span>
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;phone_nos&quot;</span><span class="p">,</span> <span class="n">MapType</span><span class="p">(</span><span class="n">StringType</span><span class="p">(),</span><span class="n">LongType</span><span class="p">(),</span><span class="kc">True</span><span class="p">),</span><span class="kc">True</span><span class="p">),</span>  
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;favorite_colors&quot;</span><span class="p">,</span> <span class="n">ArrayType</span><span class="p">(</span><span class="n">StringType</span><span class="p">(),</span><span class="kc">True</span><span class="p">),</span><span class="kc">True</span><span class="p">),</span>  
-    <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;address&quot;</span><span class="p">,</span> <span class="n">StructType</span><span class="p">([</span>
-        <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;houseno&quot;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">(),</span><span class="kc">True</span><span class="p">),</span>
-        <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;street&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span><span class="kc">True</span><span class="p">),</span>
-        <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;city&quot;</span><span class="p">,</span> <span class="n">StringType</span><span class="p">(),</span><span class="kc">True</span><span class="p">),</span>
-        <span class="n">StructField</span><span class="p">(</span><span class="s2">&quot;zipcode&quot;</span><span class="p">,</span> <span class="n">IntegerType</span><span class="p">(),</span><span class="kc">True</span><span class="p">),</span>
-    <span class="p">]))</span> 
-    
-<span class="p">])</span>
-<span class="n">schema</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>StructType(List(StructField(name,StringType,true),StructField(weight,LongType,true),StructField(smoker,BooleanType,true),StructField(height,DoubleType,true),StructField(birthdate,StringType,true),StructField(phone_nos,MapType(StringType,LongType,true),true),StructField(favorite_colors,ArrayType(StringType,true),true),StructField(address,StructType(List(StructField(houseno,IntegerType,true),StructField(street,StringType,true),StructField(city,StringType,true),StructField(zipcode,IntegerType,true))),true)))
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hello)&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>hello)
-</pre></div>
-</div>
-</div>
-</div>
-<p><a id='1001'></a></p>
-<p><a id='2'></a></p>
-<div class="section" id="creating-a-spark-dataframe">
-<h3>2. Creating a spark dataframe<a class="headerlink" href="#creating-a-spark-dataframe" title="Permalink to this headline">¶</a></h3>
-<p>Lets first understand the syntax</p>
-<div class="admonition-syntax admonition">
-<p class="admonition-title">Syntax</p>
-<p><b>createDataFrame(data, schema=None, samplingRatio=None, verifySchema=True)</b></p>
-<p><b>Parameters</b>:</p>
-<p>data – RDD,list, or pandas.DataFrame.</p>
-<p>schema – a pyspark.sql.types.DataType or a datatype string or a list of column names, default is None.</p>
-<p>samplingRatio – the sample ratio of rows used for inferring</p>
-<p>verifySchema – verify data types of every row against schema.</p>
-</div>
-<p><a id='33'></a></p>
-</div>
-</div>
-<div class="section" id="a-from-rdd">
-<h2>2a. from RDD<a class="headerlink" href="#a-from-rdd" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center">
-<img alt="../_images/rdd_dataframe.png" src="../_images/rdd_dataframe.png" />
-</div>
-<p><b>What is RDD?</b></p>
-<p>Resilient Distributed Datasets (RDDs)</p>
-<p>At a high level, every Spark application consists of a driver program that runs the user’s main function and executes various parallel operations on a cluster.</p>
-<p>The main abstraction Spark provides is a resilient distributed dataset (RDD), which is a collection of elements partitioned across the nodes of the cluster that can be operated on in parallel.</p>
-<p>RDDs are created by starting with a file in the Hadoop file system (or any other Hadoop-supported file system), or an existing Scala collection in the driver program, and transforming it.</p>
-<p>Users may also ask Spark to persist an RDD in memory, allowing it to be reused efficiently across parallel operations. Finally, RDDs automatically recover from node failures.</p>
-<p><b>Creating RDD :</b></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyspark</span>
-<span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
-<span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span> \
-    <span class="o">.</span><span class="n">builder</span> \
-    <span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s2">&quot;Python Spark SQL basic example&quot;</span><span class="p">)</span> \
-    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.some.config.option&quot;</span><span class="p">,</span> <span class="s2">&quot;some-value&quot;</span><span class="p">)</span> \
-    <span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
-<span class="n">rdd_spark</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">sparkContext</span><span class="o">.</span><span class="n">parallelize</span><span class="p">([(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">),</span>
- <span class="p">(</span><span class="s1">&#39;Tony&#39;</span><span class="p">,</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s1">&#39;1990-01-01&#39;</span><span class="p">),</span>
- <span class="p">(</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">,</span> <span class="s1">&#39;1980-01-01&#39;</span><span class="p">)])</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">rdd_spark</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;John&#39;, &#39;Seattle&#39;, 60, True, 1.7, &#39;1960-01-01&#39;), (&#39;Tony&#39;, &#39;Cupertino&#39;, 30, False, 1.8, &#39;1990-01-01&#39;), (&#39;Mike&#39;, &#39;New York&#39;, 40, True, 1.65, &#39;1980-01-01&#39;)]
-</pre></div>
-</div>
-</div>
-</div>
-<p><b>Creating a spark dataframe:</b></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">rdd_spark</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+-----+----+----------+
-|  _1|       _2| _3|   _4|  _5|        _6|
-+----+---------+---+-----+----+----------+
-|John|  Seattle| 60| true| 1.7|1960-01-01|
-|Tony|Cupertino| 30|false| 1.8|1990-01-01|
-|Mike| New York| 40| true|1.65|1980-01-01|
-+----+---------+---+-----+----+----------+
-</pre></div>
-</div>
-</div>
-</div>
-<p><a id='4'></a></p>
-</div>
-<div class="section" id="b-from-list">
-<h2>2b. from List<a class="headerlink" href="#b-from-list" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center">
-<img alt="../_images/list_dataframe.png" src="../_images/list_dataframe.png" />
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">),</span> 
-<span class="p">(</span><span class="s1">&#39;Tony&#39;</span><span class="p">,</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s1">&#39;1990-01-01&#39;</span><span class="p">),</span> 
-<span class="p">(</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">,</span> <span class="s1">&#39;1980-01-01&#39;</span><span class="p">)])</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+-----+----+----------+
-|  _1|       _2| _3|   _4|  _5|        _6|
-+----+---------+---+-----+----+----------+
-|John|  Seattle| 60| true| 1.7|1960-01-01|
-|Tony|Cupertino| 30|false| 1.8|1990-01-01|
-|Mike| New York| 40| true|1.65|1980-01-01|
-+----+---------+---+-----+----+----------+
-</pre></div>
-</div>
-</div>
-</div>
-<p><a id='12451'></a></p>
-</div>
-<div class="section" id="c-from-pandas-dataframe">
-<h2>2c. from pandas dataframe<a class="headerlink" href="#c-from-pandas-dataframe" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center">
-<img alt="../_images/pd_spark.png" src="../_images/pd_spark.png" />
-</div>
-<p><b>Input: pandas dataframe</b></p>
-<p><b>Creating pandas dataframe</b></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">df_pd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">),</span> 
-<span class="p">(</span><span class="s1">&#39;Tony&#39;</span><span class="p">,</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s1">&#39;1990-01-01&#39;</span><span class="p">),</span> 
-<span class="p">(</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">,</span> <span class="s1">&#39;1980-01-01&#39;</span><span class="p">)])</span>
-<span class="n">df_pd</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>John</td>
-      <td>Seattle</td>
-      <td>60</td>
-      <td>True</td>
-      <td>1.70</td>
-      <td>1960-01-01</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Tony</td>
-      <td>Cupertino</td>
-      <td>30</td>
-      <td>False</td>
-      <td>1.80</td>
-      <td>1990-01-01</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Mike</td>
-      <td>New York</td>
-      <td>40</td>
-      <td>True</td>
-      <td>1.65</td>
-      <td>1980-01-01</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
-</div>
-<p><b>Output: spark dataframe</b></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#spark.createDataFrame(df_pd).show()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="a-test1">
-<h2>.    3a. test1<a class="headerlink" href="#a-test1" title="Permalink to this headline">¶</a></h2>
-<p><a id='4'></a></p>
-</div>
-<div class="section" id="test2">
-<h2>   5.     test2<a class="headerlink" href="#test2" title="Permalink to this headline">¶</a></h2>
-<p><a id='5'></a></p>
 </div>
 </div>
 
@@ -1482,7 +1232,7 @@ if (window.Jupyter !== undefined) {
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="chapter2-dataframe.html" title="previous page">Chapter 2 : DataFrames</a>
-    <a class='right-next' id="next-link" href="chapter6-user-defined-function.html" title="next page">Chapter 1 Basics</a>
+    <a class='right-next' id="next-link" href="chapter4-data-types-schema.html" title="next page">Chapter 4 : Data Types &amp; Schema</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

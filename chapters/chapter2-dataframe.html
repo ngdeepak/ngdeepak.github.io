@@ -45,8 +45,6 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
@@ -68,7 +66,7 @@
 <meta property="og:url"         content="https://github.com/ngdeepak/testbook/chapters/chapter2-dataframe.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Chapter 2 : DataFrames" />
-<meta property="og:description" content="Chapter 2 : DataFrames  Chapter Learning Objectives  understand the syntax to create dataframe  create spark dataframe from different data sources  Chapter Outl" />
+<meta property="og:description" content="Chapter 2 : DataFrames  Learning Objectives  Understand dataframe basics.  Create syntax to create spark dataframe from different data sources.  Basic dataframe" />
 <meta property="og:image"       content="https://github.com/ngdeepak/testbook/_static/sparklogo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -126,103 +124,73 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter3-data-sources.html#test123">
-   test123
+  <a class="reference internal" href="chapter4-data-types-schema.html">
+   Chapter 4 : Data Types &amp; Schema
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter6-user-defined-function.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter5-string-column.html">
+   Chapter 5 : String Columns
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter7-string-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter6-number-column.html">
+   Chapter 6 : Number Columns
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter8-number-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter7-date-column.html">
+   Chapter 7 : Date Columns
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter9-date-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter8-array-column.html">
+   Chapter 8 : Array Columns
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter10-array-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter9-map-column.html">
+   Chapter 9 : Map Column
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter11-map-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter10-struct-column.html">
+   Chapter 10 : Struct Column
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter12-struct-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter11-json-string-column.html">
+   Chapter 11 : JSON Column
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter13-null-column.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter12-null-nan-column.html">
+   Chapter 12 : Null &amp; NaN Column
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter14-columns%20operations.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter13-user-defined-function.html">
+   Chapter 13 : User Defined Functions(UDFs)
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter15-rows-operations.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter14-pandas-with-arrow.html">
+   Chapter 14 : Pandas User Defined Function
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter16-spark-with-pandas.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter15-aggregate-operations.html">
+   Chapter 15 : Aggregate Operations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter17-columns%20operations.html">
-   Chapter 1 Basics
+  <a class="reference internal" href="chapter16-join-operations.html">
+   Chapter 16 : Join operations
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="chapter18-rows-operations.html">
-   Chapter 1 Basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../intro.html">
-   Jupiter Book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../test.html">
-   Creating a Data Frame
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../test.html#twisting-spinning-data-in-apache-spark-interactive-data-engineer-s-guide">
-   Twisting &amp; Spinning Data in Apache Spark - Interactive Data Engineer’s Guide
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../SparkDataFrame.html">
-   Spark Data Frame
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../SparkDataFrame.html#creating-a-spark-dataframe">
-   Creating a Spark DataFrame
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../SparkDataFrame.html#creating-a-spark-dataframe123">
-   Creating a Spark DataFrame123
+  <a class="reference internal" href="chapter17-window-operations.html">
+   Chapter 17 : Window operations
   </a>
  </li>
 </ul>
@@ -334,18 +302,18 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#chapter-learning-objectives">
-   Chapter Learning Objectives
+  <a class="reference internal nav-link" href="#learning-objectives">
+   Learning Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#chapter-outline">
-   Chapter Outline
+  <a class="reference internal nav-link" href="#outline">
+   Outline
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#click-on-one-of-the-image-below-that-achieves-the-outcome">
-   Click on one of the image below that achieves the outcome
+  <a class="reference internal nav-link" href="#visual-outline">
+   Visual Outline
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -354,36 +322,70 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#creating-a-spark-dataframe">
-     2. Creating a spark dataframe
+    <a class="reference internal nav-link" href="#why-dataframes-are-useful">
+     Why DataFrames are Useful ?
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-from-rdd">
-   2a. from RDD
+  <a class="reference internal nav-link" href="#creating-a-spark-dataframe">
+   2. Creating a spark dataframe
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-from-rdd">
+     2a. from RDD
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-from-list">
+     2b. from List
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-from-pandas-dataframe">
+     2c. from pandas dataframe
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#b-from-list">
-   2b. from List
+  <a class="reference internal nav-link" href="#basic-data-frame-operations">
+   3. Basic data frame operations
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#c-from-pandas-dataframe">
-   2c. from pandas dataframe
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-test1">
-   .    3a. test1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#test2">
-   5.     test2
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-how-to-select-columns">
+     3a. How to select columns?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-how-to-rename-columns">
+     3b. How to rename columns?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#c-how-to-add-new-columns">
+     3c. How to add new columns?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#d-how-to-delete-columns">
+     3d. How to delete columns?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#e-how-to-change-the-data-type-of-columns">
+     3e. How to change the data type of columns?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#f-how-to-filter-the-data">
+     3f. How to filter the data?
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -401,15 +403,16 @@
 </div>
 <div class="section" id="chapter-2-dataframes">
 <h1>Chapter 2 : DataFrames<a class="headerlink" href="#chapter-2-dataframes" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="chapter-learning-objectives">
-<h2>Chapter Learning Objectives<a class="headerlink" href="#chapter-learning-objectives" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>understand the syntax to create dataframe</p></li>
-<li><p>create spark dataframe from different data sources</p></li>
+<li><p>Understand dataframe basics.</p></li>
+<li><p>Create syntax to create spark dataframe from different data sources.</p></li>
+<li><p>Basic dataframe operations.</p></li>
 </ul>
 </div>
-<div class="section" id="chapter-outline">
-<h2>Chapter Outline<a class="headerlink" href="#chapter-outline" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="outline">
+<h2>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="#1">1. What is spark dataframe</a></p></li>
 <li><p><a class="reference external" href="#2">2. Creating a spark dataframe</a></p>
@@ -419,58 +422,104 @@
 <li><p><a class="reference external" href="#5">2c. from pandas dataframe</a></p></li>
 </ul>
 </li>
+<li><p><a class="reference external" href="#6">3. Basic dataframe operations</a></p>
+<ul>
+<li><p><a class="reference external" href="#7">3a. Selecting columns</a></p></li>
+<li><p><a class="reference external" href="#8">3b. Renaming a column</a></p></li>
+<li><p><a class="reference external" href="#9">3c. Deleting a column</a></p></li>
+<li><p><a class="reference external" href="#10">3d. Renaming a column</a></p></li>
+<li><p><a class="reference external" href="#11">3e. Changing the data type of a column</a></p></li>
+<li><p><a class="reference external" href="#12">3f. Filtering the data</a></p></li>
 </ul>
-<p>If you do not want to go through the entire chapter,</p>
+</li>
+</ul>
+<div class="cell tag_hide_input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display_html</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="k">def</span> <span class="nf">display_side_by_side</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">html_str</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">df</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+        <span class="n">html_str</span><span class="o">+=</span><span class="n">df</span><span class="o">.</span><span class="n">to_html</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">html_str</span><span class="o">+=</span> <span class="s2">&quot;</span><span class="se">\xa0\xa0\xa0</span><span class="s2">&quot;</span><span class="o">*</span><span class="mi">10</span>
+    <span class="n">display_html</span><span class="p">(</span><span class="n">html_str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">,</span><span class="s1">&#39;table style=&quot;display:inline&quot;&#39;</span><span class="p">),</span><span class="n">raw</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">space</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\xa0</span><span class="s2">&quot;</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
 </div>
-<div class="section" id="click-on-one-of-the-image-below-that-achieves-the-outcome">
-<h2>Click on one of the image below that achieves the outcome<a class="headerlink" href="#click-on-one-of-the-image-below-that-achieves-the-outcome" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="section" id="visual-outline">
+<h2>Visual Outline<a class="headerlink" href="#visual-outline" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>A</p></th>
-<th class="head"><p>B</p></th>
+<tr class="row-odd"><th class="text-align:right head"><p>click on</p></th>
+<th class="text-align:left head"><p>any image</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference external" href="#23"><img alt="alt" src="../_images/rdd_dataframe.png" /></a></p></td>
-<td><p><a class="reference external" href="#33"><img alt="alt" src="../_images/list_dataframe.png" /></a></p></td>
+<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#3"><img alt="alt" src="../_images/17.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#4"><img alt="alt" src="../_images/26.png" /></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference external" href="#23"><img alt="alt" src="../_images/pd_spark.png" /></a></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#5"><img alt="alt" src="../_images/36.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#7"><img alt="alt" src="../_images/46.png" /></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#8"><img alt="alt" src="../_images/54.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#9"><img alt="alt" src="../_images/63.png" /></a></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#10"><img alt="alt" src="../_images/72.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#11"><img alt="alt" src="../_images/81.png" /></a></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#12"><img alt="alt" src="../_images/91.png" /></a></p></td>
+<td class="text-align:left"><p></p></td>
 </tr>
 </tbody>
 </table>
-<hr></hr><p><a class="reference external" href="#23"><img alt="alt text" src="../_images/rdd_dataframe.png" /></a></p>
-<hr class="docutils" />
-<p><a class="reference external" href="#23"><img alt="alt text" src="../_images/list_dataframe.png" /></a></p>
-<hr class="docutils" />
-<p><a class="reference external" href="#23"><img alt="alt text" src="../_images/pd_spark.png" /></a></p>
-<hr class="docutils" />
-<p><a id='1'></a></p>
+<hr></hr><p><a id='1'></a></p>
 </div>
 <div class="section" id="what-is-spark-dataframe">
 <h2>1. What is spark dataframe?<a class="headerlink" href="#what-is-spark-dataframe" title="Permalink to this headline">¶</a></h2>
 <p>A DataFrame simply represents a table of data with rows and columns. A simple analogy would be a spreadsheet with named columns.</p>
 <p>Spark Data Frame is a distributed collection of data organized into named columns. It can be constructed from a wide array of sources such as: structured data files, tables in Hive, external databases, or existing RDD, Lists, Pandas data frame.</p>
+<ul class="simple">
+<li><p>Immutable in nature : We can create DataFrame once but can’t change it. And we can transform a DataFrame after applying transformations.</p></li>
+<li><p>Lazy Evaluations: This means that a task is not executed until an action is performed.</p></li>
+<li><p>Distributed: DataFrame is distributed in nature.</p></li>
+</ul>
+<p>All transformations in Spark are lazy, in that they do not compute their results right away. Instead, they just remember the transformations applied to some base dataset (e.g. a file). The transformations are only computed when an action requires a result to be returned to the driver program. This design enables Spark to run more efficiently.</p>
+<p>Advantages of lazy evaluation.</p>
+<ul class="simple">
+<li><p>It is an optimization technique i.e. it provides optimization by reducing the number of queries.</p></li>
+<li><p>It saves the round trips between driver and cluster, thus speeds up the process.</p></li>
+<li><p>Saves Computation and increases Speed</p></li>
+</ul>
+<div class="section" id="why-dataframes-are-useful">
+<h3>Why DataFrames are Useful ?<a class="headerlink" href="#why-dataframes-are-useful" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>DataFrames are designed for processing large collection of structured or semi-structured data.
+Observations in Spark DataFrame are organised under named columns, which helps Apache Spark to understand the schema of a DataFrame. This helps Spark optimize execution plan on these queries.</p></li>
+<li><p>DataFrame in Apache Spark has the ability to handle petabytes of data.</p></li>
+<li><p>DataFrame has a support for wide range of data format and sources.</p></li>
+</ul>
 <div class="figure align-center">
-<img alt="../_images/spark_dataframe.png" src="../_images/spark_dataframe.png" />
+<img alt="../_images/0.png" src="../_images/0.png" />
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">a</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;2&#39;</span><span class="o">&gt;&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
-</pre></div>
+<p>All transformations in Spark are lazy, in that they do not compute their results right away. Instead, they just remember the transformations applied to some base dataset (e.g. a file). The transformations are only computed when an action requires a result to be returned to the driver program. This design enables Spark to run more efficiently.</p>
+<p>Advantages of lazy evaluation.</p>
+<ul class="simple">
+<li><p>It is an optimization technique i.e. it provides optimization by reducing the number of queries.</p></li>
+<li><p>It saves the round trips between driver and cluster, thus speeds up the process.</p></li>
+<li><p>Saves Computation and increases Speed</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="../_images/0_1.png" src="../_images/0_1.png" />
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-1-9a56fda4989e&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
-    <span class="o">&lt;</span><span class="n">a</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;2&#39;</span><span class="o">&gt;&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
-    <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
-</pre></div>
-</div>
+<p><a id='2'></a></p>
 </div>
 </div>
 <div class="section" id="creating-a-spark-dataframe">
-<h3>2. Creating a spark dataframe<a class="headerlink" href="#creating-a-spark-dataframe" title="Permalink to this headline">¶</a></h3>
+<h2>2. Creating a spark dataframe<a class="headerlink" href="#creating-a-spark-dataframe" title="Permalink to this headline">¶</a></h2>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
 <p class="admonition-title">Syntax</p>
@@ -481,13 +530,11 @@
 <p>samplingRatio – the sample ratio of rows used for inferring</p>
 <p>verifySchema – verify data types of every row against schema.</p>
 </div>
-<p><a id='33'></a></p>
-</div>
-</div>
+<p><a id='3'></a></p>
 <div class="section" id="a-from-rdd">
-<h2>2a. from RDD<a class="headerlink" href="#a-from-rdd" title="Permalink to this headline">¶</a></h2>
+<h3>2a. from RDD<a class="headerlink" href="#a-from-rdd" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-center">
-<img alt="../_images/rdd_dataframe.png" src="../_images/rdd_dataframe.png" />
+<img alt="../_images/17.png" src="../_images/17.png" />
 </div>
 <p><b>What is RDD?</b></p>
 <p>Resilient Distributed Datasets (RDDs)</p>
@@ -495,7 +542,7 @@
 <p>The main abstraction Spark provides is a resilient distributed dataset (RDD), which is a collection of elements partitioned across the nodes of the cluster that can be operated on in parallel.</p>
 <p>RDDs are created by starting with a file in the Hadoop file system (or any other Hadoop-supported file system), or an existing Scala collection in the driver program, and transforming it.</p>
 <p>Users may also ask Spark to persist an RDD in memory, allowing it to be reused efficiently across parallel operations. Finally, RDDs automatically recover from node failures.</p>
-<p><b>Creating RDD :</b></p>
+<p><b>How to create RDD?</b></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyspark</span>
@@ -524,74 +571,10 @@
 </div>
 </div>
 </div>
-<p><b>Creating a spark dataframe:</b></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">rdd_spark</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+-----+----+----------+
-|  _1|       _2| _3|   _4|  _5|        _6|
-+----+---------+---+-----+----+----------+
-|John|  Seattle| 60| true| 1.7|1960-01-01|
-|Tony|Cupertino| 30|false| 1.8|1990-01-01|
-|Mike| New York| 40| true|1.65|1980-01-01|
-+----+---------+---+-----+----+----------+
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">a</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="o">&gt;&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="b-from-list">
-<h2>2b. from List<a class="headerlink" href="#b-from-list" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center">
-<img alt="../_images/list_dataframe.png" src="../_images/list_dataframe.png" />
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">),</span> 
-<span class="p">(</span><span class="s1">&#39;Tony&#39;</span><span class="p">,</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s1">&#39;1990-01-01&#39;</span><span class="p">),</span> 
-<span class="p">(</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">,</span> <span class="s1">&#39;1980-01-01&#39;</span><span class="p">)])</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+-----+----+----------+
-|  _1|       _2| _3|   _4|  _5|        _6|
-+----+---------+---+-----+----+----------+
-|John|  Seattle| 60| true| 1.7|1960-01-01|
-|Tony|Cupertino| 30|false| 1.8|1990-01-01|
-|Mike| New York| 40| true|1.65|1980-01-01|
-+----+---------+---+-----+----+----------+
-</pre></div>
-</div>
-</div>
-</div>
-<p><a id='23'></a></p>
-</div>
-<div class="section" id="c-from-pandas-dataframe">
-<h2>2c. from pandas dataframe<a class="headerlink" href="#c-from-pandas-dataframe" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center">
-<img alt="../_images/pd_spark.png" src="../_images/pd_spark.png" />
-</div>
-<p><b>Input: pandas dataframe</b></p>
-<p><b>Creating pandas dataframe</b></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">df_pd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">),</span> 
-<span class="p">(</span><span class="s1">&#39;Tony&#39;</span><span class="p">,</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s1">&#39;1990-01-01&#39;</span><span class="p">),</span> 
-<span class="p">(</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">,</span> <span class="s1">&#39;1980-01-01&#39;</span><span class="p">)])</span>
-<span class="n">df_pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_colwidth&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="n">rdd_spark</span><span class="p">]])</span>
 </pre></div>
 </div>
 </div>
@@ -615,11 +598,170 @@
     <tr style="text-align: right;">
       <th></th>
       <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-      <th>5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>[(John, Seattle, 60, True, 1.7, 1960...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><b>Creating a spark dataframe from RDD:</b></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">rdd_spark</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+-----+----+----------+
+|  _1|       _2| _3|   _4|  _5|        _6|
++----+---------+---+-----+----+----------+
+|John|  Seattle| 60| true| 1.7|1960-01-01|
+|Tony|Cupertino| 30|false| 1.8|1990-01-01|
+|Mike| New York| 40| true|1.65|1980-01-01|
++----+---------+---+-----+----+----------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_colwidth&#39;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Input                                               &quot;</span><span class="p">,</span>            <span class="s2">&quot;Output&quot;</span><span class="p">)</span>
+<span class="n">display_side_by_side</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="n">rdd_spark</span><span class="p">]]),</span><span class="n">df</span><span class="o">.</span><span class="n">toPandas</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Input                                                Output
+</pre></div>
+</div>
+<div class="output text_html"><table style="display:inline" border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[(John, Seattle, 60, True, 1.7, 1960-01-01), (Tony, Cupertino, 30, False, 1.8, 1990-01-01), (Mike, New York, 40, True, 1.65, 1980-01-01)]</td>
+    </tr>
+  </tbody>
+</table style="display:inline">                              <table style="display:inline" border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>_1</th>
+      <th>_2</th>
+      <th>_3</th>
+      <th>_4</th>
+      <th>_5</th>
+      <th>_6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>Seattle</td>
+      <td>60</td>
+      <td>True</td>
+      <td>1.70</td>
+      <td>1960-01-01</td>
+    </tr>
+    <tr>
+      <td>Tony</td>
+      <td>Cupertino</td>
+      <td>30</td>
+      <td>False</td>
+      <td>1.80</td>
+      <td>1990-01-01</td>
+    </tr>
+    <tr>
+      <td>Mike</td>
+      <td>New York</td>
+      <td>40</td>
+      <td>True</td>
+      <td>1.65</td>
+      <td>1980-01-01</td>
+    </tr>
+  </tbody>
+</table style="display:inline">                              </div></div>
+</div>
+<p><a id='4'></a></p>
+</div>
+<div class="section" id="b-from-list">
+<h3>2b. from List<a class="headerlink" href="#b-from-list" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<img alt="../_images/26.png" src="../_images/26.png" />
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alist</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Tony&#39;</span><span class="p">,</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s1">&#39;1990-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">,</span> <span class="s1">&#39;1980-01-01&#39;</span><span class="p">)]</span>
+<span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+-----+----+----------+
+|  _1|       _2| _3|   _4|  _5|        _6|
++----+---------+---+-----+----+----------+
+|John|  Seattle| 60| true| 1.7|1960-01-01|
+|Tony|Cupertino| 30|false| 1.8|1990-01-01|
+|Mike| New York| 40| true|1.65|1980-01-01|
++----+---------+---+-----+----+----------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id='5'></a></p>
+</div>
+<div class="section" id="c-from-pandas-dataframe">
+<h3>2c. from pandas dataframe<a class="headerlink" href="#c-from-pandas-dataframe" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<img alt="../_images/36.png" src="../_images/36.png" />
+</div>
+<p><b>How to create pandas dataframe?</b></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df_pd</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Tony&#39;</span><span class="p">,</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s1">&#39;1990-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">,</span> <span class="s1">&#39;1980-01-01&#39;</span><span class="p">)],</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="s2">&quot;city&quot;</span><span class="p">,</span><span class="s2">&quot;age&quot;</span><span class="p">,</span><span class="s2">&quot;smoker&quot;</span><span class="p">,</span><span class="s2">&quot;height&quot;</span><span class="p">,</span> <span class="s2">&quot;birthdate&quot;</span><span class="p">])</span>
+<span class="n">df_pd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>city</th>
+      <th>age</th>
+      <th>smoker</th>
+      <th>height</th>
+      <th>birthdate</th>
     </tr>
   </thead>
   <tbody>
@@ -654,7 +796,7 @@
 </table>
 </div></div></div>
 </div>
-<p><b>Output: spark dataframe</b></p>
+<p><b>How to create spark dataframe from pandas dataframe</b></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">(</span><span class="n">df_pd</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -662,25 +804,644 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+-----+----+----------+
-|   0|        1|  2|    3|   4|         5|
-+----+---------+---+-----+----+----------+
-|John|  Seattle| 60| true| 1.7|1960-01-01|
-|Tony|Cupertino| 30|false| 1.8|1990-01-01|
-|Mike| New York| 40| true|1.65|1980-01-01|
-+----+---------+---+-----+----+----------+
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+------+------+----------+
+|name|     city|age|smoker|height| birthdate|
++----+---------+---+------+------+----------+
+|John|  Seattle| 60|  true|   1.7|1960-01-01|
+|Tony|Cupertino| 30| false|   1.8|1990-01-01|
+|Mike| New York| 40|  true|  1.65|1980-01-01|
++----+---------+---+------+------+----------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id='6'></a></p>
+</div>
+</div>
+<div class="section" id="basic-data-frame-operations">
+<h2>3. Basic data frame operations<a class="headerlink" href="#basic-data-frame-operations" title="Permalink to this headline">¶</a></h2>
+<p><a id='6'></a></p>
+<p><a id='7'></a></p>
+<div class="section" id="a-how-to-select-columns">
+<h3>3a. How to select columns?<a class="headerlink" href="#a-how-to-select-columns" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<img alt="../_images/46.png" src="../_images/46.png" />
+</div>
+<p><b>Input: Spark dataframe</b></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Tony&#39;</span><span class="p">,</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s1">&#39;1990-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">,</span> <span class="s1">&#39;1980-01-01&#39;</span><span class="p">)],[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;smoker&#39;</span><span class="p">,</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;birthdate&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+------+------+----------+
+|name|     city|age|smoker|height| birthdate|
++----+---------+---+------+------+----------+
+|John|  Seattle| 60|  true|   1.7|1960-01-01|
+|Tony|Cupertino| 30| false|   1.8|1990-01-01|
+|Mike| New York| 40|  true|  1.65|1980-01-01|
++----+---------+---+------+------+----------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><b>Output: spark dataframe with selected columns</b></p>
+<p>Method#1</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_out</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span><span class="s2">&quot;city&quot;</span><span class="p">,</span><span class="s2">&quot;age&quot;</span><span class="p">)</span>
+<span class="n">df_out</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+
+|name|     city|age|
++----+---------+---+
+|John|  Seattle| 60|
+|Tony|Cupertino| 30|
+|Mike| New York| 40|
++----+---------+---+
+</pre></div>
+</div>
+</div>
+</div>
+<p>Method#2</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="n">df</span><span class="o">.</span><span class="n">city</span><span class="p">,</span><span class="n">df</span><span class="o">.</span><span class="n">age</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+
+|name|     city|age|
++----+---------+---+
+|John|  Seattle| 60|
+|Tony|Cupertino| 30|
+|Mike| New York| 40|
++----+---------+---+
+</pre></div>
+</div>
+</div>
+</div>
+<p>Method#3</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">col</span>
+<span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">),</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;city&quot;</span><span class="p">),</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+
+|name|     city|age|
++----+---------+---+
+|John|  Seattle| 60|
+|Tony|Cupertino| 30|
+|Mike| New York| 40|
++----+---------+---+
+</pre></div>
+</div>
+</div>
+</div>
+<p><b> Summary</b></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Input                                               &quot;</span><span class="p">,</span>            <span class="s2">&quot;Output&quot;</span><span class="p">)</span>
+<span class="n">display_side_by_side</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">toPandas</span><span class="p">(),</span><span class="n">df_out</span><span class="o">.</span><span class="n">toPandas</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Input                                                Output
+</pre></div>
+</div>
+<div class="output text_html"><table style="display:inline" border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>name</th>
+      <th>city</th>
+      <th>age</th>
+      <th>smoker</th>
+      <th>height</th>
+      <th>birthdate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>Seattle</td>
+      <td>60</td>
+      <td>True</td>
+      <td>1.70</td>
+      <td>1960-01-01</td>
+    </tr>
+    <tr>
+      <td>Tony</td>
+      <td>Cupertino</td>
+      <td>30</td>
+      <td>False</td>
+      <td>1.80</td>
+      <td>1990-01-01</td>
+    </tr>
+    <tr>
+      <td>Mike</td>
+      <td>New York</td>
+      <td>40</td>
+      <td>True</td>
+      <td>1.65</td>
+      <td>1980-01-01</td>
+    </tr>
+  </tbody>
+</table style="display:inline">                              <table style="display:inline" border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>name</th>
+      <th>city</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>Seattle</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>Tony</td>
+      <td>Cupertino</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>Mike</td>
+      <td>New York</td>
+      <td>40</td>
+    </tr>
+  </tbody>
+</table style="display:inline">                              </div></div>
+</div>
+<p><a id='8'></a></p>
+</div>
+<div class="section" id="b-how-to-rename-columns">
+<h3>3b. How to rename columns?<a class="headerlink" href="#b-how-to-rename-columns" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<img alt="../_images/54.png" src="../_images/54.png" />
+</div>
+<p><b>Input: Spark dataframe with one of the column “age”</b></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Tony&#39;</span><span class="p">,</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s1">&#39;1990-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">,</span> <span class="s1">&#39;1980-01-01&#39;</span><span class="p">)],[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;smoker&#39;</span><span class="p">,</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;birthdate&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+------+------+----------+
+|name|     city|age|smoker|height| birthdate|
++----+---------+---+------+------+----------+
+|John|  Seattle| 60|  true|   1.7|1960-01-01|
+|Tony|Cupertino| 30| false|   1.8|1990-01-01|
+|Mike| New York| 40|  true|  1.65|1980-01-01|
++----+---------+---+------+------+----------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><b>Output: spark dataframe with column “age” renamed to “age_in_years”</b></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;firstname&quot;</span><span class="p">),</span><span class="n">df</span><span class="o">.</span><span class="n">city</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;birthcity&quot;</span><span class="p">),</span><span class="n">df</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;age_in_years&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+---------+------------+
+|firstname|birthcity|age_in_years|
++---------+---------+------------+
+|     John|  Seattle|          60|
+|     Tony|Cupertino|          30|
+|     Mike| New York|          40|
++---------+---------+------------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_rename</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">withColumnRenamed</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">,</span><span class="s2">&quot;age_in_years&quot;</span><span class="p">)</span>
+<span class="n">df_rename</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+------------+------+------+----------+
+|name|     city|age_in_years|smoker|height| birthdate|
++----+---------+------------+------+------+----------+
+|John|  Seattle|          60|  true|   1.7|1960-01-01|
+|Tony|Cupertino|          30| false|   1.8|1990-01-01|
+|Mike| New York|          40|  true|  1.65|1980-01-01|
++----+---------+------------+------+------+----------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Input                                               &quot;</span><span class="p">,</span>            <span class="s2">&quot;Output&quot;</span><span class="p">)</span>
+<span class="n">display_side_by_side</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">toPandas</span><span class="p">(),</span><span class="n">df_rename</span><span class="o">.</span><span class="n">toPandas</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Input                                                Output
+</pre></div>
+</div>
+<div class="output text_html"><table style="display:inline" border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>name</th>
+      <th>city</th>
+      <th>age</th>
+      <th>smoker</th>
+      <th>height</th>
+      <th>birthdate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>Seattle</td>
+      <td>60</td>
+      <td>True</td>
+      <td>1.70</td>
+      <td>1960-01-01</td>
+    </tr>
+    <tr>
+      <td>Tony</td>
+      <td>Cupertino</td>
+      <td>30</td>
+      <td>False</td>
+      <td>1.80</td>
+      <td>1990-01-01</td>
+    </tr>
+    <tr>
+      <td>Mike</td>
+      <td>New York</td>
+      <td>40</td>
+      <td>True</td>
+      <td>1.65</td>
+      <td>1980-01-01</td>
+    </tr>
+  </tbody>
+</table style="display:inline">                              <table style="display:inline" border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>name</th>
+      <th>city</th>
+      <th>age_in_years</th>
+      <th>smoker</th>
+      <th>height</th>
+      <th>birthdate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>John</td>
+      <td>Seattle</td>
+      <td>60</td>
+      <td>True</td>
+      <td>1.70</td>
+      <td>1960-01-01</td>
+    </tr>
+    <tr>
+      <td>Tony</td>
+      <td>Cupertino</td>
+      <td>30</td>
+      <td>False</td>
+      <td>1.80</td>
+      <td>1990-01-01</td>
+    </tr>
+    <tr>
+      <td>Mike</td>
+      <td>New York</td>
+      <td>40</td>
+      <td>True</td>
+      <td>1.65</td>
+      <td>1980-01-01</td>
+    </tr>
+  </tbody>
+</table style="display:inline">                              </div></div>
+</div>
+<p><a id='9'></a></p>
+</div>
+<div class="section" id="c-how-to-add-new-columns">
+<h3>3c. How to add new columns?<a class="headerlink" href="#c-how-to-add-new-columns" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<img alt="../_images/63.png" src="../_images/63.png" />
+</div>
+<p><b>Input: Spark dataframe</b></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Tony&#39;</span><span class="p">,</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s1">&#39;1990-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">,</span> <span class="s1">&#39;1980-01-01&#39;</span><span class="p">)],[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;smoker&#39;</span><span class="p">,</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;birthdate&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+------+------+----------+
+|name|     city|age|smoker|height| birthdate|
++----+---------+---+------+------+----------+
+|John|  Seattle| 60|  true|   1.7|1960-01-01|
+|Tony|Cupertino| 30| false|   1.8|1990-01-01|
+|Mike| New York| 40|  true|  1.65|1980-01-01|
++----+---------+---+------+------+----------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><b>Output: spark dataframe with a new column added</b></p>
+<p>Method#1</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">&quot;ageplusheight&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">age</span><span class="o">+</span><span class="n">df</span><span class="o">.</span><span class="n">height</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+------+------+----------+-------------+
+|name|     city|age|smoker|height| birthdate|ageplusheight|
++----+---------+---+------+------+----------+-------------+
+|John|  Seattle| 60|  true|   1.7|1960-01-01|         61.7|
+|Tony|Cupertino| 30| false|   1.8|1990-01-01|         31.8|
+|Mike| New York| 40|  true|  1.65|1980-01-01|        41.65|
++----+---------+---+------+------+----------+-------------+
+</pre></div>
+</div>
+</div>
+</div>
+<p>Method#2</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span><span class="o">+</span><span class="n">df</span><span class="o">.</span><span class="n">height</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;ageplusheight&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+------+------+----------+-------------+
+|name|     city|age|smoker|height| birthdate|ageplusheight|
++----+---------+---+------+------+----------+-------------+
+|John|  Seattle| 60|  true|   1.7|1960-01-01|         61.7|
+|Tony|Cupertino| 30| false|   1.8|1990-01-01|         31.8|
+|Mike| New York| 40|  true|  1.65|1980-01-01|        41.65|
++----+---------+---+------+------+----------+-------------+
+</pre></div>
+</div>
+</div>
+</div>
+<p>Method#3</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">lit</span>
+<span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span><span class="n">lit</span><span class="p">(</span><span class="s2">&quot;true&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;male&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+------+------+----------+----+
+|name|     city|age|smoker|height| birthdate|male|
++----+---------+---+------+------+----------+----+
+|John|  Seattle| 60|  true|   1.7|1960-01-01|true|
+|Tony|Cupertino| 30| false|   1.8|1990-01-01|true|
+|Mike| New York| 40|  true|  1.65|1980-01-01|true|
++----+---------+---+------+------+----------+----+
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id='10'></a></p>
+</div>
+<div class="section" id="d-how-to-delete-columns">
+<h3>3d. How to delete columns?<a class="headerlink" href="#d-how-to-delete-columns" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<img alt="../_images/72.png" src="../_images/72.png" />
+</div>
+<p><b>Input: Spark dataframe</b></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Tony&#39;</span><span class="p">,</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s1">&#39;1990-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">,</span> <span class="s1">&#39;1980-01-01&#39;</span><span class="p">)],[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;smoker&#39;</span><span class="p">,</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;birthdate&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+------+------+----------+
+|name|     city|age|smoker|height| birthdate|
++----+---------+---+------+------+----------+
+|John|  Seattle| 60|  true|   1.7|1960-01-01|
+|Tony|Cupertino| 30| false|   1.8|1990-01-01|
+|Mike| New York| 40|  true|  1.65|1980-01-01|
++----+---------+---+------+------+----------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><b>Output: spark dataframe with one of the column deleted</b></p>
+<p>dropping a single column</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---+------+------+----------+
+|name|age|smoker|height| birthdate|
++----+---+------+------+----------+
+|John| 60|  true|   1.7|1960-01-01|
+|Tony| 30| false|   1.8|1990-01-01|
+|Mike| 40|  true|  1.65|1980-01-01|
++----+---+------+------+----------+
+</pre></div>
+</div>
+</div>
+</div>
+<p>dropping multiple columns</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">,</span><span class="s1">&#39;birthdate&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---+------+------+
+|name|age|smoker|height|
++----+---+------+------+
+|John| 60|  true|   1.7|
+|Tony| 30| false|   1.8|
+|Mike| 40|  true|  1.65|
++----+---+------+------+
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id='11'></a></p>
+</div>
+<div class="section" id="e-how-to-change-the-data-type-of-columns">
+<h3>3e. How to change the data type of columns?<a class="headerlink" href="#e-how-to-change-the-data-type-of-columns" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<img alt="../_images/81.png" src="../_images/81.png" />
+</div>
+<p><b>Input: Spark dataframe with column “age” of string type</b></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span> <span class="s2">&quot;60&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Tony&#39;</span><span class="p">,</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="s2">&quot;30&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s1">&#39;1990-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="s2">&quot;40&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">,</span> <span class="s1">&#39;1980-01-01&#39;</span><span class="p">)],[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;smoker&#39;</span><span class="p">,</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;birthdate&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data types:&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+------+------+----------+
+|name|     city|age|smoker|height| birthdate|
++----+---------+---+------+------+----------+
+|John|  Seattle| 60|  true|   1.7|1960-01-01|
+|Tony|Cupertino| 30| false|   1.8|1990-01-01|
+|Mike| New York| 40|  true|  1.65|1980-01-01|
++----+---------+---+------+------+----------+
+
+Data types:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;name&#39;, &#39;string&#39;),
+ (&#39;city&#39;, &#39;string&#39;),
+ (&#39;age&#39;, &#39;string&#39;),
+ (&#39;smoker&#39;, &#39;boolean&#39;),
+ (&#39;height&#39;, &#39;double&#39;),
+ (&#39;birthdate&#39;, &#39;string&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<p><b>Output: spark dataframe with column “age” of integer data type</b></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span><span class="n">df</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;age_inttype&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span><span class="n">df</span><span class="o">.</span><span class="n">age</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="s2">&quot;int&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">&quot;age_inttype&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+------+------+----------+-----------+
+|name|     city|age|smoker|height| birthdate|age_inttype|
++----+---------+---+------+------+----------+-----------+
+|John|  Seattle| 60|  true|   1.7|1960-01-01|         60|
+|Tony|Cupertino| 30| false|   1.8|1990-01-01|         30|
+|Mike| New York| 40|  true|  1.65|1980-01-01|         40|
++----+---------+---+------+------+----------+-----------+
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;name&#39;, &#39;string&#39;),
+ (&#39;city&#39;, &#39;string&#39;),
+ (&#39;age&#39;, &#39;string&#39;),
+ (&#39;smoker&#39;, &#39;boolean&#39;),
+ (&#39;height&#39;, &#39;double&#39;),
+ (&#39;birthdate&#39;, &#39;string&#39;),
+ (&#39;age_inttype&#39;, &#39;int&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<p><a id='12'></a></p>
+</div>
+<div class="section" id="f-how-to-filter-the-data">
+<h3>3f. How to filter the data?<a class="headerlink" href="#f-how-to-filter-the-data" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<img alt="../_images/91.png" src="../_images/91.png" />
+</div>
+<p><b>Input: Spark dataframe</b></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Seattle&#39;</span><span class="p">,</span> <span class="s2">&quot;60&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="s1">&#39;1960-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Tony&#39;</span><span class="p">,</span> <span class="s1">&#39;Cupertino&#39;</span><span class="p">,</span> <span class="s2">&quot;30&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">,</span> <span class="s1">&#39;1990-01-01&#39;</span><span class="p">),</span> 
+<span class="p">(</span><span class="s1">&#39;Mike&#39;</span><span class="p">,</span> <span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="s2">&quot;40&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="mf">1.65</span><span class="p">,</span> <span class="s1">&#39;1980-01-01&#39;</span><span class="p">)],[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;smoker&#39;</span><span class="p">,</span><span class="s1">&#39;height&#39;</span><span class="p">,</span> <span class="s1">&#39;birthdate&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data types:&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+------+------+----------+
+|name|     city|age|smoker|height| birthdate|
++----+---------+---+------+------+----------+
+|John|  Seattle| 60|  true|   1.7|1960-01-01|
+|Tony|Cupertino| 30| false|   1.8|1990-01-01|
+|Mike| New York| 40|  true|  1.65|1980-01-01|
++----+---------+---+------+------+----------+
+
+Data types:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(&#39;name&#39;, &#39;string&#39;),
+ (&#39;city&#39;, &#39;string&#39;),
+ (&#39;age&#39;, &#39;string&#39;),
+ (&#39;smoker&#39;, &#39;boolean&#39;),
+ (&#39;height&#39;, &#39;double&#39;),
+ (&#39;birthdate&#39;, &#39;string&#39;)]
+</pre></div>
+</div>
+</div>
+</div>
+<p><b>Output: spark dataframe containing people whose age is more than 39</b></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;age &gt; 39&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+--------+---+------+------+----------+
+|name|    city|age|smoker|height| birthdate|
++----+--------+---+------+------+----------+
+|John| Seattle| 60|  true|   1.7|1960-01-01|
+|Mike|New York| 40|  true|  1.65|1980-01-01|
++----+--------+---+------+------+----------+
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">39</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+--------+---+------+------+----------+
+|name|    city|age|smoker|height| birthdate|
++----+--------+---+------+------+----------+
+|John| Seattle| 60|  true|   1.7|1960-01-01|
+|Mike|New York| 40|  true|  1.65|1980-01-01|
++----+--------+---+------+------+----------+
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="a-test1">
-<h2>.    3a. test1<a class="headerlink" href="#a-test1" title="Permalink to this headline">¶</a></h2>
-<p><a id='4'></a></p>
-</div>
-<div class="section" id="test2">
-<h2>   5.     test2<a class="headerlink" href="#test2" title="Permalink to this headline">¶</a></h2>
-<p><a id='5'></a></p>
 </div>
 </div>
 
