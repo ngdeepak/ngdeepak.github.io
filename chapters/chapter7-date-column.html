@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chapter 7 : Date Columns &#8212; Spark Programming for Data Engineering</title>
+    <title>Chapter 7 : Date Columns &#8212; Spark Data Frame Programming for Modern Data Engineering</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -87,7 +87,7 @@
   <img src="../_static/sparklogo.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">Spark Programming for Data Engineering</h1>
+  <h1 class="site-logo" id="site-title">Spark Data Frame Programming for Modern Data Engineering</h1>
   
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -879,16 +879,16 @@ if (window.Jupyter !== undefined) {
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#2"><img alt="alt" src="../_images/110.png" /></a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="#3"><img alt="alt" src="../_images/29.png" /></a></p></td>
+<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#2"><img alt="alt" src="../_images/114.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#3"><img alt="alt" src="../_images/212.png" /></a></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#4"><img alt="alt" src="../_images/39.png" /></a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="#5"><img alt="alt" src="../_images/49.png" /></a></p></td>
+<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#4"><img alt="alt" src="../_images/311.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#5"><img alt="alt" src="../_images/411.png" /></a></p></td>
 </tr>
-<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#6"><img alt="alt" src="../_images/57.png" /></a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="#7"><img alt="alt" src="../_images/66.png" /></a></p></td>
+<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#6"><img alt="alt" src="../_images/59.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#7"><img alt="alt" src="../_images/68.png" /></a></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#8"><img alt="alt" src="../_images/73.png" /></a></p></td>
+<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#8"><img alt="alt" src="../_images/75.png" /></a></p></td>
 <td class="text-align:left"><p></p></td>
 </tr>
 </tbody>
@@ -904,13 +904,13 @@ if (window.Jupyter !== undefined) {
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#10"><img alt="alt" src="../_images/82.png" /></a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="#11"><img alt="alt" src="../_images/92.png" /></a></p></td>
+<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#10"><img alt="alt" src="../_images/84.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#11"><img alt="alt" src="../_images/93.png" /></a></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#12"><img alt="alt" src="../_images/10.png" /></a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="#13"><img alt="alt" src="../_images/111.png" /></a></p></td>
+<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#12"><img alt="alt" src="../_images/102.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#13"><img alt="alt" src="../_images/115.png" /></a></p></td>
 </tr>
-<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#14"><img alt="alt" src="../_images/121.png" /></a></p></td>
+<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#14"><img alt="alt" src="../_images/122.png" /></a></p></td>
 <td class="text-align:left"><p></p></td>
 </tr>
 </tbody>
@@ -918,7 +918,7 @@ if (window.Jupyter !== undefined) {
 </div>
 <div class="section" id="b-extract-year-month-date-hour-minute-second-day-weekday-week-quarter-of-year-from-a-datetime-column-b">
 <h3><b> Extract year, month, date, hour, minute, second, day, weekday, week/quarter of year from a datetime column  </b><a class="headerlink" href="#b-extract-year-month-date-hour-minute-second-day-weekday-week-quarter-of-year-from-a-datetime-column-b" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="#15"><img alt="alt" src="../_images/131.png" /></a></p>
+<p><a class="reference external" href="#15"><img alt="alt" src="../_images/132.png" /></a></p>
 <p><a id='2'></a></p>
 </div>
 </div>
@@ -926,7 +926,7 @@ if (window.Jupyter !== undefined) {
 <h2>1a. How to convert string timestamp to date format?<a class="headerlink" href="#a-how-to-convert-string-timestamp-to-date-format" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/110.png" src="../_images/110.png" />
+<img alt="../_images/114.png" src="../_images/114.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1013,7 +1013,7 @@ if (window.Jupyter !== undefined) {
 <div class="section" id="b-how-to-convert-a-string-timestamp-to-datetime-format">
 <h2>1b. How to convert a string timestamp to datetime format?<a class="headerlink" href="#b-how-to-convert-a-string-timestamp-to-datetime-format" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/29.png" src="../_images/29.png" />
+<img alt="../_images/212.png" src="../_images/212.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1102,7 +1102,7 @@ if (window.Jupyter !== undefined) {
 <h2>1c. How to convert unix timestamp to a string timestamp?<a class="headerlink" href="#c-how-to-convert-unix-timestamp-to-a-string-timestamp" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/39.png" src="../_images/39.png" />
+<img alt="../_images/311.png" src="../_images/311.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1190,7 +1190,7 @@ if (window.Jupyter !== undefined) {
 <h2>1d. How to convert a timestamp to unix timestamp?<a class="headerlink" href="#d-how-to-convert-a-timestamp-to-unix-timestamp" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/49.png" src="../_images/49.png" />
+<img alt="../_images/411.png" src="../_images/411.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1213,7 +1213,7 @@ if (window.Jupyter !== undefined) {
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-----------------------+
 |timestamp              |
 +-----------------------+
-|2021-02-25 22:21:01.063|
+|2021-02-28 01:05:53.711|
 +-----------------------+
 </pre></div>
 </div>
@@ -1232,7 +1232,7 @@ if (window.Jupyter !== undefined) {
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-------------+
 |unixtimestamp|
 +-------------+
-|1614309661   |
+|1614492354   |
 +-------------+
 </pre></div>
 </div>
@@ -1258,7 +1258,7 @@ if (window.Jupyter !== undefined) {
   </thead>
   <tbody>
     <tr>
-      <td>2021-02-25 22:21:01.703</td>
+      <td>2021-02-28 01:05:54.267</td>
     </tr>
   </tbody>
 </table style="display:inline">                              <table style="display:inline" border="1" class="dataframe">
@@ -1269,7 +1269,7 @@ if (window.Jupyter !== undefined) {
   </thead>
   <tbody>
     <tr>
-      <td>1614309661</td>
+      <td>1614492354</td>
     </tr>
   </tbody>
 </table style="display:inline">                              </div></div>
@@ -1280,7 +1280,7 @@ if (window.Jupyter !== undefined) {
 <h2>1e. How to convert timestamp in UTC timezone to a given time zone?<a class="headerlink" href="#e-how-to-convert-timestamp-in-utc-timezone-to-a-given-time-zone" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/57.png" src="../_images/57.png" />
+<img alt="../_images/59.png" src="../_images/59.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1314,7 +1314,7 @@ be ambiguous.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-----------------------+
 |timestamp_UTC          |
 +-----------------------+
-|2021-02-25 22:21:02.034|
+|2021-02-28 01:05:54.655|
 +-----------------------+
 </pre></div>
 </div>
@@ -1333,7 +1333,7 @@ be ambiguous.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-----------------------+
 |timestamp in local TZ  |
 +-----------------------+
-|2021-02-25 18:21:02.188|
+|2021-02-27 21:05:54.917|
 +-----------------------+
 </pre></div>
 </div>
@@ -1359,7 +1359,7 @@ be ambiguous.
   </thead>
   <tbody>
     <tr>
-      <td>2021-02-25 22:21:02.354</td>
+      <td>2021-02-28 01:05:55.090</td>
     </tr>
   </tbody>
 </table style="display:inline">                              <table style="display:inline" border="1" class="dataframe">
@@ -1370,7 +1370,7 @@ be ambiguous.
   </thead>
   <tbody>
     <tr>
-      <td>2021-02-25 18:21:02.519</td>
+      <td>2021-02-27 21:05:55.225</td>
     </tr>
   </tbody>
 </table style="display:inline">                              </div></div>
@@ -1381,7 +1381,7 @@ be ambiguous.
 <h2>1f. How to convert from a given time zone to UTC timestamps?<a class="headerlink" href="#f-how-to-convert-from-a-given-time-zone-to-utc-timestamps" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/66.png" src="../_images/66.png" />
+<img alt="../_images/68.png" src="../_images/68.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1411,7 +1411,7 @@ be ambiguous.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-----------------------+
 |timestamp              |
 +-----------------------+
-|2021-02-25 22:21:02.725|
+|2021-02-28 01:05:55.443|
 +-----------------------+
 </pre></div>
 </div>
@@ -1427,11 +1427,11 @@ be ambiguous.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-----------------------+
-|timestamp in UTC       |
-+-----------------------+
-|2021-02-26 02:21:02.955|
-+-----------------------+
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----------------------+
+|timestamp in UTC      |
++----------------------+
+|2021-02-28 05:05:55.73|
++----------------------+
 </pre></div>
 </div>
 </div>
@@ -1456,7 +1456,7 @@ be ambiguous.
   </thead>
   <tbody>
     <tr>
-      <td>2021-02-25 22:21:03.108</td>
+      <td>2021-02-28 01:05:55.905</td>
     </tr>
   </tbody>
 </table style="display:inline">                              <table style="display:inline" border="1" class="dataframe">
@@ -1467,7 +1467,7 @@ be ambiguous.
   </thead>
   <tbody>
     <tr>
-      <td>2021-02-26 02:21:03.325</td>
+      <td>2021-02-28 05:05:56.122</td>
     </tr>
   </tbody>
 </table style="display:inline">                              </div></div>
@@ -1477,7 +1477,7 @@ be ambiguous.
 <div class="section" id="g-how-to-convert-the-date-format">
 <h2>1g. How to convert the date format?<a class="headerlink" href="#g-how-to-convert-the-date-format" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/73.png" src="../_images/73.png" />
+<img alt="../_images/75.png" src="../_images/75.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1574,7 +1574,7 @@ be ambiguous.
 <h2>2a. How to find no of days between 2 dates?<a class="headerlink" href="#a-how-to-find-no-of-days-between-2-dates" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/82.png" src="../_images/82.png" />
+<img alt="../_images/84.png" src="../_images/84.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1663,7 +1663,7 @@ be ambiguous.
 <div class="section" id="b-how-to-find-no-of-months-between-2-dates">
 <h2>2b. How to find no of months between 2 dates?<a class="headerlink" href="#b-how-to-find-no-of-months-between-2-dates" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/92.png" src="../_images/92.png" />
+<img alt="../_images/93.png" src="../_images/93.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1752,7 +1752,7 @@ be ambiguous.
 <div class="section" id="c-how-to-add-no-of-days-to-a-date">
 <h2>2c. How to add no of days to a date?<a class="headerlink" href="#c-how-to-add-no-of-days-to-a-date" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="chapters/img/chapter7/date-add-details.png" src="chapters/img/chapter7/date-add-details.png" />
+<img alt="../_images/102.png" src="../_images/102.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1840,7 +1840,7 @@ be ambiguous.
 <h2>2d. How to subtract no of days from a date?<a class="headerlink" href="#d-how-to-subtract-no-of-days-from-a-date" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/111.png" src="../_images/111.png" />
+<img alt="../_images/115.png" src="../_images/115.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1927,7 +1927,7 @@ be ambiguous.
 <div class="section" id="e-how-to-add-no-of-months-to-a-date">
 <h2>2e. How to add no of months to a date?<a class="headerlink" href="#e-how-to-add-no-of-months-to-a-date" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/121.png" src="../_images/121.png" />
+<img alt="../_images/122.png" src="../_images/122.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -2014,7 +2014,7 @@ be ambiguous.
 <div class="section" id="how-to-extract-year-month-date-hour-minute-second-day-weekday-week-quarter-of-year-from-a-datetime-column">
 <h2>How to extract year, month, date, hour, minute, second, day, weekday, week/quarter of year from a datetime column?<a class="headerlink" href="#how-to-extract-year-month-date-hour-minute-second-day-weekday-week-quarter-of-year-from-a-datetime-column" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/131.png" src="../_images/131.png" />
+<img alt="../_images/132.png" src="../_images/132.png" />
 </div>
 <p><b>Input:  Spark data frame consisting of a datetime column </b></p>
 <div class="cell docutils container">
@@ -2029,7 +2029,7 @@ be ambiguous.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-----------------------+
 |timestamp              |
 +-----------------------+
-|2021-02-25 22:21:07.588|
+|2021-02-28 01:06:00.456|
 +-----------------------+
 </pre></div>
 </div>
@@ -2053,7 +2053,7 @@ be ambiguous.
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-----------------------+----+-----+----------+---------+---------+----+------+------+----------+-------+
 |timestamp              |year|month|dayofmonth|dayofweek|dayofyear|hour|minute|second|weekofyear|quarter|
 +-----------------------+----+-----+----------+---------+---------+----+------+------+----------+-------+
-|2021-02-25 22:21:07.934|2021|2    |25        |5        |56       |22  |21    |7     |8         |1      |
+|2021-02-28 01:06:00.741|2021|2    |28        |1        |59       |1   |6     |0     |8         |1      |
 +-----------------------+----+-----+----------+---------+---------+----+------+------+----------+-------+
 </pre></div>
 </div>
@@ -2079,7 +2079,7 @@ be ambiguous.
   </thead>
   <tbody>
     <tr>
-      <td>2021-02-25 22:21:08.232</td>
+      <td>2021-02-28 01:06:00.947</td>
     </tr>
   </tbody>
 </table style="display:inline">                              <table style="display:inline" border="1" class="dataframe">
@@ -2100,15 +2100,15 @@ be ambiguous.
   </thead>
   <tbody>
     <tr>
-      <td>2021-02-25 22:21:08.319</td>
+      <td>2021-02-28 01:06:01.047</td>
       <td>2021</td>
       <td>2</td>
-      <td>25</td>
-      <td>5</td>
-      <td>56</td>
-      <td>22</td>
-      <td>21</td>
-      <td>8</td>
+      <td>28</td>
+      <td>1</td>
+      <td>59</td>
+      <td>1</td>
+      <td>6</td>
+      <td>1</td>
       <td>8</td>
       <td>1</td>
     </tr>

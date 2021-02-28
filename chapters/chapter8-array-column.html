@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chapter 8 : Array Columns &#8212; Spark Programming for Data Engineering</title>
+    <title>Chapter 8 : Array Columns &#8212; Spark Data Frame Programming for Modern Data Engineering</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -87,7 +87,7 @@
   <img src="../_static/sparklogo.png" class="logo" alt="logo">
   
   
-  <h1 class="site-logo" id="site-title">Spark Programming for Data Engineering</h1>
+  <h1 class="site-logo" id="site-title">Spark Data Frame Programming for Modern Data Engineering</h1>
   
 </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -900,23 +900,23 @@ if (window.Jupyter !== undefined) {
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#2"><img alt="alt" src="../_images/210.png" /></a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="#3"><img alt="alt" src="../_images/310.png" /></a></p></td>
+<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#2"><img alt="alt" src="../_images/213.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#3"><img alt="alt" src="../_images/312.png" /></a></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#4"><img alt="alt" src="../_images/410.png" /></a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="#5"><img alt="alt" src="../_images/58.png" /></a></p></td>
+<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#4"><img alt="alt" src="../_images/412.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#5"><img alt="alt" src="../_images/510.png" /></a></p></td>
 </tr>
-<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#6"><img alt="alt" src="../_images/67.png" /></a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="#7"><img alt="alt" src="../_images/74.png" /></a></p></td>
+<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#6"><img alt="alt" src="../_images/69.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#7"><img alt="alt" src="../_images/76.png" /></a></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#8"><img alt="alt" src="../_images/83.png" /></a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="#9"><img alt="alt" src="../_images/93.png" /></a></p></td>
+<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#8"><img alt="alt" src="../_images/85.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#9"><img alt="alt" src="../_images/94.png" /></a></p></td>
 </tr>
-<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#10"><img alt="alt" src="../_images/101.png" /></a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="#11"><img alt="alt" src="../_images/112.png" /></a></p></td>
+<tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#10"><img alt="alt" src="../_images/103.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#11"><img alt="alt" src="../_images/116.png" /></a></p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#12"><img alt="alt" src="../_images/122.png" /></a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="#13"><img alt="alt" src="../_images/132.png" /></a></p></td>
+<tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#12"><img alt="alt" src="../_images/123.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#13"><img alt="alt" src="../_images/133.png" /></a></p></td>
 </tr>
 <tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#14"><img alt="alt" src="../_images/141.png" /></a></p></td>
 <td class="text-align:left"><p><a class="reference external" href="#15"><img alt="alt" src="../_images/151.png" /></a></p></td>
@@ -928,7 +928,7 @@ if (window.Jupyter !== undefined) {
 <td class="text-align:left"><p><a class="reference external" href="#19"><img alt="alt" src="../_images/191.png" /></a></p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:right"><p><a class="reference external" href="#20"><img alt="alt" src="../_images/20.png" /></a></p></td>
-<td class="text-align:left"><p><a class="reference external" href="#21"><img alt="alt" src="../_images/211.png" /></a></p></td>
+<td class="text-align:left"><p><a class="reference external" href="#21"><img alt="alt" src="../_images/214.png" /></a></p></td>
 </tr>
 <tr class="row-even"><td class="text-align:right"><p><a class="reference external" href="#22"><img alt="alt" src="../_images/221.png" /></a></p></td>
 <td class="text-align:left"><p></p></td>
@@ -1068,7 +1068,7 @@ if (window.Jupyter !== undefined) {
 <div class="section" id="b-how-to-remove-duplicate-values-from-an-array-column">
 <h2>1b. How to remove duplicate values from an array column?<a class="headerlink" href="#b-how-to-remove-duplicate-values-from-an-array-column" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/210.png" src="../_images/210.png" />
+<img alt="../_images/213.png" src="../_images/213.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1165,7 +1165,7 @@ if (window.Jupyter !== undefined) {
 <div class="section" id="c-how-to-check-if-a-value-is-in-an-array-column">
 <h2>1c. How to check if a value is in an array column?<a class="headerlink" href="#c-how-to-check-if-a-value-is-in-an-array-column" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/310.png" src="../_images/310.png" />
+<img alt="../_images/312.png" src="../_images/312.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1274,7 +1274,7 @@ if (window.Jupyter !== undefined) {
 <h2>1d. How to find the list of elements in column A, but not in column B without duplicates?<a class="headerlink" href="#d-how-to-find-the-list-of-elements-in-column-a-but-not-in-column-b-without-duplicates" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/410.png" src="../_images/410.png" />
+<img alt="../_images/412.png" src="../_images/412.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1378,7 +1378,7 @@ if (window.Jupyter !== undefined) {
 <h2>1e.How to sort the column array in ascending order?<a class="headerlink" href="#e-how-to-sort-the-column-array-in-ascending-order" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/58.png" src="../_images/58.png" />
+<img alt="../_images/510.png" src="../_images/510.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1486,7 +1486,7 @@ if (window.Jupyter !== undefined) {
 <h2>1f. How to create an array from a  column value  repeated  many times?<a class="headerlink" href="#f-how-to-create-an-array-from-a-column-value-repeated-many-times" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/67.png" src="../_images/67.png" />
+<img alt="../_images/69.png" src="../_images/69.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1574,7 +1574,7 @@ if (window.Jupyter !== undefined) {
 <h2>1g. How to remove all elements equal to an element from the given array in a column?<a class="headerlink" href="#g-how-to-remove-all-elements-equal-to-an-element-from-the-given-array-in-a-column" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/74.png" src="../_images/74.png" />
+<img alt="../_images/76.png" src="../_images/76.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1676,7 +1676,7 @@ if (window.Jupyter !== undefined) {
 <h2>1h . How to locate the position of first occurrence of the given value in the given array in a column?<a class="headerlink" href="#h-how-to-locate-the-position-of-first-occurrence-of-the-given-value-in-the-given-array-in-a-column" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/83.png" src="../_images/83.png" />
+<img alt="../_images/85.png" src="../_images/85.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1771,7 +1771,7 @@ if (window.Jupyter !== undefined) {
 <div class="section" id="i-how-to-find-the-minimum-value-of-an-array-in-a-column">
 <h2>1i. How to find the minimum value of an array in a column?<a class="headerlink" href="#i-how-to-find-the-minimum-value-of-an-array-in-a-column" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/93.png" src="../_images/93.png" />
+<img alt="../_images/94.png" src="../_images/94.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1870,7 +1870,7 @@ if (window.Jupyter !== undefined) {
 <div class="section" id="j-how-to-find-the-maximum-value-of-an-array-in-a-column">
 <h2>1j. How to find the maximum value of an array in a column?<a class="headerlink" href="#j-how-to-find-the-maximum-value-of-an-array-in-a-column" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/101.png" src="../_images/101.png" />
+<img alt="../_images/103.png" src="../_images/103.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -1970,7 +1970,7 @@ if (window.Jupyter !== undefined) {
 <h2>1k. How to convert a column of nested arrays into a map column?<a class="headerlink" href="#k-how-to-convert-a-column-of-nested-arrays-into-a-map-column" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/112.png" src="../_images/112.png" />
+<img alt="../_images/116.png" src="../_images/116.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -2062,7 +2062,7 @@ if (window.Jupyter !== undefined) {
 <div class="section" id="l-how-to-sort-an-array-in-a-column-in-ascending-or-descending-order">
 <h2>1l. How to sort an array in a column in ascending or descending order?<a class="headerlink" href="#l-how-to-sort-an-array-in-a-column-in-ascending-or-descending-order" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/122.png" src="../_images/122.png" />
+<img alt="../_images/123.png" src="../_images/123.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -2196,7 +2196,7 @@ if (window.Jupyter !== undefined) {
 <h2>1m. How to slice an array in a column?<a class="headerlink" href="#m-how-to-slice-an-array-in-a-column" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/132.png" src="../_images/132.png" />
+<img alt="../_images/133.png" src="../_images/133.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
@@ -2333,8 +2333,8 @@ if (window.Jupyter !== undefined) {
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+-----------------+
 |          shuffle|
 +-----------------+
-|  [8, 3, 4, 1, 2]|
-|[5, 32, 32, 4, 6]|
+|  [8, 1, 3, 4, 2]|
+|[32, 4, 5, 32, 6]|
 +-----------------+
 </pre></div>
 </div>
@@ -2374,10 +2374,10 @@ if (window.Jupyter !== undefined) {
   </thead>
   <tbody>
     <tr>
-      <td>[8, 3, 4, 1, 2]</td>
+      <td>[8, 1, 3, 4, 2]</td>
     </tr>
     <tr>
-      <td>[5, 32, 32, 4, 6]</td>
+      <td>[32, 4, 5, 32, 6]</td>
     </tr>
   </tbody>
 </table style="display:inline">                              </div></div>
@@ -2980,7 +2980,7 @@ if (window.Jupyter !== undefined) {
 <h2>1u. How to concatenate the elements of an array in a column?<a class="headerlink" href="#u-how-to-concatenate-the-elements-of-an-array-in-a-column" title="Permalink to this headline">¶</a></h2>
 <p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/211.png" src="../_images/211.png" />
+<img alt="../_images/214.png" src="../_images/214.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
