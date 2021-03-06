@@ -98,7 +98,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../Author.html">
-   About the Author:
+   Jupiter Book
   </a>
  </li>
 </ul>
@@ -307,13 +307,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#outline">
-   Outline
+  <a class="reference internal nav-link" href="#chapter-outline">
+   Chapter Outline
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#visual-outline">
-   Visual Outline
+  <a class="reference internal nav-link" href="#chapter-outline-gallery">
+   Chapter Outline - Gallery
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -322,8 +322,8 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#why-dataframes-are-useful">
-     Why DataFrames are Useful ?
+    <a class="reference internal nav-link" href="#why-are-dataframes-useful">
+     Why are DataFrames Useful ?
     </a>
    </li>
   </ul>
@@ -401,7 +401,7 @@
   <div class="figure align-center" id="banner">
 <img alt="../_images/banner.png" src="../_images/banner.png" />
 </div>
-<div class="section" id="chapter-2-dataframes">
+<style>body {text-align: justify}</style><div class="section" id="chapter-2-dataframes">
 <h1>Chapter 2 : DataFrames<a class="headerlink" href="#chapter-2-dataframes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="learning-objectives">
 <h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
@@ -411,8 +411,8 @@
 <li><p>Basic dataframe operations.</p></li>
 </ul>
 </div>
-<div class="section" id="outline">
-<h2>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="chapter-outline">
+<h2>Chapter Outline<a class="headerlink" href="#chapter-outline" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="#1">1. What is spark dataframe</a></p></li>
 <li><p><a class="reference external" href="#2">2. Creating a spark dataframe</a></p>
@@ -450,8 +450,8 @@
 </div>
 </div>
 </div>
-<div class="section" id="visual-outline">
-<h2>Visual Outline<a class="headerlink" href="#visual-outline" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="chapter-outline-gallery">
+<h2>Chapter Outline - Gallery<a class="headerlink" href="#chapter-outline-gallery" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:right head"><p>click on</p></th>
@@ -476,12 +476,12 @@
 </tr>
 </tbody>
 </table>
-<hr></hr><p><a id='1'></a></p>
+<p><a id='1'></a></p>
 </div>
 <div class="section" id="what-is-spark-dataframe">
 <h2>1. What is spark dataframe?<a class="headerlink" href="#what-is-spark-dataframe" title="Permalink to this headline">¶</a></h2>
 <p>A DataFrame simply represents a table of data with rows and columns. A simple analogy would be a spreadsheet with named columns.</p>
-<p>Spark Data Frame is a distributed collection of data organized into named columns. It can be constructed from a wide array of sources such as: structured data files, tables in Hive, external databases, or existing RDD, Lists, Pandas data frame.</p>
+<p>Spark DataFrame is a distributed collection of data organized into named columns. It can be constructed from a wide array of sources such as: structured data files, tables in Hive, external databases, or existing RDD, Lists, Pandas data frame.</p>
 <ul class="simple">
 <li><p>Immutable in nature : We can create DataFrame once but can’t change it. And we can transform a DataFrame after applying transformations.</p></li>
 <li><p>Lazy Evaluations: This means that a task is not executed until an action is performed.</p></li>
@@ -494,27 +494,18 @@
 <li><p>It saves the round trips between driver and cluster, thus speeds up the process.</p></li>
 <li><p>Saves Computation and increases Speed</p></li>
 </ul>
-<div class="section" id="why-dataframes-are-useful">
-<h3>Why DataFrames are Useful ?<a class="headerlink" href="#why-dataframes-are-useful" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="why-are-dataframes-useful">
+<h3>Why are DataFrames Useful ?<a class="headerlink" href="#why-are-dataframes-useful" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>DataFrames are designed for processing large collection of structured or semi-structured data.
+<li><p>DataFrames are designed for processing large collections of structured or semi-structured data.
 Observations in Spark DataFrame are organised under named columns, which helps Apache Spark to understand the schema of a DataFrame. This helps Spark optimize execution plan on these queries.</p></li>
 <li><p>DataFrame in Apache Spark has the ability to handle petabytes of data.</p></li>
-<li><p>DataFrame has a support for wide range of data format and sources.</p></li>
+<li><p>DataFrame has a support for a wide range of data formats and sources.</p></li>
 </ul>
 <div class="figure align-center">
 <img alt="../_images/0.png" src="../_images/0.png" />
 </div>
-<p>All transformations in Spark are lazy, in that they do not compute their results right away. Instead, they just remember the transformations applied to some base dataset (e.g. a file). The transformations are only computed when an action requires a result to be returned to the driver program. This design enables Spark to run more efficiently.</p>
-<p>Advantages of lazy evaluation.</p>
-<ul class="simple">
-<li><p>It is an optimization technique i.e. it provides optimization by reducing the number of queries.</p></li>
-<li><p>It saves the round trips between driver and cluster, thus speeds up the process.</p></li>
-<li><p>Saves Computation and increases Speed</p></li>
-</ul>
-<div class="figure align-center">
-<img alt="../_images/0_1.png" src="../_images/0_1.png" />
-</div>
+<p>All transformations in Spark are lazy, in that they do not compute their results right away. Instead, they just remember the transformations applied to some base dataset (e.g. a file).</p>
 <p><a id='2'></a></p>
 </div>
 </div>

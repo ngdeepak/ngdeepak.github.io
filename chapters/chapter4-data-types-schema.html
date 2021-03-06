@@ -66,7 +66,7 @@
 <meta property="og:url"         content="https://github.com/ngdeepak/testbook/chapters/chapter4-data-types-schema.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Chapter 4 : Data Types &amp; Schema" />
-<meta property="og:description" content="Chapter 4 : Data Types &amp; Schema  Chapter Learning Objectives  Various Data types in Spark  Use of Schema  Chapter Outline  1. Various data types   1a. How to ge" />
+<meta property="og:description" content="Chapter 4 : Data Types &amp; Schema  Chapter Learning Objectives  Various Data types in Spark.  Use of Schema.  Chapter Outline  1. Various data types   1a. How to " />
 <meta property="og:image"       content="https://github.com/ngdeepak/testbook/_static/sparklogo.png" />
 
 <meta name="twitter:card" content="summary" />
@@ -98,7 +98,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../Author.html">
-   About the Author:
+   Jupiter Book
   </a>
  </li>
 </ul>
@@ -347,7 +347,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#b-how-to-define-a-schema">
-   [2b. How to define a schema?]
+   2b. How to define a schema?
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -360,12 +360,12 @@
      Example#2
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#c-how-to-use-the-schema">
-     2c. How to use the schema?
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#c-how-to-use-the-schema">
+   2c. How to use the schema?
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#d-how-to-save-the-schema">
@@ -401,8 +401,8 @@
 <div class="section" id="chapter-learning-objectives">
 <h2>Chapter Learning Objectives<a class="headerlink" href="#chapter-learning-objectives" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Various Data types in Spark</p></li>
-<li><p>Use of Schema</p></li>
+<li><p>Various Data types in Spark.</p></li>
+<li><p>Use of Schema.</p></li>
 </ul>
 </div>
 <div class="section" id="chapter-outline">
@@ -427,13 +427,13 @@
 </ul>
 <div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>
-<span class="n">css</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">div.special_table + table, th, td {</span>
-<span class="s2">  border: 3px solid orange;</span>
-<span class="s2">}</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pn</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="n">raw_css</span><span class="o">=</span><span class="p">[</span><span class="n">css</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import panel as pn</span>
+<span class="c1"># css = &quot;&quot;&quot;</span>
+<span class="c1"># div.special_table + table, th, td {</span>
+<span class="c1">#   border: 3px solid orange;</span>
+<span class="c1"># }</span>
+<span class="c1"># &quot;&quot;&quot;</span>
+<span class="c1"># pn.extension(raw_css=[css])</span>
 <span class="kn">import</span> <span class="nn">pyspark</span>
 <span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
 <span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span> \
@@ -454,378 +454,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<script type="application/javascript">
-(function(root) {
-  function now() {
-    return new Date();
-  }
-
-  var force = true;
-
-  if (typeof root._bokeh_onload_callbacks === "undefined" || force === true) {
-    root._bokeh_onload_callbacks = [];
-    root._bokeh_is_loading = undefined;
-  }
-
-  if (typeof (root._bokeh_timeout) === "undefined" || force === true) {
-    root._bokeh_timeout = Date.now() + 5000;
-    root._bokeh_failed_load = false;
-  }
-
-  function run_callbacks() {
-    try {
-      root._bokeh_onload_callbacks.forEach(function(callback) {
-        if (callback != null)
-          callback();
-      });
-    } finally {
-      delete root._bokeh_onload_callbacks
-    }
-    console.debug("Bokeh: all callbacks have finished");
-  }
-
-  function load_libs(css_urls, js_urls, callback) {
-    if (css_urls == null) css_urls = [];
-    if (js_urls == null) js_urls = [];
-
-    root._bokeh_onload_callbacks.push(callback);
-    if (root._bokeh_is_loading > 0) {
-      console.debug("Bokeh: BokehJS is being loaded, scheduling callback at", now());
-      return null;
-    }
-    if (js_urls == null || js_urls.length === 0) {
-      run_callbacks();
-      return null;
-    }
-    console.debug("Bokeh: BokehJS not loaded, scheduling load and callback at", now());
-    root._bokeh_is_loading = css_urls.length + js_urls.length;
-
-    function on_load() {
-      root._bokeh_is_loading--;
-      if (root._bokeh_is_loading === 0) {
-        console.debug("Bokeh: all BokehJS libraries/stylesheets loaded");
-        run_callbacks()
-      }
-    }
-
-    function on_error() {
-      console.error("failed to load " + url);
-    }
-
-    for (var i = 0; i < css_urls.length; i++) {
-      var url = css_urls[i];
-      const element = document.createElement("link");
-      element.onload = on_load;
-      element.onerror = on_error;
-      element.rel = "stylesheet";
-      element.type = "text/css";
-      element.href = url;
-      console.debug("Bokeh: injecting link tag for BokehJS stylesheet: ", url);
-      document.body.appendChild(element);
-    }
-
-    var skip = [];
-    if (window.requirejs) {
-      require([], function() {
-      })
-    }
-    for (var i = 0; i < js_urls.length; i++) {
-      var url = js_urls[i];
-      if (skip.indexOf(url) >= 0) { on_load(); continue; }
-      var element = document.createElement('script');
-      element.onload = on_load;
-      element.onerror = on_error;
-      element.async = false;
-      element.src = url;
-      console.debug("Bokeh: injecting script tag for BokehJS library: ", url);
-      document.head.appendChild(element);
-    }
-	if (!js_urls.length) {
-      on_load()
-    }
-  };
-
-  function inject_raw_css(css) {
-    const element = document.createElement("style");
-    element.appendChild(document.createTextNode(css));
-    document.body.appendChild(element);
-  }
-
-  var js_urls = ["https://cdn.bokeh.org/bokeh/release/bokeh-2.2.3.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.2.3.min.js", "https://cdn.bokeh.org/bokeh/release/bokeh-tables-2.2.3.min.js", "https://unpkg.com/@holoviz/panel@^0.10.3/dist/panel.min.js"];
-  var css_urls = ["https://unpkg.com/@holoviz/panel@0.10.3/dist/css/alerts.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/card.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/widgets.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/markdown.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/json.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/dataframe.css"];
-
-  var inline_js = [
-    function(Bokeh) {
-      inject_raw_css("\ndiv.special_table + table, th, td {\n  border: 3px solid orange;\n}\n");
-    },
-    function(Bokeh) {
-      Bokeh.set_log_level("info");
-    },
-    function(Bokeh) {} // ensure no trailing comma for IE
-  ];
-
-  function run_inline_js() {
-    if ((root.Bokeh !== undefined) || (force === true)) {
-      for (var i = 0; i < inline_js.length; i++) {
-        inline_js[i].call(root, root.Bokeh);
-      }} else if (Date.now() < root._bokeh_timeout) {
-      setTimeout(run_inline_js, 100);
-    } else if (!root._bokeh_failed_load) {
-      console.log("Bokeh: BokehJS failed to load within specified timeout.");
-      root._bokeh_failed_load = true;
-    }
-  }
-
-  if (root._bokeh_is_loading === 0) {
-    console.debug("Bokeh: BokehJS loaded, going straight to plotting");
-    run_inline_js();
-  } else {
-    load_libs(css_urls, js_urls, function() {
-      console.debug("Bokeh: BokehJS plotting callback run at", now());
-      run_inline_js();
-    });
-  }
-}(window));</script><script type="application/javascript">
-if ((window.PyViz === undefined) || (window.PyViz instanceof HTMLElement)) {
-  window.PyViz = {comms: {}, comm_status:{}, kernels:{}, receivers: {}, plot_index: []}
-}
-
-
-    function JupyterCommManager() {
-    }
-
-    JupyterCommManager.prototype.register_target = function(plot_id, comm_id, msg_handler) {
-      if (window.comm_manager || ((window.Jupyter !== undefined) && (Jupyter.notebook.kernel != null))) {
-        var comm_manager = window.comm_manager || Jupyter.notebook.kernel.comm_manager;
-        comm_manager.register_target(comm_id, function(comm) {
-          comm.on_msg(msg_handler);
-        });
-      } else if ((plot_id in window.PyViz.kernels) && (window.PyViz.kernels[plot_id])) {
-        window.PyViz.kernels[plot_id].registerCommTarget(comm_id, function(comm) {
-          comm.onMsg = msg_handler;
-        });
-      } else if (typeof google != 'undefined' && google.colab.kernel != null) {
-        google.colab.kernel.comms.registerTarget(comm_id, (comm) => {
-          var messages = comm.messages[Symbol.asyncIterator]();
-          function processIteratorResult(result) {
-            var message = result.value;
-            console.log(message)
-            var content = {data: message.data, comm_id};
-            var buffers = []
-            for (var buffer of message.buffers || []) {
-              buffers.push(new DataView(buffer))
-            }
-            var metadata = message.metadata || {};
-            var msg = {content, buffers, metadata}
-            msg_handler(msg);
-            return messages.next().then(processIteratorResult);
-          }
-          return messages.next().then(processIteratorResult);
-        })
-      }
-    }
-
-    JupyterCommManager.prototype.get_client_comm = function(plot_id, comm_id, msg_handler) {
-      if (comm_id in window.PyViz.comms) {
-        return window.PyViz.comms[comm_id];
-      } else if (window.comm_manager || ((window.Jupyter !== undefined) && (Jupyter.notebook.kernel != null))) {
-        var comm_manager = window.comm_manager || Jupyter.notebook.kernel.comm_manager;
-        var comm = comm_manager.new_comm(comm_id, {}, {}, {}, comm_id);
-        if (msg_handler) {
-          comm.on_msg(msg_handler);
-        }
-      } else if ((plot_id in window.PyViz.kernels) && (window.PyViz.kernels[plot_id])) {
-        var comm = window.PyViz.kernels[plot_id].connectToComm(comm_id);
-        comm.open();
-        if (msg_handler) {
-          comm.onMsg = msg_handler;
-        }
-      } else if (typeof google != 'undefined' && google.colab.kernel != null) {
-        var comm_promise = google.colab.kernel.comms.open(comm_id)
-        comm_promise.then((comm) => {
-          window.PyViz.comms[comm_id] = comm;
-          if (msg_handler) {
-            var messages = comm.messages[Symbol.asyncIterator]();
-            function processIteratorResult(result) {
-              var message = result.value;
-              var content = {data: message.data};
-              var metadata = message.metadata || {comm_id};
-              var msg = {content, metadata}
-              msg_handler(msg);
-              return messages.next().then(processIteratorResult);
-            }
-            return messages.next().then(processIteratorResult);
-          }
-        }) 
-        var sendClosure = (data, metadata, buffers, disposeOnDone) => {
-          return comm_promise.then((comm) => {
-            comm.send(data, metadata, buffers, disposeOnDone);
-          });
-        };
-        var comm = {
-          send: sendClosure
-        };
-      }
-      window.PyViz.comms[comm_id] = comm;
-      return comm;
-    }
-    window.PyViz.comm_manager = new JupyterCommManager();
-    
-
-
-var JS_MIME_TYPE = 'application/javascript';
-var HTML_MIME_TYPE = 'text/html';
-var EXEC_MIME_TYPE = 'application/vnd.holoviews_exec.v0+json';
-var CLASS_NAME = 'output';
-
-/**
- * Render data to the DOM node
- */
-function render(props, node) {
-  var div = document.createElement("div");
-  var script = document.createElement("script");
-  node.appendChild(div);
-  node.appendChild(script);
-}
-
-/**
- * Handle when a new output is added
- */
-function handle_add_output(event, handle) {
-  var output_area = handle.output_area;
-  var output = handle.output;
-  if ((output.data == undefined) || (!output.data.hasOwnProperty(EXEC_MIME_TYPE))) {
-    return
-  }
-  var id = output.metadata[EXEC_MIME_TYPE]["id"];
-  var toinsert = output_area.element.find("." + CLASS_NAME.split(' ')[0]);
-  if (id !== undefined) {
-    var nchildren = toinsert.length;
-    var html_node = toinsert[nchildren-1].children[0];
-    html_node.innerHTML = output.data[HTML_MIME_TYPE];
-    var scripts = [];
-    var nodelist = html_node.querySelectorAll("script");
-    for (var i in nodelist) {
-      if (nodelist.hasOwnProperty(i)) {
-        scripts.push(nodelist[i])
-      }
-    }
-
-    scripts.forEach( function (oldScript) {
-      var newScript = document.createElement("script");
-      var attrs = [];
-      var nodemap = oldScript.attributes;
-      for (var j in nodemap) {
-        if (nodemap.hasOwnProperty(j)) {
-          attrs.push(nodemap[j])
-        }
-      }
-      attrs.forEach(function(attr) { newScript.setAttribute(attr.name, attr.value) });
-      newScript.appendChild(document.createTextNode(oldScript.innerHTML));
-      oldScript.parentNode.replaceChild(newScript, oldScript);
-    });
-    if (JS_MIME_TYPE in output.data) {
-      toinsert[nchildren-1].children[1].textContent = output.data[JS_MIME_TYPE];
-    }
-    output_area._hv_plot_id = id;
-    if ((window.Bokeh !== undefined) && (id in Bokeh.index)) {
-      window.PyViz.plot_index[id] = Bokeh.index[id];
-    } else {
-      window.PyViz.plot_index[id] = null;
-    }
-  } else if (output.metadata[EXEC_MIME_TYPE]["server_id"] !== undefined) {
-    var bk_div = document.createElement("div");
-    bk_div.innerHTML = output.data[HTML_MIME_TYPE];
-    var script_attrs = bk_div.children[0].attributes;
-    for (var i = 0; i < script_attrs.length; i++) {
-      toinsert[toinsert.length - 1].childNodes[1].setAttribute(script_attrs[i].name, script_attrs[i].value);
-    }
-    // store reference to server id on output_area
-    output_area._bokeh_server_id = output.metadata[EXEC_MIME_TYPE]["server_id"];
-  }
-}
-
-/**
- * Handle when an output is cleared or removed
- */
-function handle_clear_output(event, handle) {
-  var id = handle.cell.output_area._hv_plot_id;
-  var server_id = handle.cell.output_area._bokeh_server_id;
-  if (((id === undefined) || !(id in PyViz.plot_index)) && (server_id !== undefined)) { return; }
-  var comm = window.PyViz.comm_manager.get_client_comm("hv-extension-comm", "hv-extension-comm", function () {});
-  if (server_id !== null) {
-    comm.send({event_type: 'server_delete', 'id': server_id});
-    return;
-  } else if (comm !== null) {
-    comm.send({event_type: 'delete', 'id': id});
-  }
-  delete PyViz.plot_index[id];
-  if ((window.Bokeh !== undefined) & (id in window.Bokeh.index)) {
-    var doc = window.Bokeh.index[id].model.document
-    doc.clear();
-    const i = window.Bokeh.documents.indexOf(doc);
-    if (i > -1) {
-      window.Bokeh.documents.splice(i, 1);
-    }
-  }
-}
-
-/**
- * Handle kernel restart event
- */
-function handle_kernel_cleanup(event, handle) {
-  delete PyViz.comms["hv-extension-comm"];
-  window.PyViz.plot_index = {}
-}
-
-/**
- * Handle update_display_data messages
- */
-function handle_update_output(event, handle) {
-  handle_clear_output(event, {cell: {output_area: handle.output_area}})
-  handle_add_output(event, handle)
-}
-
-function register_renderer(events, OutputArea) {
-  function append_mime(data, metadata, element) {
-    // create a DOM node to render to
-    var toinsert = this.create_output_subarea(
-    metadata,
-    CLASS_NAME,
-    EXEC_MIME_TYPE
-    );
-    this.keyboard_manager.register_events(toinsert);
-    // Render to node
-    var props = {data: data, metadata: metadata[EXEC_MIME_TYPE]};
-    render(props, toinsert[0]);
-    element.append(toinsert);
-    return toinsert
-  }
-
-  events.on('output_added.OutputArea', handle_add_output);
-  events.on('output_updated.OutputArea', handle_update_output);
-  events.on('clear_output.CodeCell', handle_clear_output);
-  events.on('delete.Cell', handle_clear_output);
-  events.on('kernel_ready.Kernel', handle_kernel_cleanup);
-
-  OutputArea.prototype.register_mime_type(EXEC_MIME_TYPE, append_mime, {
-    safe: true,
-    index: 0
-  });
-}
-
-if (window.Jupyter !== undefined) {
-  try {
-    var events = require('base/js/events');
-    var OutputArea = require('notebook/js/outputarea').OutputArea;
-    if (OutputArea.prototype.mime_types().indexOf(EXEC_MIME_TYPE) == -1) {
-      register_renderer(events, OutputArea);
-    }
-  } catch(err) {
-  }
-}
-</script></div>
 </div>
 <div class="section" id="common-data-types-in-spark">
 <h3>Common data types in spark<a class="headerlink" href="#common-data-types-in-spark" title="Permalink to this headline">¶</a></h3>
@@ -1302,7 +930,7 @@ Returns the schema of this DataFrame as a pyspark.sql.types.StructType.</p>
 </div>
 </div>
 <div class="section" id="b-how-to-define-a-schema">
-<h2>[2b. How to define a schema?]<a class="headerlink" href="#b-how-to-define-a-schema" title="Permalink to this headline">¶</a></h2>
+<h2>2b. How to define a schema?<a class="headerlink" href="#b-how-to-define-a-schema" title="Permalink to this headline">¶</a></h2>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
 <p class="admonition-title">Syntax</p>
@@ -1404,8 +1032,9 @@ Returns the schema of this DataFrame as a pyspark.sql.types.StructType.</p>
 </div>
 <p><a id='7'></a></p>
 </div>
+</div>
 <div class="section" id="c-how-to-use-the-schema">
-<h3>2c. How to use the schema?<a class="headerlink" href="#c-how-to-use-the-schema" title="Permalink to this headline">¶</a></h3>
+<h2>2c. How to use the schema?<a class="headerlink" href="#c-how-to-use-the-schema" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.types</span> <span class="kn">import</span> <span class="o">*</span>
@@ -1525,7 +1154,6 @@ Returns the schema of this DataFrame as a pyspark.sql.types.StructType.</p>
 </div>
 <p><a id='8'></a></p>
 </div>
-</div>
 <div class="section" id="d-how-to-save-the-schema">
 <h2>2d. How to save the schema?<a class="headerlink" href="#d-how-to-save-the-schema" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
@@ -1572,10 +1200,110 @@ Returns the schema of this DataFrame as a pyspark.sql.types.StructType.</p>
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rdd_schema</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">sparkContext</span><span class="o">.</span><span class="n">parallelize</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">schema</span><span class="p">)</span>
+
+<span class="n">rdd_schema</span><span class="o">.</span><span class="n">coalesce</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">saveAsPickleFile</span><span class="p">(</span><span class="s2">&quot;data/text/schema_file&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>---------------------------------------------------------------------------
+Py4JJavaError                             Traceback (most recent call last)
+&lt;ipython-input-20-394ef375de97&gt; in &lt;module&gt;
+      1 rdd_schema = spark.sparkContext.parallelize(df.schema)
+      2 
+----&gt; 3 rdd_schema.coalesce(1).saveAsPickleFile(&quot;data/text/schema_file&quot;)
+
+~/opt/anaconda3/envs/sparkbook/lib/python3.8/site-packages/pyspark/rdd.py in saveAsPickleFile(self, path, batchSize)
+   1603         else:
+   1604             ser = BatchedSerializer(PickleSerializer(), batchSize)
+-&gt; 1605         self._reserialize(ser)._jrdd.saveAsObjectFile(path)
+   1606 
+   1607     @ignore_unicode_prefix
+
+~/opt/anaconda3/envs/sparkbook/lib/python3.8/site-packages/py4j/java_gateway.py in __call__(self, *args)
+   1302 
+   1303         answer = self.gateway_client.send_command(command)
+-&gt; 1304         return_value = get_return_value(
+   1305             answer, self.gateway_client, self.target_id, self.name)
+   1306 
+
+~/opt/anaconda3/envs/sparkbook/lib/python3.8/site-packages/pyspark/sql/utils.py in deco(*a, **kw)
+    126     def deco(*a, **kw):
+    127         try:
+--&gt; 128             return f(*a, **kw)
+    129         except py4j.protocol.Py4JJavaError as e:
+    130             converted = convert_exception(e.java_exception)
+
+~/opt/anaconda3/envs/sparkbook/lib/python3.8/site-packages/py4j/protocol.py in get_return_value(answer, gateway_client, target_id, name)
+    324             value = OUTPUT_CONVERTER[type](answer[2:], gateway_client)
+    325             if answer[1] == REFERENCE_TYPE:
+--&gt; 326                 raise Py4JJavaError(
+    327                     &quot;An error occurred while calling {0}{1}{2}.\n&quot;.
+    328                     format(target_id, &quot;.&quot;, name), value)
+
+Py4JJavaError: An error occurred while calling o148.saveAsObjectFile.
+: org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory file:/Users/deepak/Documents/sparkbook/chapters/data/text/schema_file already exists
+	at org.apache.hadoop.mapred.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:131)
+	at org.apache.spark.internal.io.HadoopMapRedWriteConfigUtil.assertConf(SparkHadoopWriter.scala:289)
+	at org.apache.spark.internal.io.SparkHadoopWriter$.write(SparkHadoopWriter.scala:71)
+	at org.apache.spark.rdd.PairRDDFunctions.$anonfun$saveAsHadoopDataset$1(PairRDDFunctions.scala:1090)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:388)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsHadoopDataset(PairRDDFunctions.scala:1088)
+	at org.apache.spark.rdd.PairRDDFunctions.$anonfun$saveAsHadoopFile$4(PairRDDFunctions.scala:1061)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:388)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsHadoopFile(PairRDDFunctions.scala:1026)
+	at org.apache.spark.rdd.SequenceFileRDDFunctions.$anonfun$saveAsSequenceFile$1(SequenceFileRDDFunctions.scala:69)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:388)
+	at org.apache.spark.rdd.SequenceFileRDDFunctions.saveAsSequenceFile(SequenceFileRDDFunctions.scala:54)
+	at org.apache.spark.rdd.RDD.$anonfun$saveAsObjectFile$1(RDD.scala:1561)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:388)
+	at org.apache.spark.rdd.RDD.saveAsObjectFile(RDD.scala:1561)
+	at org.apache.spark.api.java.JavaRDDLike.saveAsObjectFile(JavaRDDLike.scala:565)
+	at org.apache.spark.api.java.JavaRDDLike.saveAsObjectFile$(JavaRDDLike.scala:564)
+	at org.apache.spark.api.java.AbstractJavaRDDLike.saveAsObjectFile(JavaRDDLike.scala:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div>
+</div>
+</div>
+</div>
 <p><a id='9'></a></p>
 </div>
 <div class="section" id="e-how-to-load-the-saved-schema">
 <h2>2e. How to load the saved schema?<a class="headerlink" href="#e-how-to-load-the-saved-schema" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">schema_rdd</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">sparkContext</span><span class="o">.</span><span class="n">pickleFile</span><span class="p">(</span><span class="s2">&quot;data/text/schema_file&quot;</span><span class="p">)</span>
+<span class="n">schema</span> <span class="o">=</span> <span class="n">StructType</span><span class="p">(</span><span class="n">schema_rdd</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>    
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="f-how-to-get-the-names-of-all-fields-in-the-schema">
 <h2>2f. How to get the names of all fields in the schema?<a class="headerlink" href="#f-how-to-get-the-names-of-all-fields-in-the-schema" title="Permalink to this headline">¶</a></h2>
@@ -1588,26 +1316,10 @@ Returns the schema of this DataFrame as a pyspark.sql.types.StructType.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+----+---------+---+------+------+----------+
-|name|     city|age|smoker|height| birthdate|
-+----+---------+---+------+------+----------+
-|John|  Seattle| 60|  true|   1.7|1960-01-01|
-|Tony|Cupertino| 30| false|   1.8|1990-01-01|
-|Mike| New York| 40|  true|  1.65|1980-01-01|
-+----+---------+---+------+------+----------+
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_mul</span><span class="o">.</span><span class="n">schema</span><span class="o">.</span><span class="n">fieldNames</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;name&#39;, &#39;city&#39;, &#39;age&#39;, &#39;smoker&#39;, &#39;height&#39;, &#39;birthdate&#39;]
 </pre></div>
 </div>
 </div>
@@ -1620,59 +1332,6 @@ Returns the schema of this DataFrame as a pyspark.sql.types.StructType.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>input                                     output
-</pre></div>
-</div>
-<div class="output text_html"><table style="display:inline" border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>name</th>
-      <th>city</th>
-      <th>age</th>
-      <th>smoker</th>
-      <th>height</th>
-      <th>birthdate</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>John</td>
-      <td>Seattle</td>
-      <td>60</td>
-      <td>True</td>
-      <td>1.70</td>
-      <td>1960-01-01</td>
-    </tr>
-    <tr>
-      <td>Tony</td>
-      <td>Cupertino</td>
-      <td>30</td>
-      <td>False</td>
-      <td>1.80</td>
-      <td>1990-01-01</td>
-    </tr>
-    <tr>
-      <td>Mike</td>
-      <td>New York</td>
-      <td>40</td>
-      <td>True</td>
-      <td>1.65</td>
-      <td>1980-01-01</td>
-    </tr>
-  </tbody>
-</table style="display:inline">      <table style="display:inline" border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>.</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>[name, city, age, smoker, height, birthdate]</td>
-    </tr>
-  </tbody>
-</table style="display:inline">      </div></div>
 </div>
 <p><a id='6'></a></p>
 </div>

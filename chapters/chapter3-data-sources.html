@@ -98,7 +98,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../Author.html">
-   About the Author:
+   Jupiter Book
   </a>
  </li>
 </ul>
@@ -376,8 +376,8 @@
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-reading-from-csv-file-into-spark-data-frame">
-     2a. Reading from CSV file into spark data frame
+    <a class="reference internal nav-link" href="#b-reading-from-csv-file-into-spark-data-frame">
+     2b. Reading from CSV file into spark data frame
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -388,8 +388,8 @@
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-reading-from-json-file-into-spark-data-frame">
-     2a. Reading from JSON file into spark data frame
+    <a class="reference internal nav-link" href="#c-reading-from-json-file-into-spark-data-frame">
+     2c. Reading from JSON file into spark data frame
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
@@ -456,7 +456,7 @@
   <div class="figure align-center" id="banner">
 <img alt="../_images/banner.png" src="../_images/banner.png" />
 </div>
-<div class="section" id="chapter-3-data-sources">
+<style>body {text-align: justify}</style><div class="section" id="chapter-3-data-sources">
 <h1>Chapter 3 : Data Sources<a class="headerlink" href="#chapter-3-data-sources" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="chapter-learning-objectives">
 <h2>Chapter Learning Objectives<a class="headerlink" href="#chapter-learning-objectives" title="Permalink to this headline">¶</a></h2>
@@ -547,7 +547,7 @@ A disadvantage of text files is that they usually have a low entropy, meaning th
 </div>
 <div class="section" id="c-json-file">
 <h3>1c.JSON file<a class="headerlink" href="#c-json-file" title="Permalink to this headline">¶</a></h3>
-<p>JSON (JavaScript Object Notation) is an open standard file format, and data interchange format, that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and array data types (or any other serializable value</p>
+<p>JSON (JavaScript Object Notation) is an open standard file format, and data interchange format, that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and array data types (or any other serializable value.</p>
 <p><a id='5'></a></p>
 </div>
 <div class="section" id="d-parquet-file">
@@ -556,7 +556,7 @@ A disadvantage of text files is that they usually have a low entropy, meaning th
 <p>Parquet uses the record shredding and assembly algorithm which is superior to simple flattening of nested namespaces. Parquet is optimized to work with complex data in bulk and features different ways for efficient data compression and encoding types.  This approach is best especially for those queries that need to read certain columns from a large table. Parquet can only read the needed columns therefore greatly minimizing the IO.</p>
 <p>Advantages of Storing Data in a Columnar Format:</p>
 <ul class="simple">
-<li><p>Columnar storage like Apache Parquet is designed to bring efficiency compared to row-based files like CSV. When querying, columnar storage you can skip over the non-relevant data very quickly. As a result, aggregation queries are less time consuming compared to row-oriented databases. This way of storage has translated into hardware savings and minimized latency for accessing data.</p></li>
+<li><p>Columnar storage like Apache Parquet is designed to bring efficiency compared to row-based files like CSV. When querying columnar storage you can skip over the non-relevant data very quickly. As a result, aggregation queries are less time consuming compared to row-oriented databases. This way of storage has translated into hardware savings and minimized latency for accessing data.</p></li>
 <li><p>Apache Parquet is built from the ground up. Hence it is able to support advanced nested data structures. The layout of Parquet data files is optimized for queries that process large volumes of data, in the gigabyte range for each individual file.</p></li>
 <li><p>Parquet is built to support flexible compression options and efficient encoding schemes. As the data type for each column is quite similar, the compression of each column is straightforward (which makes queries even faster). Data can be compressed by using one of the several codecs available; as a result, different data files can be compressed differently.</p></li>
 </ul>
@@ -713,8 +713,8 @@ If None is set, it uses the default value, \n.</p></li>
 <p><a id='11'></a></p>
 </div>
 </div>
-<div class="section" id="a-reading-from-csv-file-into-spark-data-frame">
-<h3>2a. Reading from CSV file into spark data frame<a class="headerlink" href="#a-reading-from-csv-file-into-spark-data-frame" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="b-reading-from-csv-file-into-spark-data-frame">
+<h3>2b. Reading from CSV file into spark data frame<a class="headerlink" href="#b-reading-from-csv-file-into-spark-data-frame" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-syntax admonition">
 <p class="admonition-title">Syntax</p>
 <p><b>csv(path, schema=None, sep=None, encoding=None, quote=None, escape=None, comment=None, header=None, inferSchema=None, ignoreLeadingWhiteSpace=None, ignoreTrailingWhiteSpace=None, nullValue=None, nanValue=None, positiveInf=None, negativeInf=None, dateFormat=None, timestampFormat=None, maxColumns=None, maxCharsPerColumn=None, maxMalformedLogPerPartition=None, mode=None, columnNameOfCorruptRecord=None, multiLine=None, charToEscapeQuoteEscaping=None, samplingRatio=None, enforceSchema=None, emptyValue=None, locale=None, lineSep=None, pathGlobFilter=None, recursiveFileLookup=None)</b></p>
@@ -841,8 +841,8 @@ exists.</p></li>
 <p><a id='12'></a></p>
 </div>
 </div>
-<div class="section" id="a-reading-from-json-file-into-spark-data-frame">
-<h3>2a. Reading from JSON file into spark data frame<a class="headerlink" href="#a-reading-from-json-file-into-spark-data-frame" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="c-reading-from-json-file-into-spark-data-frame">
+<h3>2c. Reading from JSON file into spark data frame<a class="headerlink" href="#c-reading-from-json-file-into-spark-data-frame" title="Permalink to this headline">¶</a></h3>
 <div class="admonition-syntax admonition">
 <p class="admonition-title">Syntax</p>
 <p><b>json(path, schema=None, primitivesAsString=None, prefersDecimal=None, allowComments=None, allowUnquotedFieldNames=None, allowSingleQuotes=None, allowNumericLeadingZero=None, allowBackslashEscapingAnyCharacter=None, mode=None, columnNameOfCorruptRecord=None, dateFormat=None, timestampFormat=None, multiLine=None, allowUnquotedControlChars=None, lineSep=None, samplingRatio=None, dropFieldIfAllNull=None, encoding=None, locale=None, pathGlobFilter=None, recursiveFileLookup=None)

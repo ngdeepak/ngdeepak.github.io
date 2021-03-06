@@ -17,16 +17,132 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-print("Input                     ",            "Output")
-display_side_by_side(df_string.toPandas(),df_sub.toPandas())
+rdd_schema = spark.sparkContext.parallelize(df.schema)
+
+rdd_schema.coalesce(1).saveAsPickleFile("data/text/schema_file")
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m<ipython-input-20-51f61352b2e2>[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0mprint[0m[0;34m([0m[0;34m"Input                     "[0m[0;34m,[0m            [0;34m"Output"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 2[0;31m [0mdisplay_side_by_side[0m[0;34m([0m[0mdf_string[0m[0;34m.[0m[0mtoPandas[0m[0;34m([0m[0;34m)[0m[0;34m,[0m[0mdf_sub[0m[0;34m.[0m[0mtoPandas[0m[0;34m([0m[0;34m)[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;31mPy4JJavaError[0m                             Traceback (most recent call last)
+[0;32m<ipython-input-20-394ef375de97>[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0mrdd_schema[0m [0;34m=[0m [0mspark[0m[0;34m.[0m[0msparkContext[0m[0;34m.[0m[0mparallelize[0m[0;34m([0m[0mdf[0m[0;34m.[0m[0mschema[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m [0;34m[0m[0m
+[0;32m----> 3[0;31m [0mrdd_schema[0m[0;34m.[0m[0mcoalesce[0m[0;34m([0m[0;36m1[0m[0;34m)[0m[0;34m.[0m[0msaveAsPickleFile[0m[0;34m([0m[0;34m"data/text/schema_file"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[0;31mNameError[0m: name 'df_string' is not defined
-NameError: name 'df_string' is not defined
+[0;32m~/opt/anaconda3/envs/sparkbook/lib/python3.8/site-packages/pyspark/rdd.py[0m in [0;36msaveAsPickleFile[0;34m(self, path, batchSize)[0m
+[1;32m   1603[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1604[0m             [0mser[0m [0;34m=[0m [0mBatchedSerializer[0m[0;34m([0m[0mPickleSerializer[0m[0;34m([0m[0;34m)[0m[0;34m,[0m [0mbatchSize[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1605[0;31m         [0mself[0m[0;34m.[0m[0m_reserialize[0m[0;34m([0m[0mser[0m[0;34m)[0m[0;34m.[0m[0m_jrdd[0m[0;34m.[0m[0msaveAsObjectFile[0m[0;34m([0m[0mpath[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1606[0m [0;34m[0m[0m
+[1;32m   1607[0m     [0;34m@[0m[0mignore_unicode_prefix[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/envs/sparkbook/lib/python3.8/site-packages/py4j/java_gateway.py[0m in [0;36m__call__[0;34m(self, *args)[0m
+[1;32m   1302[0m [0;34m[0m[0m
+[1;32m   1303[0m         [0manswer[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mgateway_client[0m[0;34m.[0m[0msend_command[0m[0;34m([0m[0mcommand[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1304[0;31m         return_value = get_return_value(
+[0m[1;32m   1305[0m             answer, self.gateway_client, self.target_id, self.name)
+[1;32m   1306[0m [0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/envs/sparkbook/lib/python3.8/site-packages/pyspark/sql/utils.py[0m in [0;36mdeco[0;34m(*a, **kw)[0m
+[1;32m    126[0m     [0;32mdef[0m [0mdeco[0m[0;34m([0m[0;34m*[0m[0ma[0m[0;34m,[0m [0;34m**[0m[0mkw[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    127[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 128[0;31m             [0;32mreturn[0m [0mf[0m[0;34m([0m[0;34m*[0m[0ma[0m[0;34m,[0m [0;34m**[0m[0mkw[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m    129[0m         [0;32mexcept[0m [0mpy4j[0m[0;34m.[0m[0mprotocol[0m[0;34m.[0m[0mPy4JJavaError[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    130[0m             [0mconverted[0m [0;34m=[0m [0mconvert_exception[0m[0;34m([0m[0me[0m[0;34m.[0m[0mjava_exception[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/opt/anaconda3/envs/sparkbook/lib/python3.8/site-packages/py4j/protocol.py[0m in [0;36mget_return_value[0;34m(answer, gateway_client, target_id, name)[0m
+[1;32m    324[0m             [0mvalue[0m [0;34m=[0m [0mOUTPUT_CONVERTER[0m[0;34m[[0m[0mtype[0m[0;34m][0m[0;34m([0m[0manswer[0m[0;34m[[0m[0;36m2[0m[0;34m:[0m[0;34m][0m[0;34m,[0m [0mgateway_client[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    325[0m             [0;32mif[0m [0manswer[0m[0;34m[[0m[0;36m1[0m[0;34m][0m [0;34m==[0m [0mREFERENCE_TYPE[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 326[0;31m                 raise Py4JJavaError(
+[0m[1;32m    327[0m                     [0;34m"An error occurred while calling {0}{1}{2}.\n"[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    328[0m                     format(target_id, ".", name), value)
+
+[0;31mPy4JJavaError[0m: An error occurred while calling o148.saveAsObjectFile.
+: org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory file:/Users/deepak/Documents/sparkbook/chapters/data/text/schema_file already exists
+	at org.apache.hadoop.mapred.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:131)
+	at org.apache.spark.internal.io.HadoopMapRedWriteConfigUtil.assertConf(SparkHadoopWriter.scala:289)
+	at org.apache.spark.internal.io.SparkHadoopWriter$.write(SparkHadoopWriter.scala:71)
+	at org.apache.spark.rdd.PairRDDFunctions.$anonfun$saveAsHadoopDataset$1(PairRDDFunctions.scala:1090)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:388)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsHadoopDataset(PairRDDFunctions.scala:1088)
+	at org.apache.spark.rdd.PairRDDFunctions.$anonfun$saveAsHadoopFile$4(PairRDDFunctions.scala:1061)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:388)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsHadoopFile(PairRDDFunctions.scala:1026)
+	at org.apache.spark.rdd.SequenceFileRDDFunctions.$anonfun$saveAsSequenceFile$1(SequenceFileRDDFunctions.scala:69)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:388)
+	at org.apache.spark.rdd.SequenceFileRDDFunctions.saveAsSequenceFile(SequenceFileRDDFunctions.scala:54)
+	at org.apache.spark.rdd.RDD.$anonfun$saveAsObjectFile$1(RDD.scala:1561)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:388)
+	at org.apache.spark.rdd.RDD.saveAsObjectFile(RDD.scala:1561)
+	at org.apache.spark.api.java.JavaRDDLike.saveAsObjectFile(JavaRDDLike.scala:565)
+	at org.apache.spark.api.java.JavaRDDLike.saveAsObjectFile$(JavaRDDLike.scala:564)
+	at org.apache.spark.api.java.AbstractJavaRDDLike.saveAsObjectFile(JavaRDDLike.scala:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+
+Py4JJavaError: An error occurred while calling o148.saveAsObjectFile.
+: org.apache.hadoop.mapred.FileAlreadyExistsException: Output directory file:/Users/deepak/Documents/sparkbook/chapters/data/text/schema_file already exists
+	at org.apache.hadoop.mapred.FileOutputFormat.checkOutputSpecs(FileOutputFormat.java:131)
+	at org.apache.spark.internal.io.HadoopMapRedWriteConfigUtil.assertConf(SparkHadoopWriter.scala:289)
+	at org.apache.spark.internal.io.SparkHadoopWriter$.write(SparkHadoopWriter.scala:71)
+	at org.apache.spark.rdd.PairRDDFunctions.$anonfun$saveAsHadoopDataset$1(PairRDDFunctions.scala:1090)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:388)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsHadoopDataset(PairRDDFunctions.scala:1088)
+	at org.apache.spark.rdd.PairRDDFunctions.$anonfun$saveAsHadoopFile$4(PairRDDFunctions.scala:1061)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:388)
+	at org.apache.spark.rdd.PairRDDFunctions.saveAsHadoopFile(PairRDDFunctions.scala:1026)
+	at org.apache.spark.rdd.SequenceFileRDDFunctions.$anonfun$saveAsSequenceFile$1(SequenceFileRDDFunctions.scala:69)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:388)
+	at org.apache.spark.rdd.SequenceFileRDDFunctions.saveAsSequenceFile(SequenceFileRDDFunctions.scala:54)
+	at org.apache.spark.rdd.RDD.$anonfun$saveAsObjectFile$1(RDD.scala:1561)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:388)
+	at org.apache.spark.rdd.RDD.saveAsObjectFile(RDD.scala:1561)
+	at org.apache.spark.api.java.JavaRDDLike.saveAsObjectFile(JavaRDDLike.scala:565)
+	at org.apache.spark.api.java.JavaRDDLike.saveAsObjectFile$(JavaRDDLike.scala:564)
+	at org.apache.spark.api.java.AbstractJavaRDDLike.saveAsObjectFile(JavaRDDLike.scala:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:244)
+	at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:357)
+	at py4j.Gateway.invoke(Gateway.java:282)
+	at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:132)
+	at py4j.commands.CallCommand.execute(CallCommand.java:79)
+	at py4j.GatewayConnection.run(GatewayConnection.java:238)
+	at java.lang.Thread.run(Thread.java:748)
+
 
