@@ -98,7 +98,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../Author.html">
-   About the Author:
+   Jupiter Book
   </a>
  </li>
 </ul>
@@ -352,8 +352,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#g-co-grouped-map">
-   1g. Co-grouped Map
+  <a class="reference internal nav-link" href="#h-co-grouped-map">
+   1h. Co-grouped Map
   </a>
  </li>
 </ul>
@@ -388,6 +388,9 @@
 <li><p><a class="reference external" href="#4">1c. Pandas UDF: Iterator of Series to Iterator of Series</a></p></li>
 <li><p><a class="reference external" href="#5">1d. Pandas UDF: Iterator of Multiple Series to Iterator of Series</a></p></li>
 <li><p><a class="reference external" href="#6">1e. Pandas UDF: Series to Scalar</a></p></li>
+<li><p><a class="reference external" href="#7">1f. Grouped Map</a></p></li>
+<li><p><a class="reference external" href="#8">1g. Map</a></p></li>
+<li><p><a class="reference external" href="#9">1h. Co-grouped Map</a></p></li>
 </ul>
 </li>
 </ul>
@@ -829,7 +832,6 @@ It can make it easier to perform static analysis. IDEs such as PyCharm and Visua
 <p>Before we do a deep dive into each case, let’s look at three key points about working with the new Pandas UDFs.</p>
 <p>Although Python type hints are optional in the Python world in general, you must specify Python type hints for the input and output in order to use the new Pandas UDFs.</p>
 <p>The type hint should use pandas.Series in all cases. However, there is one variant in which pandas.DataFrame should be used for its input or output type hint instead: when the input or output column is of StructType.Take a look at the example below:</p>
-<p><a id='2'></a></p>
 <div class="figure align-center">
 <img alt="../_images/16.png" src="../_images/16.png" />
 </div>
@@ -857,13 +859,13 @@ It can make it easier to perform static analysis. IDEs such as PyCharm and Visua
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pandas DataFrame result statistics:
                 0           1           2
 count  100.000000  100.000000  100.000000
-mean     0.456107    0.487268    0.500909
-std      0.292031    0.306032    0.282391
-min      0.024646    0.001150    0.009177
-25%      0.205606    0.228372    0.259762
-50%      0.456771    0.469159    0.528730
-75%      0.645314    0.766143    0.703808
-max      0.984566    0.992455    0.997533
+mean     0.440397    0.485852    0.518552
+std      0.282520    0.299111    0.305305
+min      0.011996    0.009297    0.004092
+25%      0.207106    0.263151    0.285165
+50%      0.392667    0.457499    0.526845
+75%      0.634899    0.767151    0.803342
+max      0.995674    0.997008    0.996010
 </pre></div>
 </div>
 </div>
@@ -878,7 +880,7 @@ max      0.984566    0.992455    0.997533
 </ul>
 </li>
 </ul>
-<p><a id='3'></a></p>
+<p><a id='2'></a></p>
 </div>
 <div class="section" id="a-pandas-udfs-vectorized-udfs">
 <h2>1a. Pandas UDFs (Vectorized UDFs)<a class="headerlink" href="#a-pandas-udfs-vectorized-udfs" title="Permalink to this headline">¶</a></h2>
@@ -1075,13 +1077,13 @@ root
 </div>
 </div>
 </div>
+<p><a id='3'></a></p>
 </div>
 <div class="section" id="b-pandas-udf-series-to-series">
 <h2>1b. Pandas UDF: Series to Series<a class="headerlink" href="#b-pandas-udf-series-to-series" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
 <img alt="../_images/25.png" src="../_images/25.png" />
 </div>
-<p><a id='4'></a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -1136,7 +1138,7 @@ dtype: int64
 </div>
 </div>
 </div>
-<p><a id='5'></a></p>
+<p><a id='4'></a></p>
 </div>
 <div class="section" id="c-iterator-of-series-to-iterator-of-series">
 <h2>1c. Iterator of Series to Iterator of Series<a class="headerlink" href="#c-iterator-of-series-to-iterator-of-series" title="Permalink to this headline">¶</a></h2>
@@ -1251,7 +1253,7 @@ dtype: int64
   </tbody>
 </table style="display:inline">                              </div></div>
 </div>
-<p><a id='6'></a></p>
+<p><a id='5'></a></p>
 </div>
 <div class="section" id="d-iterator-of-multiple-series-to-iterator-of-series">
 <h2>1d. Iterator of Multiple Series to Iterator of Series<a class="headerlink" href="#d-iterator-of-multiple-series-to-iterator-of-series" title="Permalink to this headline">¶</a></h2>
@@ -1343,7 +1345,7 @@ dtype: int64
   </tbody>
 </table style="display:inline">                              </div></div>
 </div>
-<p><a id='7'></a></p>
+<p><a id='6'></a></p>
 </div>
 <div class="section" id="e-series-to-scalar">
 <h2>1e. Series to Scalar<a class="headerlink" href="#e-series-to-scalar" title="Permalink to this headline">¶</a></h2>
@@ -1450,7 +1452,7 @@ dtype: int64
 </div>
 </div>
 </div>
-<p><a id='8'></a></p>
+<p><a id='7'></a></p>
 </div>
 <div class="section" id="f-grouped-map">
 <h2>1f. Grouped Map<a class="headerlink" href="#f-grouped-map" title="Permalink to this headline">¶</a></h2>
@@ -1645,10 +1647,10 @@ schema – the return type of the func in PySpark. The value can be either a pys
   </tbody>
 </table style="display:inline">                              </div></div>
 </div>
-<p><a id='8'></a></p>
+<p><a id='9'></a></p>
 </div>
-<div class="section" id="g-co-grouped-map">
-<h2>1g. Co-grouped Map<a class="headerlink" href="#g-co-grouped-map" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="h-co-grouped-map">
+<h2>1h. Co-grouped Map<a class="headerlink" href="#h-co-grouped-map" title="Permalink to this headline">¶</a></h2>
 <p>Co-grouped map operations with Pandas instances are supported by DataFrame.groupby().cogroup().applyInPandas() which allows two PySpark DataFrames to be cogrouped by a common key and then a Python function applied to each cogroup.</p>
 <p>It consists of the following steps:</p>
 <ul class="simple">

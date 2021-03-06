@@ -322,8 +322,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#b-how-to-convert-uppercase-to-lowercase">
-   1b. How to convert uppercase to lowercase?
+  <a class="reference internal nav-link" href="#b-how-to-slice-a-string">
+   1b. How to slice a string?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -332,8 +332,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#d-how-to-slice-a-string">
-   1d. How to slice a string?
+  <a class="reference internal nav-link" href="#d-how-to-convert-uppercase-to-lowercase">
+   1d. How to convert uppercase to lowercase?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -374,9 +374,9 @@
 <li><p><a class="reference external" href="#1">1. Various data operations on columns containing string </a></p>
 <ul>
 <li><p><a class="reference external" href="#2">1a. How to split a string?</a></p></li>
-<li><p><a class="reference external" href="#3">1b. How to convert uppercase to lowercase?</a></p></li>
-<li><p><a class="reference external" href="#4">1c. How to convert lowercase to uppercase?</a></p></li>
-<li><p><a class="reference external" href="#5">1d. How to slice a string?</a></p></li>
+<li><p><a class="reference external" href="#3">1b. How to slice a string?</a></p></li>
+<li><p><a class="reference external" href="#4">1d. How to convert lowercase to uppercase?</a></p></li>
+<li><p><a class="reference external" href="#5">1c. How to convert uppercase to lowercase?</a></p></li>
 <li><p><a class="reference external" href="#6">1e. How to extract a specific group matched by a Java regex?</a></p></li>
 <li><p><a class="reference external" href="#7">1f. How to replace a specific group matched by a Java regex?</a></p></li>
 </ul>
@@ -532,54 +532,57 @@ array can be of any size.
 </div>
 <p><a id='3'></a></p>
 </div>
-<div class="section" id="b-how-to-convert-uppercase-to-lowercase">
-<h2>1b. How to convert uppercase to lowercase?<a class="headerlink" href="#b-how-to-convert-uppercase-to-lowercase" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="b-how-to-slice-a-string">
+<h2>1b. How to slice a string?<a class="headerlink" href="#b-how-to-slice-a-string" title="Permalink to this headline">¶</a></h2>
+<p>Explanation here.</p>
 <div class="figure align-center">
-<img alt="../_images/210.png" src="../_images/210.png" />
+<img alt="../_images/49.png" src="../_images/49.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
 <p class="admonition-title">Syntax</p>
-<p><b>pyspark.sql.functions.lower(col)</b></p>
-<p>Converts a string expression to lower case.</p>
+<p><b>pyspark.sql.functions.slice(x, start, length)</b></p>
+<p>Collection function: returns an array containing all the elements in x from index start (array indices start at 1, or from the end if start is negative) with the specified length.</p>
 <p><b>Parameters</b>:</p>
 <ul class="simple">
-<li><p>col : column
+<li><p>x : the array to be sliced</p></li>
+<li><p>start : the starting index</p></li>
+<li><p>length : the length of the slice
 ‘’’</p></li>
 </ul>
 </div>
 <p><b>Input:  Spark data frame with a column having a string</b></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_string</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s1">&#39;abcdefghc&#39;</span><span class="p">,)],</span> <span class="p">[</span><span class="s1">&#39;lowercase&#39;</span><span class="p">,])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_string</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s1">&#39;abcdefghi&#39;</span><span class="p">,)],</span> <span class="p">[</span><span class="s1">&#39;string&#39;</span><span class="p">,])</span>
 <span class="n">df_string</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+
-|lowercase|
+|   string|
 +---------+
-|abcdefghc|
+|abcdefghi|
 +---------+
 </pre></div>
 </div>
 </div>
 </div>
-<p><b>Output :  Spark data frame with a column with a split string</b></p>
+<p><b>Output :  Spark data frame with a column with a sliced string</b></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">upper</span>
-<span class="n">df_upper</span><span class="o">=</span> <span class="n">df_string</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">upper</span><span class="p">(</span><span class="n">df_string</span><span class="o">.</span><span class="n">lowercase</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;uppercase&#39;</span><span class="p">))</span>
-<span class="n">df_upper</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">substring</span>
+<span class="n">df_sub</span> <span class="o">=</span> <span class="n">df_string</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">substring</span><span class="p">(</span><span class="n">df_string</span><span class="o">.</span><span class="n">string</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;substring&#39;</span><span class="p">))</span>
+<span class="n">df_sub</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+
-|uppercase|
+|substring|
 +---------+
-|ABCDEFGHC|
+|     abcd|
 +---------+
 </pre></div>
 </div>
@@ -589,7 +592,7 @@ array can be of any size.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Input                     &quot;</span><span class="p">,</span>            <span class="s2">&quot;Output&quot;</span><span class="p">)</span>
-<span class="n">display_side_by_side</span><span class="p">(</span><span class="n">df_string</span><span class="o">.</span><span class="n">toPandas</span><span class="p">(),</span><span class="n">df_upper</span><span class="o">.</span><span class="n">toPandas</span><span class="p">())</span>
+<span class="n">display_side_by_side</span><span class="p">(</span><span class="n">df_string</span><span class="o">.</span><span class="n">toPandas</span><span class="p">(),</span><span class="n">df_sub</span><span class="o">.</span><span class="n">toPandas</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -600,23 +603,23 @@ array can be of any size.
 <div class="output text_html"><table style="display:inline" border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>lowercase</th>
+      <th>string</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>abcdefghc</td>
+      <td>abcdefghi</td>
     </tr>
   </tbody>
 </table style="display:inline">                              <table style="display:inline" border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>uppercase</th>
+      <th>substring</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>ABCDEFGHC</td>
+      <td>abcd</td>
     </tr>
   </tbody>
 </table style="display:inline">                              </div></div>
@@ -715,57 +718,54 @@ array can be of any size.
 </div>
 <p><a id='5'></a></p>
 </div>
-<div class="section" id="d-how-to-slice-a-string">
-<h2>1d. How to slice a string?<a class="headerlink" href="#d-how-to-slice-a-string" title="Permalink to this headline">¶</a></h2>
-<p>Explanation here.</p>
+<div class="section" id="d-how-to-convert-uppercase-to-lowercase">
+<h2>1d. How to convert uppercase to lowercase?<a class="headerlink" href="#d-how-to-convert-uppercase-to-lowercase" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/49.png" src="../_images/49.png" />
+<img alt="../_images/210.png" src="../_images/210.png" />
 </div>
 <p>Lets first understand the syntax</p>
 <div class="admonition-syntax admonition">
 <p class="admonition-title">Syntax</p>
-<p><b>pyspark.sql.functions.slice(x, start, length)</b></p>
-<p>Collection function: returns an array containing all the elements in x from index start (array indices start at 1, or from the end if start is negative) with the specified length.</p>
+<p><b>pyspark.sql.functions.lower(col)</b></p>
+<p>Converts a string expression to lower case.</p>
 <p><b>Parameters</b>:</p>
 <ul class="simple">
-<li><p>x : the array to be sliced</p></li>
-<li><p>start : the starting index</p></li>
-<li><p>length : the length of the slice
+<li><p>col : column
 ‘’’</p></li>
 </ul>
 </div>
 <p><b>Input:  Spark data frame with a column having a string</b></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_string</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s1">&#39;abcdefghi&#39;</span><span class="p">,)],</span> <span class="p">[</span><span class="s1">&#39;string&#39;</span><span class="p">,])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_string</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">createDataFrame</span><span class="p">([(</span><span class="s1">&#39;abcdefghc&#39;</span><span class="p">,)],</span> <span class="p">[</span><span class="s1">&#39;lowercase&#39;</span><span class="p">,])</span>
 <span class="n">df_string</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+
-|   string|
+|lowercase|
 +---------+
-|abcdefghi|
+|abcdefghc|
 +---------+
 </pre></div>
 </div>
 </div>
 </div>
-<p><b>Output :  Spark data frame with a column with a sliced string</b></p>
+<p><b>Output :  Spark data frame with a column with a split string</b></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">substring</span>
-<span class="n">df_sub</span> <span class="o">=</span> <span class="n">df_string</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">substring</span><span class="p">(</span><span class="n">df_string</span><span class="o">.</span><span class="n">string</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;substring&#39;</span><span class="p">))</span>
-<span class="n">df_sub</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyspark.sql.functions</span> <span class="kn">import</span> <span class="n">upper</span>
+<span class="n">df_upper</span><span class="o">=</span> <span class="n">df_string</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">upper</span><span class="p">(</span><span class="n">df_string</span><span class="o">.</span><span class="n">lowercase</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s1">&#39;uppercase&#39;</span><span class="p">))</span>
+<span class="n">df_upper</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>+---------+
-|substring|
+|uppercase|
 +---------+
-|     abcd|
+|ABCDEFGHC|
 +---------+
 </pre></div>
 </div>
@@ -775,7 +775,7 @@ array can be of any size.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Input                     &quot;</span><span class="p">,</span>            <span class="s2">&quot;Output&quot;</span><span class="p">)</span>
-<span class="n">display_side_by_side</span><span class="p">(</span><span class="n">df_string</span><span class="o">.</span><span class="n">toPandas</span><span class="p">(),</span><span class="n">df_sub</span><span class="o">.</span><span class="n">toPandas</span><span class="p">())</span>
+<span class="n">display_side_by_side</span><span class="p">(</span><span class="n">df_string</span><span class="o">.</span><span class="n">toPandas</span><span class="p">(),</span><span class="n">df_upper</span><span class="o">.</span><span class="n">toPandas</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -786,23 +786,23 @@ array can be of any size.
 <div class="output text_html"><table style="display:inline" border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>string</th>
+      <th>lowercase</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>abcdefghi</td>
+      <td>abcdefghc</td>
     </tr>
   </tbody>
 </table style="display:inline">                              <table style="display:inline" border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>substring</th>
+      <th>uppercase</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>abcd</td>
+      <td>ABCDEFGHC</td>
     </tr>
   </tbody>
 </table style="display:inline">                              </div></div>
