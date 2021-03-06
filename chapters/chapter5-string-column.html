@@ -384,13 +384,13 @@
 </ul>
 <style>body {text-align: justify}</style><div class="cell tag_hide_input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">panel</span> <span class="k">as</span> <span class="nn">pn</span>
-<span class="n">css</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">div.special_table + table, th, td {</span>
-<span class="s2">  border: 3px solid orange;</span>
-<span class="s2">}</span>
-<span class="s2">&quot;&quot;&quot;</span>
-<span class="n">pn</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="n">raw_css</span><span class="o">=</span><span class="p">[</span><span class="n">css</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import panel as pn</span>
+<span class="c1"># css = &quot;&quot;&quot;</span>
+<span class="c1"># div.special_table + table, th, td {</span>
+<span class="c1">#   border: 3px solid orange;</span>
+<span class="c1"># }</span>
+<span class="c1"># &quot;&quot;&quot;</span>
+<span class="c1"># pn.extension(raw_css=[css])</span>
 <span class="kn">import</span> <span class="nn">pyspark</span>
 <span class="kn">from</span> <span class="nn">pyspark.sql</span> <span class="kn">import</span> <span class="n">SparkSession</span>
 <span class="n">spark</span> <span class="o">=</span> <span class="n">SparkSession</span> \
@@ -513,9 +513,6 @@
   var css_urls = ["https://unpkg.com/@holoviz/panel@0.10.3/dist/css/alerts.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/card.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/widgets.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/markdown.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/json.css", "https://unpkg.com/@holoviz/panel@0.10.3/dist/css/dataframe.css"];
 
   var inline_js = [
-    function(Bokeh) {
-      inject_raw_css("\ndiv.special_table + table, th, td {\n  border: 3px solid orange;\n}\n");
-    },
     function(Bokeh) {
       inject_raw_css("\ndiv.special_table + table, th, td {\n  border: 3px solid orange;\n}\n");
     },
