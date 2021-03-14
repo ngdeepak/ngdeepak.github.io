@@ -1,4 +1,4 @@
-# Jupiter Book
+
 
 
 ```{figure} images/bookcover.png
@@ -10,7 +10,7 @@ align: center
 
 
 # About the Author:  
-                                                                                             More details about Deepak at  www.linkedin.com/in/deepakngowda   
+More details about Deepak at  www.linkedin.com/in/deepakngowda   
 
 Spark credentials obtained from databricks in 2015 is as below. 
 
