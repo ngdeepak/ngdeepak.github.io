@@ -1,5 +1,3 @@
-# Jupiter Book
-
 
 ```{figure} images/bookcover.png
 ---
