@@ -7,8 +7,6 @@ align: center
 ---
 ```
 
-
-
 # About the Author:  
 More details about Deepak at  www.linkedin.com/in/deepakngowda   
 
