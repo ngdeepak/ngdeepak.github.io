@@ -98,7 +98,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../Author.html">
-   Jupiter Book
+   About the Author:
   </a>
  </li>
 </ul>
@@ -833,7 +833,7 @@ It can make it easier to perform static analysis. IDEs such as PyCharm and Visua
 <p>Although Python type hints are optional in the Python world in general, you must specify Python type hints for the input and output in order to use the new Pandas UDFs.</p>
 <p>The type hint should use pandas.Series in all cases. However, there is one variant in which pandas.DataFrame should be used for its input or output type hint instead: when the input or output column is of StructType.Take a look at the example below:</p>
 <div class="figure align-center">
-<img alt="../_images/16.png" src="../_images/16.png" />
+<img alt="../_images/14.png" src="../_images/14.png" />
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -859,13 +859,13 @@ It can make it easier to perform static analysis. IDEs such as PyCharm and Visua
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pandas DataFrame result statistics:
                 0           1           2
 count  100.000000  100.000000  100.000000
-mean     0.440397    0.485852    0.518552
-std      0.282520    0.299111    0.305305
-min      0.011996    0.009297    0.004092
-25%      0.207106    0.263151    0.285165
-50%      0.392667    0.457499    0.526845
-75%      0.634899    0.767151    0.803342
-max      0.995674    0.997008    0.996010
+mean     0.475495    0.497599    0.518556
+std      0.294840    0.277754    0.298373
+min      0.011082    0.017651    0.012683
+25%      0.222519    0.256175    0.250417
+50%      0.444332    0.503060    0.545583
+75%      0.735770    0.736086    0.778632
+max      0.989444    0.999400    0.984667
 </pre></div>
 </div>
 </div>
@@ -885,7 +885,7 @@ max      0.995674    0.997008    0.996010
 <div class="section" id="a-pandas-udfs-vectorized-udfs">
 <h2>1a. Pandas UDFs (Vectorized UDFs)<a class="headerlink" href="#a-pandas-udfs-vectorized-udfs" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/16.png" src="../_images/16.png" />
+<img alt="../_images/14.png" src="../_images/14.png" />
 </div>
 <ul class="simple">
 <li><p>Pandas UDFs are user defined functions that are executed by Spark using Arrow to transfer data to perform  vectorized operations.</p></li>
@@ -1082,7 +1082,7 @@ root
 <div class="section" id="b-pandas-udf-series-to-series">
 <h2>1b. Pandas UDF: Series to Series<a class="headerlink" href="#b-pandas-udf-series-to-series" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/25.png" src="../_images/25.png" />
+<img alt="../_images/24.png" src="../_images/24.png" />
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1143,7 +1143,7 @@ dtype: int64
 <div class="section" id="c-iterator-of-series-to-iterator-of-series">
 <h2>1c. Iterator of Series to Iterator of Series<a class="headerlink" href="#c-iterator-of-series-to-iterator-of-series" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/35.png" src="../_images/35.png" />
+<img alt="../_images/34.png" src="../_images/34.png" />
 </div>
 <p>An iterator UDF is the same as a scalar pandas UDF except:</p>
 <p>The Python function</p>
@@ -1258,7 +1258,7 @@ dtype: int64
 <div class="section" id="d-iterator-of-multiple-series-to-iterator-of-series">
 <h2>1d. Iterator of Multiple Series to Iterator of Series<a class="headerlink" href="#d-iterator-of-multiple-series-to-iterator-of-series" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-center">
-<img alt="../_images/45.png" src="../_images/45.png" />
+<img alt="../_images/44.png" src="../_images/44.png" />
 </div>
 <ul class="simple">
 <li><p>An Iterator of multiple Series to Iterator of Series UDF has similar characteristics and restrictions as Iterator of Series to Iterator of Series UDF.</p></li>
